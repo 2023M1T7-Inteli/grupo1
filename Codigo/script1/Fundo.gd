@@ -5,7 +5,7 @@ onready var config = $Inicio/Fundo/config
 onready var creditos = $Inicio/Fundo/creditos
 
 func _on_jogar_pressed():
-	get_tree().change_scene("res://.mono/Main.tscn")
+	get_tree().change_scene("res://Main.tscn")
 	# abre o jogo
 	
 func _on_config_pressed():
