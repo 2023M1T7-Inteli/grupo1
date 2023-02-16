@@ -6,8 +6,8 @@
 [node name="Inicio" type="Node2D"]
 
 [node name="Fundo" type="Sprite" parent="."]
-position = Vector2( 205.125, 384.777 )
-scale = Vector2( 0.360666, 0.31714 )
+position = Vector2( 213.625, 400.961 )
+scale = Vector2( 0.375777, 0.330428 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

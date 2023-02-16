@@ -52,7 +52,7 @@ rect_scale = Vector2( 0.079999, 0.079999 )
 icon = ExtResource( 1 )
 flat = true
 
-[node name="ButtonRight" type="Button" parent="."]
+[node name="button" type="Button" parent="."]
 margin_left = 293.0
 margin_top = 495.0
 margin_right = 817.0
@@ -84,5 +84,5 @@ flat = true
 [connection signal="pressed" from="buttonDown" to="." method="_on_buttonDown_pressed"]
 [connection signal="pressed" from="buttonLeft" to="." method="_on_buttonLeft_pressed"]
 [connection signal="pressed" from="buttonUp" to="." method="_on_buttonUp_pressed"]
-[connection signal="pressed" from="ButtonRight" to="." method="_on_ButtonRight_pressed"]
+[connection signal="pressed" from="button" to="." method="_on_ButtonRight_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
