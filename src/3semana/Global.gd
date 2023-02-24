@@ -1,8 +1,8 @@
 extends Node
 
 var numQuestion: int = 0
-var listaComandos = ["left", "left"]
-var estado = false
+var listaComandos = []
+var estado: bool
 
 func _ready():
 	pass # Replace with function body.

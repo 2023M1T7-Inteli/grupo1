@@ -5,16 +5,24 @@ var screen_size
 onready var global = get_node("/root/Global")
 onready var listaComandos = global.listaComandos
 onready var estado = global.estado
+var i = 0
 
 # funções
 func _ready():
 	screen_size = get_viewport_rect().size
 	
+	
 
 func _physics_process(delta):
-	if estado:
+	if i < 3:
+		print("Hello")
+		print(estado)
+		i +=1
+		
+	if $"/root/Global".estado:
+		print("deu certo")
 		movimentacao()
-		estado = false
+		$"/root/Global".estado = false
 		
 	
 
@@ -23,8 +31,20 @@ func movimentacao():
 	for i in len(listaComandos):
 		if listaComandos[i] == "left":
 			velocidade.x -= 10
-			move_and_slide(velocidade*300)
-			print(position)
+		if listaComandos[i] == "right":
+			velocidade.x += 10
+		if listaComandos[i] == "up":
+			velocidade.y -= 10
+		if listaComandos[i] == "down":
+			velocidade.y[i] += 10
+	move_and_slide(velocidade*300)
+	yield(get_tree().create_timer(5.0), "timeout")
+	print(position)
+
+# função para esperar alguns segundos
+func wait():
+	var tempo = $"../Timer"
+	tempo.wait_time = 10
 
 # Utilização em um teste. Dentro de process(delta)
 #var vector_movement = Vector2.ZERO # Atribuição no vetor 2D
