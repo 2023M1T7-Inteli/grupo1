@@ -64,6 +64,9 @@ func _on_A2_body_entered(body):
 	print("Falso")
 	$WindowDialog/RichTextLabel.text = "Tente novamente"
 	$WindowDialog/RichTextLabel.visible = true
+	$AudioStreamPlayer2D.play()
+	
+	
 
 
 func _on_A1_body_entered(body):
