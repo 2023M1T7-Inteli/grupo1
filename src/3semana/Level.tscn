@@ -1,0 +1,232 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Imagens/Bode.png" type="Texture" id=1]
+[ext_resource path="res://Level.gd" type="Script" id=2]
+[ext_resource path="res://Imagens/Seta_Left.png" type="Texture" id=3]
+[ext_resource path="res://Imagens/Seta_Down.png" type="Texture" id=4]
+[ext_resource path="res://Imagens/Seta_Up.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/Seta_Right.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/botao_start-1.png (1).png" type="Texture" id=7]
+[ext_resource path="res://Imagens/Seta-cima-pressionado.png" type="Texture" id=8]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Imagens/Seta-direita-pressionada.png" type="Texture" id=10]
+[ext_resource path="res://Imagens/Seta-baixo-pressionado.png" type="Texture" id=11]
+[ext_resource path="res://Imagens/Seta-esquerda-pressionada.png" type="Texture" id=12]
+[ext_resource path="res://Imagens/Botao-start-pressionado.png" type="Texture" id=13]
+[ext_resource path="res://cino-Lago.wav.wav" type="AudioStream" id=14]
+
+[sub_resource type="Animation" id=3]
+resource_name = "walkRight"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bode/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 1, 1, 0, 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "walkRight"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bode/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 1, 1, 0, 0 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 16.0
+height = 0.0
+
+[sub_resource type="Animation" id=5]
+resource_name = "walkLeft"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bode/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Bode/Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "walkRight"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bode/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Bode/Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+
+[node name="Fundo" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="coin" parent="." instance=ExtResource( 9 )]
+position = Vector2( 296, 496 )
+scale = Vector2( 0.64644, 0.64644 )
+
+[node name="coin2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 98, 367 )
+scale = Vector2( 0.64644, 0.64644 )
+
+[node name="coin3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 231, 236 )
+scale = Vector2( 0.64644, 0.64644 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coin3"]
+root_node = NodePath("../..")
+anims/walkRight = SubResource( 3 )
+
+[node name="coin4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 162, 104 )
+scale = Vector2( 0.64644, 0.64644 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coin4"]
+root_node = NodePath("../..")
+anims/walkRight = SubResource( 4 )
+
+[node name="coin5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 232, 627 )
+scale = Vector2( 0.64644, 0.64644 )
+
+[node name="fundoLista" type="ColorRect" parent="."]
+margin_left = 346.0
+margin_top = 382.0
+margin_right = 389.0
+margin_bottom = 690.0
+color = Color( 0.0196078, 0.0196078, 0.0196078, 0 )
+
+[node name="Left" type="TextureButton" parent="fundoLista"]
+margin_left = -307.0
+margin_top = 343.0
+margin_right = 75.0
+margin_bottom = 719.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 12 )
+
+[node name="Right" type="TextureButton" parent="fundoLista"]
+margin_left = -146.0
+margin_top = 343.0
+margin_right = 239.0
+margin_bottom = 722.0
+rect_scale = Vector2( 0.199999, 0.199999 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 10 )
+
+[node name="Up" type="TextureButton" parent="fundoLista"]
+margin_left = -230.0
+margin_top = 342.0
+margin_right = 160.0
+margin_bottom = 726.0
+rect_scale = Vector2( 0.208333, 0.2 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 8 )
+
+[node name="Down" type="TextureButton" parent="fundoLista"]
+margin_left = -66.0
+margin_top = 341.0
+margin_right = 319.0
+margin_bottom = 720.0
+rect_scale = Vector2( 0.209823, 0.209823 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 11 )
+
+[node name="Rodar" type="TextureButton" parent="fundoLista"]
+margin_left = -15.0
+margin_top = -47.9999
+margin_right = 588.0
+margin_bottom = 549.0
+rect_scale = Vector2( 0.120001, 0.120001 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 13 )
+
+[node name="Bode" type="KinematicBody2D" parent="."]
+position = Vector2( 36, 622 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bode"]
+position = Vector2( 12, 9 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Bode"]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.164, 0.164 )
+texture = ExtResource( 1 )
+hframes = 3
+vframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bode"]
+root_node = NodePath("../..")
+anims/walkLeft = SubResource( 5 )
+anims/walkRight = SubResource( 1 )
+
+[node name="Lista" type="Label" parent="."]
+modulate = Color( 0.117647, 0.0627451, 0.0627451, 1 )
+margin_left = 87.0
+margin_top = 12.0
+margin_right = 378.0
+margin_bottom = 52.0
+autowrap = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[connection signal="pressed" from="fundoLista/Left" to="." method="_on_Left_pressed"]
+[connection signal="pressed" from="fundoLista/Right" to="." method="_on_Right_pressed"]
+[connection signal="pressed" from="fundoLista/Up" to="." method="_on_Up_pressed"]
+[connection signal="pressed" from="fundoLista/Down" to="." method="_on_Down_pressed"]
+[connection signal="pressed" from="fundoLista/Rodar" to="." method="_on_lista_pressed"]

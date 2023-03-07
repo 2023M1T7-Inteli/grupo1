@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/fase select rua att-1.png.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Imagens/fase select rua att-4.png.png" type="Texture" id=5]
 [ext_resource path="res://Imagens/fase select rua att-2.png.png" type="Texture" id=6]
 [ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=7]
+[ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=8]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -74,17 +75,18 @@ rect_scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 5 )
 flat = true
 
-[node name="ButtonVoltar" type="Button" parent="."]
+[node name="moveBackButton" type="TextureButton" parent="."]
 margin_left = 17.0
 margin_top = 34.0
 margin_right = 127.0
 margin_bottom = 60.0
 rect_scale = Vector2( 0.5, 0.5 )
-icon = ExtResource( 7 )
-flat = true
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
 
 [connection signal="pressed" from="Button1" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button1" to="." method="_on_Button1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
-[connection signal="pressed" from="ButtonVoltar" to="." method="_on_ButtonVoltar_pressed"]
+[connection signal="pressed" from="moveBackButton" to="." method="_on_moveBackButton_pressed"]

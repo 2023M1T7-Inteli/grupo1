@@ -2,23 +2,23 @@
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends RichTextLabel
-var ms = 0 #Milissegundos
-var s = 0 #Segundos
-var m = 0 #Minutos
-var score #Pontuação final
+var ms = 0 # Miliseconds
+var s = 0 # Seconds
+var m = 0 # Minutes
+var score # Final pontuation
 func _process(delta):
 	if ms > 9 :
 		s += 1
-		ms = 0 #Progressão de milissegundos para segundos
+		ms = 0 # Progression of miliseconds to seconds
 	if s > 59 :
 		m += 1
-		s = 0 #Progressão de segundos para minutos
-	set_text(str(m)+\":\"+str(s)+\":\"+str(ms)) #Exibição do timer na tela
+		s = 0 # Progression of seconds to minutes
+	set_text(str(m)+\":\"+str(s)+\":\"+str(ms)) # Time exibition
 
 func _on_Timer_timeout():
-	ms += 1 #Contagem de milissegundos de 1 em 1
+	ms += 1 # Miliseconds count
 
-func _on_Button_pressed(): #Definição da pontuação final a partir da quantidade de tempo despendido para completar a fase
+func _on_Button_pressed(): # Final pontuation based on the time of conclusion
 	$Timer.stop()
 	if m >= 5:
 		score = 100

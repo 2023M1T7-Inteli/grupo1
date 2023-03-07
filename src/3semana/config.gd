@@ -1,6 +1,5 @@
 extends Node2D
 
-
-func _on_voltar_pressed():
+# Move back to the initial screen
+func _on_Back_pressed():
 	get_tree().change_scene("res://Inicio.tscn")
-	# volta para a tela inicial
