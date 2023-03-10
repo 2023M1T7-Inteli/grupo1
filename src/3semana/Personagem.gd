@@ -1,4 +1,6 @@
 extends KinematicBody2D
+# Previous bode script, saved for Level 2
+
 # Change name comandList, move1, move2, move3, move4
 var comandList = [] # Array where the commands will be saved
 var i = 0 # Variable that select the element of the array that will be read

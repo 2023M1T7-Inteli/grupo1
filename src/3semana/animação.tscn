@@ -20,24 +20,23 @@ position = Vector2( 230.5, 338.376 )
 scale = Vector2( 0.285802, 0.260347 )
 texture = ExtResource( 2 )
 
-[node name="Animação2" type="Sprite" parent="."]
-visible = false
-position = Vector2( 336, 648 )
-scale = Vector2( 0.237912, 0.216722 )
-texture = ExtResource( 4 )
-
 [node name="ColorRect" type="Sprite" parent="."]
-position = Vector2( 235, 755 )
+position = Vector2( 210.25, 755.056 )
 scale = Vector2( 0.335312, 0.335313 )
 texture = ExtResource( 7 )
 
 [node name="texto" type="RichTextLabel" parent="."]
-margin_left = 61.0
-margin_top = 688.0
-margin_right = 400.0
-margin_bottom = 746.0
+margin_left = 36.2496
+margin_top = 688.056
+margin_right = 375.25
+margin_bottom = 746.056
 custom_fonts/normal_font = SubResource( 1 )
 text = "Em uma tarde tranquila na cidade de Pilar"
+
+[node name="Animação2" type="Sprite" parent="."]
+position = Vector2( 368.85, 667.824 )
+scale = Vector2( 0.211769, 0.192908 )
+texture = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -46,10 +45,10 @@ wait_time = 0.05
 autostart = true
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 317.0
-margin_top = 730.0
-margin_right = 908.0
-margin_bottom = 1321.0
+margin_left = 189.0
+margin_top = 727.0
+margin_right = 780.0
+margin_bottom = 1318.0
 rect_scale = Vector2( 0.08, 0.08 )
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 5 )

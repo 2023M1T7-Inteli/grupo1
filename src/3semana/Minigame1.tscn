@@ -1,16 +1,21 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Imagens/Areia da praia com malha quadriculada.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Stay Pixel DEMO.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Level.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Minigame1.gd" type="Script" id=5]
 [ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=6]
 [ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=7]
 [ext_resource path="res://Imagens/caixa_pergunta.png" type="Texture" id=8]
-[ext_resource path="res://Restart.png" type="Texture" id=9]
+[ext_resource path="res://Imagens/Restart.png" type="Texture" id=9]
 [ext_resource path="res://Imagens/image.png" type="Texture" id=10]
 [ext_resource path="res://coluda_comando-2.png.png" type="Texture" id=11]
 
 [sub_resource type="Theme" id=3]
+
+[sub_resource type="DynamicFont" id=10]
+size = 18
+font_data = ExtResource( 2 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 213, 10 )
@@ -68,15 +73,16 @@ texture = ExtResource( 8 )
 [node name="RichTextLabel" type="RichTextLabel" parent="WindowDialog"]
 modulate = Color( 0, 0, 0, 1 )
 anchor_left = -0.26441
-anchor_top = -8.05942e-05
-anchor_right = 0.146197
-anchor_bottom = 0.0908285
-margin_left = -96.4897
-margin_top = -24.9645
-margin_right = -96.4897
-margin_bottom = -24.9645
+anchor_top = -8.06808e-05
+anchor_right = 0.12953
+anchor_bottom = 0.10901
+margin_left = -81.3763
+margin_top = -23.3687
+margin_right = -81.3763
+margin_bottom = -23.3687
 rect_scale = Vector2( 2, 2 )
 theme = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 10 )
 text = "
 "
 __meta__ = {

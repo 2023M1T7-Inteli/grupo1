@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://mapa.png" type="Texture" id=1]
+[ext_resource path="res://Imagens/mapa.png" type="Texture" id=1]
 [ext_resource path="res://Fundo.gd" type="Script" id=2]
 [ext_resource path="res://Imagens/botao_start-1.png (1).png" type="Texture" id=3]
 [ext_resource path="res://Imagens/botao_config_pressionado.png" type="Texture" id=4]
 [ext_resource path="res://Imagens/botao_config.png" type="Texture" id=5]
 [ext_resource path="res://Imagens/Botao-start-pressionado.png" type="Texture" id=6]
-[ext_resource path="res://logo (1).png" type="Texture" id=7]
+[ext_resource path="res://Imagens/logo (1).png" type="Texture" id=7]
 [ext_resource path="res://Imagens/creditos.png-1.png.png" type="Texture" id=8]
 [ext_resource path="res://Imagens/botao_creditos_pressionado.png" type="Texture" id=9]
 
@@ -54,8 +54,8 @@ texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
 
 [node name="Logo(1)" type="Sprite" parent="backGround"]
-position = Vector2( 32.4408, -916.284 )
-scale = Vector2( 1.15346, 1.189 )
+position = Vector2( 29.1967, -998.094 )
+scale = Vector2( 1.1673, 1.33372 )
 texture = ExtResource( 7 )
 
 [connection signal="pressed" from="backGround/play" to="backGround" method="_on_jogar_pressed"]

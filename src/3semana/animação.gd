@@ -43,16 +43,11 @@ func _show_message():
 	# Set the label to the text in the variable msg
 	$texto.bbcode_text = msg
 	$Timer.start()
-	
-
 
 func _on_Timer_timeout():
 	if $texto.visible_characters == $texto.bbcode_text.length():
 		$Timer.stop()
 	$texto.visible_characters += 1
-	print($texto.visible_characters)
-	print($texto.bbcode_text.length())
-
 
 func _on_TextureButton_pressed():
 	_show_message()
