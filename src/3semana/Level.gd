@@ -1,93 +1,134 @@
 extends KinematicBody2D
-# Change name ListaComandos, mover1, mover2, mover3, mover4
-var listaComandos = [] # Array where the commands will be saved
-var i = 0 # Variable that select the element of the array that will be read
-# Variables that controls the moviments of the bode
+
+# Emit signal to Minigame1
+signal vetor(comandList)
+
+var comandList = [] # Array of moviment commands
+var i = 0 # Wich element will be read
+
+# Variables of moviment
 var mover1 = false 
 var mover2 = false
 var mover3 = false
 var mover4 = false
-# Variables that save the initial cordinates of the bode when he start moving
+var mover5 = false
+
+# Varibles of control
+var comecar = false
+var reset = false
+var condition = true
+
+# Texture of console arrows
+var up = load("res://Imagens/Seta_Up_console.png")
+var down = load("res://Imagens/Seta_Down_console.png")
+var left = load("res://Imagens/Seta_Left_console.png")
+var right = load("res://Imagens/Seta_Right_console.png")
+
+# Save the initial cordinates of the bode
 var x
 var y
 
+# Reset the number of coins
 func _ready():
 	Global.coin = 0
-# Functions that save the buttons pressed and writes in the labem the historic of commands
+	$Bode/AnimationPlayer.play("Stop")
+
+# Functions that apped vetors in the array
 func _on_Left_pressed():
-	if !$Bode/AnimationPlayer.is_playing():
-		listaComandos.append("left")
-		$Lista.text += "| <-"
-		print(listaComandos)
+	if !(mover1 or mover2 or mover3 or mover4):
+		comandList.append("left")
 
 func _on_Right_pressed():
-	if !$Bode/AnimationPlayer.is_playing():
-		listaComandos.append("right")
-		$Lista.text += "| ->"
-		print(listaComandos)
+	if !(mover1 or mover2 or mover3 or mover4):
+		comandList.append("right")
 
 func _on_Down_pressed():
-	if !$Bode/AnimationPlayer.is_playing():
-		listaComandos.append("down")
-		$Lista.text += "| v"
-		print(listaComandos)
+	if !(mover1 or mover2 or mover3 or mover4):
+		comandList.append("down")
 
 func _on_Up_pressed():
-	if !$Bode/AnimationPlayer.is_playing():
-		listaComandos.append("up")
-		$Lista.text += "| ^"
-		print(listaComandos)
+	if !(mover1 or mover2 or mover3 or mover4):
+		comandList.append("up")
 
-# Function that trigger the bode movimentation in the order of the array listaComandos
+# Read the movemnt array
 func _on_lista_pressed():
-	# Save the initial position
-	x = $Bode.position.x
-	y = $Bode.position.y
-	# Do not let execute if the number of calls is equal the numbers of elements in the array, not letting the code bug, calling a no existing element
-	if i != listaComandos.size():
 
-		# These conditionals makes the i go to the next element and add the direction to the array
-		if listaComandos[i] == ("right"):
-			i += 1
-			mover1 = true
+	if comecar:
 
-		elif listaComandos[i] == ("left"):
-			i += 1
-			mover2 = true
+		reset = true
+		# Save the initial position
+		x = $Bode.position.x
+		y = $Bode.position.y
 
-		elif listaComandos[i] == ("down"):
-			i += 1
-			mover3 = true
+# Do not let call a non existent element in the erray
+		if i != comandList.size():
+			condition = true
 
-		elif listaComandos[i] == ("up"):
-			i += 1
-			mover4 = true
+			# Conditionals that activate the bode moviment
+			if comandList[i] == ("right"):
+				i += 1
+				mover1 = true
 
+			elif comandList[i] == ("left"):
+				i += 1
+				mover2 = true
+
+			elif comandList[i] == ("down"):
+				i += 1
+				mover3 = true
+
+			elif comandList[i] == ("up"):
+				i += 1
+				mover4 = true
+
+# Reset the func for another set of moviments
+		else:
+			i = 0
+			comandList = []
+			comecar = false
+			$Bode/AnimationPlayer.play("Stop")
+			for j in range(15):
+				get_node("Sprite"+str(j)).texture = null
+
+# Emit signal for Minigame1
 	else:
-		$Lista.text = ""
-		i = 0
-		listaComandos = []
+		emit_signal("vetor", comandList)
 
-func audio():
-	$AudioStreamPlayer.play()
+# Reset console for another set od movements
+	if reset:
+		if i == comandList.size() and Global.coin != 5 and ! condition:
+			comandList = []
+			for j in range(15):
+				get_node("Sprite"+str(j)).texture = null
 
-# Function that makes the bode move
+
+	# Function that makes the bode move
 func _process(delta):
-	# Conditionals that make the bode moves deppending of the direction
-	# Right
-	#get_node("coin").connect("coletou",self,"audio")
-	#$AudioStreamPlayer.play()
-	
+
+# Append the arrows at the console
+	if len(comandList)<=15:
+		for j in range(len(comandList)):
+			if comandList[j]=="up":
+				get_node("Sprite"+str(j)).texture = up
+			elif comandList[j]=="left":
+				get_node("Sprite"+str(j)).texture = left
+			elif comandList[j]=="right":
+				get_node("Sprite"+str(j)).texture = right
+			elif comandList[j]=="down":
+				get_node("Sprite"+str(j)).texture = down
+
+# Move right
 	if mover1:
 		$Bode/AnimationPlayer.play("walkRight")
 		$Bode.move_and_slide(80*Vector2(2,0))
 		#Conditional that make the bode stop after reach the determined location
-		if $Bode.position.x > x + 66 or $Bode.position.x > 370:
+		if $Bode.position.x > x + 66 or $Bode.position.x > 355:
 			mover1 = false
 			$Bode/AnimationPlayer.stop()
 			_on_lista_pressed()
+			condition = false
 
-	# Left
+# Move left
 	elif mover2:
 		$Bode/AnimationPlayer.play("walkLeft")
 		$Bode.move_and_slide(-80*Vector2(2,0))
@@ -95,8 +136,9 @@ func _process(delta):
 			mover2 = false
 			$Bode/AnimationPlayer.stop()
 			_on_lista_pressed()
+			condition = false
 
-	# Down
+# Move down
 	elif mover3:
 		$Bode/AnimationPlayer.play("walkRight")
 		$Bode.move_and_slide(80*Vector2(0,2))
@@ -104,13 +146,18 @@ func _process(delta):
 			mover3 = false
 			$Bode/AnimationPlayer.stop()
 			_on_lista_pressed()
+			condition = false
 
-	# Up
+# Move up
 	elif mover4:
-		$Bode/AnimationPlayer.play("walkRight")
+		$Bode/AnimationPlayer.play("walkup")
 		$Bode.move_and_slide(-80*Vector2(0,2))
 		if $Bode.position.y < y - 66 or $Bode.position.y < 85:
 			mover4 = false
 			$Bode/AnimationPlayer.stop()
 			_on_lista_pressed()	
+			condition = false
 
+# Let the game start
+	if comandList.size() <= 15:
+		comecar = true

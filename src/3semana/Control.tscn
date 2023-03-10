@@ -12,8 +12,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 200, 367 )
-scale = Vector2( 0.65, 0.65 )
+position = Vector2( 235.075, 367 )
+scale = Vector2( 0.763511, 0.65 )
 texture = ExtResource( 4 )
 
 [node name="GridContainer" type="GridContainer" parent="."]
@@ -25,7 +25,7 @@ margin_right = -25.0
 margin_bottom = -25.0
 
 [node name="MusicSetting" type="VBoxContainer" parent="GridContainer"]
-margin_right = 350.0
+margin_right = 416.0
 margin_bottom = 58.0
 size_flags_horizontal = 3
 script = ExtResource( 1 )
@@ -34,86 +34,88 @@ bus_name = "Music"
 audio_stream_player_path = NodePath("../../MusicPlayer")
 
 [node name="Label" type="Label" parent="GridContainer/MusicSetting"]
-margin_right = 350.0
+margin_right = 416.0
 margin_bottom = 14.0
 align = 1
 
 [node name="HSlider" type="HSlider" parent="GridContainer/MusicSetting"]
 modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
 margin_top = 18.0
-margin_right = 350.0
+margin_right = 416.0
 margin_bottom = 34.0
 min_value = -24.0
 max_value = 0.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/MusicSetting"]
 margin_top = 38.0
-margin_right = 350.0
+margin_right = 416.0
 margin_bottom = 58.0
 
 [node name="Play" type="Button" parent="GridContainer/MusicSetting/HBoxContainer"]
 modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
-margin_right = 173.0
+margin_right = 206.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "Tocar"
 
 [node name="Stop" type="Button" parent="GridContainer/MusicSetting/HBoxContainer"]
 modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
-margin_left = 177.0
-margin_right = 350.0
+margin_left = 210.0
+margin_right = 416.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "Parar"
 
 [node name="SFXSetting" type="VBoxContainer" parent="GridContainer"]
 margin_top = 62.0
-margin_right = 350.0
+margin_right = 416.0
 margin_bottom = 120.0
 size_flags_horizontal = 3
 script = ExtResource( 1 )
-label = "Volume dos efeitos sonoros"
+label = "SFX"
 bus_name = "SFX"
 audio_stream_player_path = NodePath("../../SFXPlayer")
 
 [node name="Label" type="Label" parent="GridContainer/SFXSetting"]
-margin_right = 350.0
+margin_right = 416.0
 margin_bottom = 14.0
 align = 1
 
-[node name="HSlider" type="HSlider" parent="GridContainer/SFXSetting"]
+[node name="sfx" type="HSlider" parent="GridContainer/SFXSetting"]
 modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
 margin_top = 18.0
-margin_right = 350.0
+margin_right = 416.0
 margin_bottom = 34.0
 min_value = -24.0
 max_value = 0.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/SFXSetting"]
 margin_top = 38.0
-margin_right = 350.0
+margin_right = 416.0
 margin_bottom = 58.0
 
 [node name="Play" type="Button" parent="GridContainer/SFXSetting/HBoxContainer"]
 modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
-margin_right = 173.0
+margin_right = 206.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "Tocar"
 
 [node name="Stop" type="Button" parent="GridContainer/SFXSetting/HBoxContainer"]
 modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
-margin_left = 177.0
-margin_right = 350.0
+margin_left = 210.0
+margin_right = 416.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "Parar"
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+bus = "Music"
 
 [node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+bus = "SFX"
 
 [node name="mainMenuButton" type="TextureButton" parent="."]
 margin_left = 12.0
@@ -127,7 +129,7 @@ texture_pressed = ExtResource( 6 )
 [connection signal="value_changed" from="GridContainer/MusicSetting/HSlider" to="GridContainer/MusicSetting" method="_on_HSlider_value_changed"]
 [connection signal="pressed" from="GridContainer/MusicSetting/HBoxContainer/Play" to="GridContainer/MusicSetting" method="_on_Play_pressed"]
 [connection signal="pressed" from="GridContainer/MusicSetting/HBoxContainer/Stop" to="GridContainer/MusicSetting" method="_on_Stop_pressed"]
-[connection signal="value_changed" from="GridContainer/SFXSetting/HSlider" to="GridContainer/SFXSetting" method="_on_HSlider_value_changed"]
+[connection signal="value_changed" from="GridContainer/SFXSetting/sfx" to="GridContainer/SFXSetting" method="_on_sfx_value_changed"]
 [connection signal="pressed" from="GridContainer/SFXSetting/HBoxContainer/Play" to="GridContainer/SFXSetting" method="_on_Play_pressed"]
 [connection signal="pressed" from="GridContainer/SFXSetting/HBoxContainer/Stop" to="GridContainer/SFXSetting" method="_on_Stop_pressed"]
 [connection signal="pressed" from="mainMenuButton" to="GridContainer/MusicSetting" method="_on_mainMenuButton_pressed"]

@@ -1,8 +1,15 @@
 extends Sprite
 
+
 # Opens the main scene
 func _on_jogar_pressed():
-	get_tree().change_scene("res://Main.tscn")
+
+# Just play the animation once
+	if Global.animationCount:
+		Global.animationCount = false
+		get_tree().change_scene("res://animação.tscn")
+	else:
+		get_tree().change_scene("res://Main.tscn")
 
 # Opens the configurations scene
 func _on_config_pressed():

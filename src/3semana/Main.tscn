@@ -19,8 +19,8 @@ margin_right = 402.0
 margin_bottom = 801.0
 
 [node name="TelaDeAberturInicalFundo" type="Sprite" parent="ColorRect"]
-position = Vector2( 196.5, 427.544 )
-scale = Vector2( 0.319231, 0.312909 )
+position = Vector2( 227, 427.544 )
+scale = Vector2( 0.366154, 0.312909 )
 texture = ExtResource( 3 )
 
 [node name="Button1" type="Button" parent="."]

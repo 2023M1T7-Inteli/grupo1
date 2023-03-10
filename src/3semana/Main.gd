@@ -1,6 +1,5 @@
 extends Node
 
-
 # Declare member variables here. Examples:
 var my_dict = {1: "A", 2: "B"}
 

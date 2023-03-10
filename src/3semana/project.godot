@@ -20,7 +20,7 @@ Global="*res://Global.gd"
 
 [display]
 
-window/size/width=400
+window/size/width=466
 window/size/height=800
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
