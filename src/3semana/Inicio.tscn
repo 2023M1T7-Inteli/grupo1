@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Imagens/mapa.png" type="Texture" id=1]
+[ext_resource path="res://Fundo.gd" type="Script" id=2]
+[ext_resource path="res://Imagens/botao_start-1.png (1).png" type="Texture" id=3]
+[ext_resource path="res://Imagens/botao_config_pressionado.png" type="Texture" id=4]
+[ext_resource path="res://Imagens/botao_config.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/Botao-start-pressionado.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/logo (1).png" type="Texture" id=7]
+[ext_resource path="res://Imagens/creditos.png-1.png.png" type="Texture" id=8]
+[ext_resource path="res://Imagens/botao_creditos_pressionado.png" type="Texture" id=9]
+
+[node name="start" type="Node2D"]
+
+[node name="backGround" type="Sprite" parent="."]
+position = Vector2( 231, 381 )
+scale = Vector2( 0.308254, 0.244466 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="play" type="TextureButton" parent="backGround"]
+anchor_left = 0.000195808
+anchor_top = 1.84674e-05
+anchor_right = 0.000195808
+anchor_bottom = 1.84674e-05
+margin_left = -376.313
+margin_top = -319.063
+margin_right = 214.687
+margin_bottom = 271.937
+rect_scale = Vector2( 1.0706, 1.26563 )
+rect_pivot_offset = Vector2( -1589.09, -515.385 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="config" type="TextureButton" parent="backGround"]
+margin_left = -710.454
+margin_top = 110.445
+margin_right = -361.454
+margin_bottom = 431.445
+rect_scale = Vector2( 1.04847, 1.04847 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
+
+[node name="credits" type="TextureButton" parent="backGround"]
+margin_left = 480.124
+margin_top = 110.445
+margin_right = 831.123
+margin_bottom = 431.445
+rect_scale = Vector2( 0.836965, 0.836965 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+
+[node name="Logo(1)" type="Sprite" parent="backGround"]
+position = Vector2( 29.1967, -998.094 )
+scale = Vector2( 1.1673, 1.33372 )
+texture = ExtResource( 7 )
+
+[connection signal="pressed" from="backGround/play" to="backGround" method="_on_jogar_pressed"]
+[connection signal="pressed" from="backGround/config" to="backGround" method="_on_config_pressed"]
+[connection signal="pressed" from="backGround/credits" to="backGround" method="_on_creditos_pressed"]

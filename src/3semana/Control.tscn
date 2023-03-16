@@ -1,0 +1,135 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Setting.gd" type="Script" id=1]
+[ext_resource path="res://Efeito Sonoro Corrida de Desenho Animado.wav" type="AudioStream" id=2]
+[ext_resource path="res://Pedaço de Alagoas.wav" type="AudioStream" id=3]
+[ext_resource path="res://Imagens/Tela de ajustes.png" type="Texture" id=4]
+[ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=6]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 235.075, 367 )
+scale = Vector2( 0.763511, 0.65 )
+texture = ExtResource( 4 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = 150.0
+margin_right = -25.0
+margin_bottom = -25.0
+
+[node name="MusicSetting" type="VBoxContainer" parent="GridContainer"]
+margin_right = 416.0
+margin_bottom = 58.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+label = "Volume da música"
+bus_name = "Music"
+audio_stream_player_path = NodePath("../../MusicPlayer")
+
+[node name="Label" type="Label" parent="GridContainer/MusicSetting"]
+margin_right = 416.0
+margin_bottom = 14.0
+align = 1
+
+[node name="HSlider" type="HSlider" parent="GridContainer/MusicSetting"]
+modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
+margin_top = 18.0
+margin_right = 416.0
+margin_bottom = 34.0
+min_value = -24.0
+max_value = 0.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/MusicSetting"]
+margin_top = 38.0
+margin_right = 416.0
+margin_bottom = 58.0
+
+[node name="Play" type="Button" parent="GridContainer/MusicSetting/HBoxContainer"]
+modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
+margin_right = 206.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Tocar"
+
+[node name="Stop" type="Button" parent="GridContainer/MusicSetting/HBoxContainer"]
+modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
+margin_left = 210.0
+margin_right = 416.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Parar"
+
+[node name="SFXSetting" type="VBoxContainer" parent="GridContainer"]
+margin_top = 62.0
+margin_right = 416.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+label = "SFX"
+bus_name = "SFX"
+audio_stream_player_path = NodePath("../../SFXPlayer")
+
+[node name="Label" type="Label" parent="GridContainer/SFXSetting"]
+margin_right = 416.0
+margin_bottom = 14.0
+align = 1
+
+[node name="sfx" type="HSlider" parent="GridContainer/SFXSetting"]
+modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
+margin_top = 18.0
+margin_right = 416.0
+margin_bottom = 34.0
+min_value = -24.0
+max_value = 0.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/SFXSetting"]
+margin_top = 38.0
+margin_right = 416.0
+margin_bottom = 58.0
+
+[node name="Play" type="Button" parent="GridContainer/SFXSetting/HBoxContainer"]
+modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
+margin_right = 206.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Tocar"
+
+[node name="Stop" type="Button" parent="GridContainer/SFXSetting/HBoxContainer"]
+modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
+margin_left = 210.0
+margin_right = 416.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Parar"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "Music"
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+bus = "SFX"
+
+[node name="mainMenuButton" type="TextureButton" parent="."]
+margin_left = 12.0
+margin_top = 24.0
+margin_right = 177.0
+margin_bottom = 151.0
+rect_scale = Vector2( 0.36, 0.36 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+
+[connection signal="value_changed" from="GridContainer/MusicSetting/HSlider" to="GridContainer/MusicSetting" method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="GridContainer/MusicSetting/HBoxContainer/Play" to="GridContainer/MusicSetting" method="_on_Play_pressed"]
+[connection signal="pressed" from="GridContainer/MusicSetting/HBoxContainer/Stop" to="GridContainer/MusicSetting" method="_on_Stop_pressed"]
+[connection signal="value_changed" from="GridContainer/SFXSetting/sfx" to="GridContainer/SFXSetting" method="_on_sfx_value_changed"]
+[connection signal="pressed" from="GridContainer/SFXSetting/HBoxContainer/Play" to="GridContainer/SFXSetting" method="_on_Play_pressed"]
+[connection signal="pressed" from="GridContainer/SFXSetting/HBoxContainer/Stop" to="GridContainer/SFXSetting" method="_on_Stop_pressed"]
+[connection signal="pressed" from="mainMenuButton" to="GridContainer/MusicSetting" method="_on_mainMenuButton_pressed"]
