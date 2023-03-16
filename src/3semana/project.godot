@@ -16,6 +16,7 @@ run/main_scene="res://Inicio.tscn"
 [autoload]
 
 Global="*res://Global.gd"
+TransitionCanvas="*res://transitionCanvas.tscn"
 
 [display]
 

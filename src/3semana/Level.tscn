@@ -189,7 +189,10 @@ position = Vector2( 232, 627 )
 scale = Vector2( 0.64644, 0.64644 )
 
 [node name="Bode" type="KinematicBody2D" parent="."]
-position = Vector2( 36, 675 )
+position = Vector2( 10, 562 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bode"]
 position = Vector2( 12, 9 )

@@ -33,7 +33,7 @@ func _show_message():
 		$ColorRect.hide() # Hide the color rect
 
 	# Change Scene
-		get_tree().change_scene("res://Main.tscn")
+		TransitionCanvas.change_scene("res://Main.tscn")
 		return
 
 # Return the first element and delet him after that

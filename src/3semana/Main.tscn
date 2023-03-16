@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/fase select rua att-1.png.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Imagens/fase select rua att-2.png.png" type="Texture" id=6]
 [ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=7]
 [ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=8]
+[ext_resource path="res://Imagens/cadeado.png" type="Texture" id=9]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -42,9 +43,9 @@ anchor_top = 0.20375
 anchor_right = 0.428
 anchor_bottom = 0.34565
 margin_left = 180.0
-margin_top = 108.0
+margin_top = 107.0
 margin_right = 408.8
-margin_bottom = 320.48
+margin_bottom = 319.48
 rect_scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 6 )
 flat = true
@@ -83,6 +84,24 @@ margin_bottom = 60.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
+
+[node name="Cadeado1" type="Sprite" parent="."]
+position = Vector2( 287, 325 )
+scale = Vector2( 0.227811, 0.227811 )
+texture = ExtResource( 9 )
+offset = Vector2( 68.9796, -58.6327 )
+
+[node name="Cadeado2" type="Sprite" parent="."]
+position = Vector2( 121, 463 )
+scale = Vector2( 0.227811, 0.227811 )
+texture = ExtResource( 9 )
+offset = Vector2( 68.9796, -58.6327 )
+
+[node name="Cadeado3" type="Sprite" parent="."]
+position = Vector2( 307, 569 )
+scale = Vector2( 0.227811, 0.227811 )
+texture = ExtResource( 9 )
+offset = Vector2( 68.9796, -58.6327 )
 
 [connection signal="pressed" from="Button1" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button1" to="." method="_on_Button1_pressed"]

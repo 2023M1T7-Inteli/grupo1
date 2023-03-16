@@ -24,10 +24,15 @@ func _ready():
 	print(global.numQuestion)
 	$WindowDialog/RichTextLabel.text = question
 	$WindowDialog/restart.hide()
-
+	$"Palmeira-1/AnimationPlayer".play("Palmeira")
+	$"Palmeira-2/AnimationPlayer".play("Palmeira")
+	$"Palmeira-3/AnimationPlayer".play("Palmeira")
+	$"Agua-animada/AnimationPlayer".play("Agua-animada")
+	$barco/AnimationPlayer.play("Barco")
+	
 # Button to go back to the previous scene
 func _on_Button2_pressed(): 
-	get_tree().change_scene("res://Main.tscn")
+	TransitionCanvas.change_scene("res://Main.tscn")
 
 # Show the wining message to the player
 func _process(delta):
@@ -39,6 +44,7 @@ func _process(delta):
 			popup.visible = true
 			Global.coin == 0
 			process = false
+			Global.cadeado1 += 1
 			$WindowDialog/restart.show()
 
 # Close popup
@@ -53,4 +59,6 @@ func _on_Fundo_vetor(comandList):
 
 # Restart the Scene
 func _on_restart_pressed():
-	get_tree().change_scene("res://Minigame1.tscn")
+	TransitionCanvas.change_scene("res://Minigame1.tscn")
+	
+	
