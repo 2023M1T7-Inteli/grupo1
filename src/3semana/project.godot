@@ -17,6 +17,7 @@ run/main_scene="res://Inicio.tscn"
 
 Global="*res://Global.gd"
 TransitionCanvas="*res://transitionCanvas.tscn"
+TocaMusica="*res://tocaMusica.tscn"
 
 [display]
 

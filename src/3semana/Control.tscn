@@ -1,121 +1,28 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Setting.gd" type="Script" id=1]
-[ext_resource path="res://Efeito Sonoro Corrida de Desenho Animado.wav" type="AudioStream" id=2]
-[ext_resource path="res://Pedaço de Alagoas.wav" type="AudioStream" id=3]
+[ext_resource path="res://AudioSettings.gd" type="Script" id=1]
+[ext_resource path="res://Imagens/botaoMaster.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/ajustesTitulo.png" type="Texture" id=3]
 [ext_resource path="res://Imagens/Tela de ajustes.png" type="Texture" id=4]
 [ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=5]
 [ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/botaoMusica.png" type="Texture" id=7]
+[ext_resource path="res://Imagens/botaoSFX.png" type="Texture" id=8]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 235.075, 367 )
-scale = Vector2( 0.763511, 0.65 )
+position = Vector2( 234, 370 )
+scale = Vector2( 0.756, 0.65 )
 texture = ExtResource( 4 )
 
-[node name="GridContainer" type="GridContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 25.0
-margin_top = 150.0
-margin_right = -25.0
-margin_bottom = -25.0
-
-[node name="MusicSetting" type="VBoxContainer" parent="GridContainer"]
-margin_right = 416.0
-margin_bottom = 58.0
-size_flags_horizontal = 3
-script = ExtResource( 1 )
-label = "Volume da música"
-bus_name = "Music"
-audio_stream_player_path = NodePath("../../MusicPlayer")
-
-[node name="Label" type="Label" parent="GridContainer/MusicSetting"]
-margin_right = 416.0
-margin_bottom = 14.0
-align = 1
-
-[node name="HSlider" type="HSlider" parent="GridContainer/MusicSetting"]
-modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
-margin_top = 18.0
-margin_right = 416.0
-margin_bottom = 34.0
-min_value = -24.0
-max_value = 0.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/MusicSetting"]
-margin_top = 38.0
-margin_right = 416.0
-margin_bottom = 58.0
-
-[node name="Play" type="Button" parent="GridContainer/MusicSetting/HBoxContainer"]
-modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
-margin_right = 206.0
-margin_bottom = 20.0
-size_flags_horizontal = 3
-text = "Tocar"
-
-[node name="Stop" type="Button" parent="GridContainer/MusicSetting/HBoxContainer"]
-modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
-margin_left = 210.0
-margin_right = 416.0
-margin_bottom = 20.0
-size_flags_horizontal = 3
-text = "Parar"
-
-[node name="SFXSetting" type="VBoxContainer" parent="GridContainer"]
-margin_top = 62.0
-margin_right = 416.0
-margin_bottom = 120.0
-size_flags_horizontal = 3
-script = ExtResource( 1 )
-label = "SFX"
-bus_name = "SFX"
-audio_stream_player_path = NodePath("../../SFXPlayer")
-
-[node name="Label" type="Label" parent="GridContainer/SFXSetting"]
-margin_right = 416.0
-margin_bottom = 14.0
-align = 1
-
-[node name="sfx" type="HSlider" parent="GridContainer/SFXSetting"]
-modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
-margin_top = 18.0
-margin_right = 416.0
-margin_bottom = 34.0
-min_value = -24.0
-max_value = 0.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/SFXSetting"]
-margin_top = 38.0
-margin_right = 416.0
-margin_bottom = 58.0
-
-[node name="Play" type="Button" parent="GridContainer/SFXSetting/HBoxContainer"]
-modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
-margin_right = 206.0
-margin_bottom = 20.0
-size_flags_horizontal = 3
-text = "Tocar"
-
-[node name="Stop" type="Button" parent="GridContainer/SFXSetting/HBoxContainer"]
-modulate = Color( 0.533333, 0.941176, 0.576471, 1 )
-margin_left = 210.0
-margin_right = 416.0
-margin_bottom = 20.0
-size_flags_horizontal = 3
-text = "Parar"
-
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-bus = "Music"
-
-[node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
-bus = "SFX"
+[node name="AjustesTitulo" type="Sprite" parent="."]
+position = Vector2( 233, 120 )
+scale = Vector2( 0.47191, 0.47191 )
+texture = ExtResource( 3 )
 
 [node name="mainMenuButton" type="TextureButton" parent="."]
 margin_left = 12.0
@@ -126,10 +33,78 @@ rect_scale = Vector2( 0.36, 0.36 )
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
-[connection signal="value_changed" from="GridContainer/MusicSetting/HSlider" to="GridContainer/MusicSetting" method="_on_HSlider_value_changed"]
-[connection signal="pressed" from="GridContainer/MusicSetting/HBoxContainer/Play" to="GridContainer/MusicSetting" method="_on_Play_pressed"]
-[connection signal="pressed" from="GridContainer/MusicSetting/HBoxContainer/Stop" to="GridContainer/MusicSetting" method="_on_Stop_pressed"]
-[connection signal="value_changed" from="GridContainer/SFXSetting/sfx" to="GridContainer/SFXSetting" method="_on_sfx_value_changed"]
-[connection signal="pressed" from="GridContainer/SFXSetting/HBoxContainer/Play" to="GridContainer/SFXSetting" method="_on_Play_pressed"]
-[connection signal="pressed" from="GridContainer/SFXSetting/HBoxContainer/Stop" to="GridContainer/SFXSetting" method="_on_Stop_pressed"]
-[connection signal="pressed" from="mainMenuButton" to="GridContainer/MusicSetting" method="_on_mainMenuButton_pressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = 60.0
+margin_top = 184.0
+margin_right = 179.0
+margin_bottom = 330.0
+rect_scale = Vector2( 3, 3 )
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_right = 119.0
+margin_bottom = 14.0
+text = " Volume principal"
+
+[node name="volumeMestre" type="HSlider" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 119.0
+margin_bottom = 35.0
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+min_value = -30.0
+max_value = 0.0
+
+[node name="Vazio1" type="Label" parent="VBoxContainer"]
+margin_top = 39.0
+margin_right = 119.0
+margin_bottom = 53.0
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_top = 57.0
+margin_right = 119.0
+margin_bottom = 71.0
+text = "Música"
+align = 1
+
+[node name="volumeMusica" type="HSlider" parent="VBoxContainer"]
+margin_top = 75.0
+margin_right = 119.0
+margin_bottom = 92.0
+custom_icons/grabber_disabled = ExtResource( 7 )
+custom_icons/grabber_highlight = ExtResource( 7 )
+custom_icons/grabber = ExtResource( 7 )
+min_value = -30.0
+max_value = 0.0
+
+[node name="Vazio2" type="Label" parent="VBoxContainer"]
+margin_top = 96.0
+margin_right = 119.0
+margin_bottom = 110.0
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_top = 114.0
+margin_right = 119.0
+margin_bottom = 128.0
+text = "Efeitos"
+align = 1
+
+[node name="volumeSFX" type="HSlider" parent="VBoxContainer"]
+margin_top = 132.0
+margin_right = 119.0
+margin_bottom = 149.0
+custom_icons/grabber_disabled = ExtResource( 8 )
+custom_icons/grabber_highlight = ExtResource( 8 )
+custom_icons/grabber = ExtResource( 8 )
+min_value = -30.0
+max_value = 0.0
+
+[connection signal="pressed" from="mainMenuButton" to="." method="_on_mainMenuButton_pressed"]
+[connection signal="value_changed" from="VBoxContainer/volumeMestre" to="." method="_on_volumeMestre_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/volumeMusica" to="." method="_on_volumeMusica_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/volumeSFX" to="." method="_on_volumeSFX_value_changed"]

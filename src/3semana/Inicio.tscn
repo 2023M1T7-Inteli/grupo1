@@ -79,7 +79,7 @@ tracks/0/keys = {
 [node name="start" type="Node2D"]
 
 [node name="backGround" type="Sprite" parent="."]
-position = Vector2( 232, 376 )
+position = Vector2( 232, 382 )
 scale = Vector2( 0.308254, 0.244466 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
