@@ -10,19 +10,9 @@ var condicao = true
 func coin():
 	Global.coin += 1
 
-# Detect the collision and hide the object
-func _on_coin_body_entered(body):
-	print("oi")
-	if (body.name == "Bode") and condicao:
-		$AudioStreamPlayer.play()
-		coin()
-		$CollisionShape2D.disabled = true
-		self.visible = false
-		condicao = false
-
-
 func _on_Sprite_area_entered(area):
+		print($area2d/CollisionShape2D.disabled)
 		$AudioStreamPlayer.play()
 		coin()
-		$Sprite/CollisionShape2D.disabled = true
-		self.visible = false
+		queue_free()
+		

@@ -1,8 +1,4 @@
-extends Node
-
-func _on_mainMenuButton_pressed():
-	get_tree().change_scene("res://inicio.tscn")
-
+extends CanvasLayer
 
 func _on_volumeMestre_value_changed(value1):
 	if value1 <= -30:

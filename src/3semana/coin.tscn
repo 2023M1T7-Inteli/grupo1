@@ -14,9 +14,9 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Area2D" parent="."]
+[node name="area2d" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area2d"]
 position = Vector2( 6, 5 )
 shape = SubResource( 8 )
 
@@ -24,4 +24,4 @@ shape = SubResource( 8 )
 stream = ExtResource( 3 )
 bus = "SFX"
 
-[connection signal="area_entered" from="Sprite" to="." method="_on_Sprite_area_entered"]
+[connection signal="area_entered" from="area2d" to="." method="_on_Sprite_area_entered"]

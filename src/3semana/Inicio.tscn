@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Imagens/mapa.png" type="Texture" id=1]
 [ext_resource path="res://Fundo.gd" type="Script" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://Imagens/creditos.png-1.png.png" type="Texture" id=8]
 [ext_resource path="res://Imagens/botao_creditos_pressionado.png" type="Texture" id=9]
 [ext_resource path="res://Imagens/logo_bodin.png" type="Texture" id=10]
+[ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=11]
+[ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=12]
+[ext_resource path="res://Control.tscn" type="PackedScene" id=13]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -155,6 +158,21 @@ vframes = 10
 anims/RESET = SubResource( 3 )
 anims/animation = SubResource( 4 )
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 252, 375 )
+
+[node name="CanvasLayer" parent="Sprite" instance=ExtResource( 13 )]
+
+[node name="TextureButton" type="TextureButton" parent="Sprite/CanvasLayer"]
+margin_left = 9.0
+margin_top = 22.0
+margin_right = 174.0
+margin_bottom = 149.0
+rect_scale = Vector2( 0.39517, 0.39517 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+
 [connection signal="pressed" from="backGround/play" to="backGround" method="_on_jogar_pressed"]
 [connection signal="pressed" from="backGround/config" to="backGround" method="_on_config_pressed"]
 [connection signal="pressed" from="backGround/credits" to="backGround" method="_on_creditos_pressed"]
+[connection signal="pressed" from="Sprite/CanvasLayer/TextureButton" to="backGround" method="_on_TextureButton_pressed"]

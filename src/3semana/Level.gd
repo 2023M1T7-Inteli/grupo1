@@ -41,31 +41,37 @@ func _on_Up_pressed():
 		comandList.append("up")
 # Read the movemnt array
 func _on_lista_pressed():
+	$CanvasLayer/Rodar.disabled = true
 	if comecar:
 		reset = true
 		# Save the initial position
 		x = $Bode.position.x
 		y = $Bode.position.y
 # Do not let call a non existent element in the erray
-		if i != comandList.size():
+		if i != comandList.size() and !mover1 and !mover2 and !mover3 and !mover4:
 			condition = true
 			# Conditionals that activate the bode moviment
 			if comandList[i] == ("right"):
 				i += 1
 				mover1 = true
+				$AudioStreamPlayer.play()
 			elif comandList[i] == ("left"):
 				i += 1
 				mover2 = true
+				$AudioStreamPlayer.play()
 			elif comandList[i] == ("down"):
 				i += 1
 				mover3 = true
+				$AudioStreamPlayer.play()
 			elif comandList[i] == ("up"):
 				i += 1
 				mover4 = true
+				$AudioStreamPlayer.play()
 # Reset the func for another set of moviments
 		else:
 			i = 0
 			comandList = []
+			$CanvasLayer/Rodar.disabled = false
 			comecar = false
 			$Bode/AnimationPlayer.play("Stop")
 			for j in range(15):
@@ -73,12 +79,13 @@ func _on_lista_pressed():
 # Emit signal for Minigame1
 	else:
 		emit_signal("vetor", comandList)
-# Reset console for another set od movements
+# Reset console for another set of movements
 	if reset:
 		if i == comandList.size() and Global.coin != 5 and ! condition:
 			comandList = []
 			for j in range(15):
 				get_node("Sprite"+str(j)).texture = null
+
 	# Function that makes the bode move
 func _process(delta):
 # Append the arrows at the console
@@ -105,6 +112,7 @@ func _process(delta):
 			condition = false
 # Move left
 	elif mover2:
+		
 		$Bode/AnimationPlayer.play("walkLeft")
 		$Bode.move_and_slide(-80*Vector2(2,0))
 		if $Bode.position.x < x - 72 or $Bode.get_slide_collision(0)!=null:
@@ -116,6 +124,7 @@ func _process(delta):
 			
 # Move down
 	elif mover3:
+		
 		$Bode/AnimationPlayer.play("walkLeft")
 		$Bode.move_and_slide(80*Vector2(0,2))
 		if $Bode.position.y > y + 72 or $Bode.get_slide_collision(0)!=null:
@@ -126,6 +135,7 @@ func _process(delta):
 			condition = false
 # Move up
 	elif mover4:
+		
 		$Bode/AnimationPlayer.play("walkup")
 		$Bode.move_and_slide(-80*Vector2(0,2))
 		if $Bode.position.y < y - 72 or $Bode.get_slide_collision(0) != null:
@@ -138,3 +148,7 @@ func _process(delta):
 # Let the game start
 	if comandList.size() <= 15:
 		comecar = true
+
+
+func _on_Area2D_area_entered(area):
+	$AudioStreamPlayer2.play()

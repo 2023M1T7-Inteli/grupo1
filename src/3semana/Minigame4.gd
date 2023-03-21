@@ -22,7 +22,7 @@ func _ready():
 	var number = Global.numQuestion
 	var question = dict.get(number)
 	print(global.numQuestion)
-	$WindowDialog/RichTextLabel.text = question
+	$WindowDialog/RichTextLabel.text = "insira  questão eduh"
 	$WindowDialog/restart.hide()
 	$WindowDialog/Next.hide()
 	$"Palmeira-1/AnimationPlayer".play("Palmeira")
@@ -46,7 +46,6 @@ func _process(delta):
 			$WindowDialog/Node2D._on_Pronto_pressed()
 			Global.coin == 0
 			process = false
-			Global.cadeado1 += 1
 			$WindowDialog/restart.show()
 			$WindowDialog/Next.show()
 
@@ -63,7 +62,7 @@ func _on_Fundo_vetor(comandList):
 
 # Restart the Scene
 func _on_restart_pressed():
-	TransitionCanvas.change_scene("res://Minigame1.tscn")
+	TransitionCanvas.change_scene("res://Minigame4.tscn")
 
-func _on_TextureButton_pressed():
+func _on_Next_pressed():
 	TransitionCanvas.change_scene("res://Main.tscn")

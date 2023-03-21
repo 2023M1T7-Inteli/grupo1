@@ -1,17 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://AudioSettings.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/botaoMaster.png" type="Texture" id=2]
 [ext_resource path="res://Imagens/ajustesTitulo.png" type="Texture" id=3]
 [ext_resource path="res://Imagens/Tela de ajustes.png" type="Texture" id=4]
-[ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=5]
-[ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=6]
 [ext_resource path="res://Imagens/botaoMusica.png" type="Texture" id=7]
 [ext_resource path="res://Imagens/botaoSFX.png" type="Texture" id=8]
 
-[node name="Control" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -23,15 +19,6 @@ texture = ExtResource( 4 )
 position = Vector2( 233, 120 )
 scale = Vector2( 0.47191, 0.47191 )
 texture = ExtResource( 3 )
-
-[node name="mainMenuButton" type="TextureButton" parent="."]
-margin_left = 12.0
-margin_top = 24.0
-margin_right = 177.0
-margin_bottom = 151.0
-rect_scale = Vector2( 0.36, 0.36 )
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 modulate = Color( 1, 0, 0, 1 )
@@ -104,7 +91,6 @@ custom_icons/grabber = ExtResource( 8 )
 min_value = -30.0
 max_value = 0.0
 
-[connection signal="pressed" from="mainMenuButton" to="." method="_on_mainMenuButton_pressed"]
 [connection signal="value_changed" from="VBoxContainer/volumeMestre" to="." method="_on_volumeMestre_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/volumeMusica" to="." method="_on_volumeMusica_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/volumeSFX" to="." method="_on_volumeSFX_value_changed"]

@@ -1,6 +1,8 @@
 extends Sprite
 
 func _ready():
+	$"../Sprite".hide()
+	$"../Sprite/CanvasLayer".hide()
 	if Global.intro:
 		$ColorRect.visible = true
 	$"AnimaçãoCaraDoBode/AnimationPlayer".play("animation")
@@ -22,9 +24,15 @@ func _on_jogar_pressed():
 # Opens the configurations scene
 func _on_config_pressed():
 	Global.intro = false
-	TransitionCanvas.change_scene("res://Control.tscn")
+	$"../Sprite".show()
+	$"../Sprite/CanvasLayer".show()
 
 # Open the credits scene
 func _on_creditos_pressed():
 	Global.intro = false
 	TransitionCanvas.change_scene("res://Node2D.tscn")
+
+
+func _on_TextureButton_pressed():
+	$"../Sprite".hide()
+	$"../Sprite/CanvasLayer".hide()
