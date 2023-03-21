@@ -12,6 +12,7 @@ func coin():
 
 # Detect the collision and hide the object
 func _on_coin_body_entered(body):
+	print("oi")
 	if (body.name == "Bode") and condicao:
 		$AudioStreamPlayer.play()
 		coin()
@@ -21,7 +22,6 @@ func _on_coin_body_entered(body):
 
 
 func _on_Sprite_area_entered(area):
-	if condicao and area.is_in_group("bode"):
 		$AudioStreamPlayer.play()
 		coin()
 		$Sprite/CollisionShape2D.disabled = true

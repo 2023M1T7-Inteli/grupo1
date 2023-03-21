@@ -103,8 +103,8 @@ scale = Vector2( 0.227811, 0.227811 )
 texture = ExtResource( 9 )
 offset = Vector2( 68.9796, -58.6327 )
 
-[connection signal="pressed" from="Button1" to="." method="_on_Button1_pressed"]
 [connection signal="pressed" from="Button1" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button1" to="." method="_on_Button1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]

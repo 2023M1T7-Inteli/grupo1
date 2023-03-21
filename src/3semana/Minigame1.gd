@@ -2,7 +2,7 @@ extends Node2D
 
 # Dictionary with the questions
 var dict = { 
-	1: "Colete todas as maçãs",
+	1: "Colete todos os lixos da praia",
 	2: "Que número vem depois do 8?",
 	3: "Quanto é 6 + 3?",
 	4: "Qual o sinal de menos?",
