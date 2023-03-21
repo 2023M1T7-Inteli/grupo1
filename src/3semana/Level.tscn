@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Imagens/bode_spritesheet_v2 (1).png" type="Texture" id=1]
 [ext_resource path="res://Level.gd" type="Script" id=2]
@@ -8,46 +8,11 @@
 [ext_resource path="res://Imagens/Seta_Right.png" type="Texture" id=6]
 [ext_resource path="res://Imagens/botao_start-1.png (1).png" type="Texture" id=7]
 [ext_resource path="res://Imagens/Seta-cima-pressionado.png" type="Texture" id=8]
-[ext_resource path="res://coin.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Imagens/Seta-direita-pressionada.png" type="Texture" id=10]
 [ext_resource path="res://Imagens/Seta-baixo-pressionado.png" type="Texture" id=11]
 [ext_resource path="res://Imagens/Seta-esquerda-pressionada.png" type="Texture" id=12]
 [ext_resource path="res://Imagens/Botao-start-pressionado.png" type="Texture" id=13]
 [ext_resource path="res://cino-Lago.wav.wav" type="AudioStream" id=14]
-
-[sub_resource type="Animation" id=3]
-resource_name = "walkRight"
-length = 0.6
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Bode/Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 1, 1, 0, 0 ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "walkRight"
-length = 0.6
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Bode/Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 1, 1, 0, 0 ]
-}
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 16.0
@@ -157,39 +122,11 @@ tracks/0/keys = {
 "values": [ 4, 5, 6, 7 ]
 }
 
-[node name="Fundo" type="KinematicBody2D"]
+[node name="Fundo" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="coin" parent="." instance=ExtResource( 9 )]
-position = Vector2( 230, 496 )
-scale = Vector2( 0.64644, 0.64644 )
-
-[node name="coin2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 98, 367 )
-scale = Vector2( 0.64644, 0.64644 )
-
-[node name="coin3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 295, 236 )
-scale = Vector2( 0.64644, 0.64644 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="coin3"]
-root_node = NodePath("../..")
-anims/walkRight = SubResource( 3 )
-
-[node name="coin4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 162, 104 )
-scale = Vector2( 0.64644, 0.64644 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="coin4"]
-root_node = NodePath("../..")
-anims/walkRight = SubResource( 4 )
-
-[node name="coin5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 232, 627 )
-scale = Vector2( 0.64644, 0.64644 )
-
 [node name="Bode" type="KinematicBody2D" parent="."]
-position = Vector2( 10, 562 )
+position = Vector2( 12, 563 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -214,61 +151,11 @@ anims/walkLeft = SubResource( 5 )
 anims/walkRight = SubResource( 1 )
 anims/walkup = SubResource( 7 )
 
-[node name="fundoLista" type="ColorRect" parent="."]
-margin_left = 346.0
-margin_top = 382.0
-margin_right = 389.0
-margin_bottom = 690.0
-color = Color( 0.0196078, 0.0196078, 0.0196078, 0 )
+[node name="Area2D" type="Area2D" parent="Bode"]
 
-[node name="Left" type="TextureButton" parent="fundoLista"]
-margin_left = -307.0
-margin_top = 343.0
-margin_right = 75.0
-margin_bottom = 719.0
-rect_scale = Vector2( 0.2, 0.2 )
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 12 )
-
-[node name="Right" type="TextureButton" parent="fundoLista"]
-margin_left = -146.0
-margin_top = 343.0
-margin_right = 239.0
-margin_bottom = 722.0
-rect_scale = Vector2( 0.199999, 0.199999 )
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 10 )
-
-[node name="Up" type="TextureButton" parent="fundoLista"]
-margin_left = -230.0
-margin_top = 342.0
-margin_right = 160.0
-margin_bottom = 726.0
-rect_scale = Vector2( 0.208333, 0.2 )
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 8 )
-
-[node name="Down" type="TextureButton" parent="fundoLista"]
-margin_left = -66.0
-margin_top = 341.0
-margin_right = 319.0
-margin_bottom = 720.0
-rect_scale = Vector2( 0.209823, 0.209823 )
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 11 )
-
-[node name="Rodar" type="TextureButton" parent="fundoLista"]
-anchor_left = 0.26
-anchor_top = 0.964
-anchor_right = 0.26
-anchor_bottom = 0.964
-margin_left = -36.18
-margin_top = -35.912
-margin_right = 566.82
-margin_bottom = 561.088
-rect_scale = Vector2( 0.120001, 0.120001 )
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 13 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bode/Area2D" groups=["bode"]]
+position = Vector2( 12, 9 )
+shape = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
@@ -333,8 +220,59 @@ scale = Vector2( 0.7, 0.7 )
 position = Vector2( 429, 737 )
 scale = Vector2( 0.7, 0.7 )
 
-[connection signal="pressed" from="fundoLista/Left" to="." method="_on_Left_pressed"]
-[connection signal="pressed" from="fundoLista/Right" to="." method="_on_Right_pressed"]
-[connection signal="pressed" from="fundoLista/Up" to="." method="_on_Up_pressed"]
-[connection signal="pressed" from="fundoLista/Down" to="." method="_on_Down_pressed"]
-[connection signal="pressed" from="fundoLista/Rodar" to="." method="_on_lista_pressed"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Left" type="TextureButton" parent="CanvasLayer"]
+margin_left = 39.0
+margin_top = 725.0
+margin_right = 421.0
+margin_bottom = 1101.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 12 )
+
+[node name="Right" type="TextureButton" parent="CanvasLayer"]
+margin_left = 200.0
+margin_top = 725.0
+margin_right = 585.0
+margin_bottom = 1104.0
+rect_scale = Vector2( 0.199999, 0.199999 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 10 )
+
+[node name="Up" type="TextureButton" parent="CanvasLayer"]
+margin_left = 116.0
+margin_top = 724.0
+margin_right = 506.0
+margin_bottom = 1108.0
+rect_scale = Vector2( 0.208333, 0.2 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 8 )
+
+[node name="Down" type="TextureButton" parent="CanvasLayer"]
+margin_left = 280.0
+margin_top = 723.0
+margin_right = 665.0
+margin_bottom = 1102.0
+rect_scale = Vector2( 0.209823, 0.209823 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 11 )
+
+[node name="Rodar" type="TextureButton" parent="CanvasLayer"]
+anchor_left = 0.26
+anchor_top = 0.964
+anchor_right = 0.26
+anchor_bottom = 0.964
+margin_left = 199.84
+margin_top = -128.2
+margin_right = 802.84
+margin_bottom = 468.8
+rect_scale = Vector2( 0.120001, 0.120001 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 13 )
+
+[connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_Left_pressed"]
+[connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_Right_pressed"]
+[connection signal="pressed" from="CanvasLayer/Up" to="." method="_on_Up_pressed"]
+[connection signal="pressed" from="CanvasLayer/Down" to="." method="_on_Down_pressed"]
+[connection signal="pressed" from="CanvasLayer/Rodar" to="." method="_on_lista_pressed"]

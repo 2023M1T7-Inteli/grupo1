@@ -1,4 +1,4 @@
-extends Area2D
+extends Sprite
 
 # Variables for interaction and sound effect
 var coletou = false
@@ -18,3 +18,11 @@ func _on_coin_body_entered(body):
 		$CollisionShape2D.disabled = true
 		self.visible = false
 		condicao = false
+
+
+func _on_Sprite_area_entered(area):
+	if condicao and area.is_in_group("bode"):
+		$AudioStreamPlayer.play()
+		coin()
+		$Sprite/CollisionShape2D.disabled = true
+		self.visible = false

@@ -15,6 +15,7 @@ onready var listaComandos = Global.listaComandos
 onready var estado = global.estado 
 var process = true
 onready var receptor = get_node("Fundo")
+var control = 0
 
 # Show the question in the popup
 func _ready():
@@ -49,7 +50,10 @@ func _process(delta):
 
 # Close popup
 func _on_closePopup_pressed():
+	control += 1
 	popup.visible = false
+	if control == 2:
+		TransitionCanvas.change_scene("res://Main.tscn")
 
 # Number of missing vetors
 func _on_Fundo_vetor(comandList):

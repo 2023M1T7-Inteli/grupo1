@@ -1,7 +1,7 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Imagens/Areia da praia com malha quadriculada.png" type="Texture" id=1]
-[ext_resource path="res://Fonts/Stay Pixel DEMO.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/PixelOperator-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Imagens/AnimaÃ§Ã£o Palmeira.png" type="Texture" id=3]
 [ext_resource path="res://Level.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Minigame1.gd" type="Script" id=5]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Imagens/caixa_pergunta.png" type="Texture" id=8]
 [ext_resource path="res://Imagens/Restart.png" type="Texture" id=9]
 [ext_resource path="res://Imagens/image.png" type="Texture" id=10]
+[ext_resource path="res://Imagens/Botao-X.png" type="Texture" id=11]
 [ext_resource path="res://Imagens/arbusto 2.png" type="Texture" id=12]
 [ext_resource path="res://Imagens/Arbusto 4.png" type="Texture" id=13]
 [ext_resource path="res://Imagens/Arbusto 3.png" type="Texture" id=14]
@@ -21,6 +22,11 @@
 [ext_resource path="res://Imagens/Estrela e concha.png" type="Texture" id=20]
 [ext_resource path="res://Imagens/Guarda sol com esteira.png" type="Texture" id=21]
 [ext_resource path="res://Imagens/barco_bandeira (1).png" type="Texture" id=22]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Imagens/Lixos/Lixo 1.png" type="Texture" id=24]
+[ext_resource path="res://Imagens/Lixos/Lixo 7.png" type="Texture" id=25]
+[ext_resource path="res://Imagens/Lixos/Lixo 10.png" type="Texture" id=26]
+[ext_resource path="res://Imagens/Lixos/lixo 5.png" type="Texture" id=27]
 
 [sub_resource type="Animation" id=14]
 resource_name = "Agua-animada"
@@ -122,12 +128,6 @@ tracks/0/keys = {
 "values": [ 0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
 }
 
-[sub_resource type="Theme" id=3]
-
-[sub_resource type="DynamicFont" id=10]
-size = 18
-font_data = ExtResource( 2 )
-
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 213, 10 )
 
@@ -139,6 +139,21 @@ extents = Vector2( 16.125, 374 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 195.5, 4.5 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 30.625, 37 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 65.75, 71 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 34.5, 87 )
+
+[sub_resource type="Theme" id=3]
+
+[sub_resource type="DynamicFont" id=20]
+size = 30
+font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
@@ -274,50 +289,34 @@ frame = 6
 [node name="AnimationPlayer" type="AnimationPlayer" parent="barco"]
 anims/Barco = SubResource( 16 )
 
+[node name="coin" parent="." instance=ExtResource( 23 )]
+position = Vector2( 168, 103 )
+scale = Vector2( 0.64644, 0.64644 )
+texture = ExtResource( 24 )
+
+[node name="coin2" parent="." instance=ExtResource( 23 )]
+position = Vector2( 237, 500 )
+rotation = 1.53637
+scale = Vector2( 0.64644, 0.64644 )
+texture = ExtResource( 27 )
+
+[node name="coin3" parent="." instance=ExtResource( 23 )]
+position = Vector2( 234, 633 )
+scale = Vector2( 0.64644, 0.64644 )
+texture = ExtResource( 25 )
+
+[node name="coin4" parent="." instance=ExtResource( 23 )]
+position = Vector2( 304, 228 )
+scale = Vector2( 0.64644, 0.64644 )
+texture = ExtResource( 26 )
+
+[node name="coin5" parent="." instance=ExtResource( 23 )]
+position = Vector2( 98, 292 )
+scale = Vector2( 0.64644, 0.64644 )
+
 [node name="Fundo" parent="." instance=ExtResource( 4 )]
 position = Vector2( 19, 14 )
 scale = Vector2( 0.963007, 0.963007 )
-
-[node name="WindowDialog" type="Sprite" parent="."]
-position = Vector2( 203, 364 )
-scale = Vector2( 0.640909, 0.640909 )
-texture = ExtResource( 8 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="WindowDialog"]
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = -0.26441
-anchor_top = -8.06808e-05
-anchor_right = 0.12953
-anchor_bottom = 0.10901
-margin_left = -81.3763
-margin_top = -23.3687
-margin_right = -81.3763
-margin_bottom = -23.3687
-rect_scale = Vector2( 2, 2 )
-theme = SubResource( 3 )
-custom_fonts/normal_font = SubResource( 10 )
-text = "
-"
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="closePopup" type="TextureButton" parent="WindowDialog"]
-margin_left = 211.852
-margin_top = 86.9136
-margin_right = 388.852
-margin_bottom = 219.914
-rect_scale = Vector2( 0.348148, 0.348148 )
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 7 )
-
-[node name="restart" type="TextureButton" parent="WindowDialog"]
-margin_left = 109.22
-margin_top = 62.4114
-margin_right = 727.22
-margin_bottom = 680.411
-rect_scale = Vector2( 0.123529, 0.123529 )
-texture_normal = ExtResource( 9 )
 
 [node name="colisionBoard" type="StaticBody2D" parent="."]
 
@@ -337,6 +336,42 @@ shape = SubResource( 8 )
 position = Vector2( 205, 710 )
 shape = SubResource( 9 )
 
+[node name="obstaculo" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 101.75, 630 )
+shape = SubResource( 17 )
+
+[node name="obstaculo2" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 369, 431 )
+shape = SubResource( 17 )
+
+[node name="obstaculo3" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 235, 364 )
+shape = SubResource( 17 )
+
+[node name="obstaculo4" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 35.375, 297 )
+shape = SubResource( 17 )
+
+[node name="obstaculo5" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 38, 226 )
+shape = SubResource( 17 )
+
+[node name="obstaculo6" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 105, 163 )
+shape = SubResource( 17 )
+
+[node name="obstaculo7" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 41, 98 )
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 335.25, 133 )
+shape = SubResource( 18 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 370.5, 619 )
+shape = SubResource( 19 )
+
 [node name="Button2" type="TextureButton" parent="."]
 margin_left = 17.0
 margin_top = 10.0
@@ -349,6 +384,44 @@ texture_pressed = ExtResource( 7 )
 texture_disabled = ExtResource( 7 )
 texture_focused = ExtResource( 7 )
 
+[node name="WindowDialog" type="Sprite" parent="."]
+position = Vector2( 212, 386 )
+scale = Vector2( 0.527272, 0.527272 )
+texture = ExtResource( 8 )
+
+[node name="RichTextLabel" type="Label" parent="WindowDialog"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = -0.26441
+anchor_top = -8.06808e-05
+anchor_right = 0.12953
+anchor_bottom = 0.10901
+margin_left = -54.9723
+margin_top = -54.9645
+margin_right = -82.9726
+margin_bottom = -39.9644
+rect_scale = Vector2( 2, 2 )
+theme = SubResource( 3 )
+custom_fonts/font = SubResource( 20 )
+text = "
+"
+autowrap = true
+
+[node name="closePopup" type="TextureButton" parent="WindowDialog"]
+margin_left = 159.31
+margin_top = 51.2069
+margin_right = 573.31
+margin_bottom = 416.207
+rect_scale = Vector2( 0.279886, 0.279886 )
+texture_normal = ExtResource( 11 )
+
+[node name="restart" type="TextureButton" parent="WindowDialog"]
+margin_left = 66.3794
+margin_top = 60.6899
+margin_right = 684.379
+margin_bottom = 678.69
+rect_scale = Vector2( 0.123529, 0.123529 )
+texture_normal = ExtResource( 9 )
+
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="WindowDialog/closePopup" to="." method="_on_closePopup_pressed"]
 [connection signal="pressed" from="WindowDialog/restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
