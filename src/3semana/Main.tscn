@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/fase select rua att-1.png.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Imagens/cadeado.png" type="Texture" id=9]
 [ext_resource path="res://Imagens/hud_bordado_pontuacao-1.png (2).png" type="Texture" id=10]
 [ext_resource path="res://Fonts/PixelOperator8.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://audios/Botões Menu.wav" type="AudioStream" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -126,6 +127,9 @@ margin_right = 77.2632
 margin_bottom = 25.8947
 custom_fonts/normal_font = SubResource( 1 )
 deselect_on_focus_loss_enabled = false
+
+[node name="Botao" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
 
 [connection signal="pressed" from="Button1" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button1" to="." method="_on_Button1_pressed"]

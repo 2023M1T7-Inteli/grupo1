@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Imagens/Areia da praia com malha quadriculada.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/PixelOperator-Bold.ttf" type="DynamicFontData" id=2]
@@ -32,6 +32,7 @@
 [ext_resource path="res://Imagens/Botao-start-pressionado.png" type="Texture" id=30]
 [ext_resource path="res://Imagens/Lixos/Lixo 1-1.png.png" type="Texture" id=31]
 [ext_resource path="res://Imagens/seta nova.png" type="Texture" id=32]
+[ext_resource path="res://audios/Vitória.wav" type="AudioStream" id=33]
 
 [sub_resource type="Animation" id=14]
 resource_name = "Agua-animada"
@@ -557,6 +558,9 @@ vframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow4"]
 anims/setinha4 = SubResource( 24 )
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 33 )
 
 [connection signal="arrow2" from="Fundo" to="." method="_on_Fundo_arrow2"]
 [connection signal="arrow3" from="Fundo" to="." method="_on_Fundo_arrow3"]

@@ -9,7 +9,7 @@ var count = 0
 var msg_queue: Array = [ 
 	"Em uma tarde tranquila na cidade de Pilar," ,
 	"o Governador Bode Frederico estava sentado em sua sala quando...",
-	"PREFEITO!!" ,
+	"GOVERNADOR!!" ,
 	"A CIDADE PRECISA DE VOCÊ!!" , 
 	"A POPULAÇÃO PRECISA DE AJUDA!"
 	]

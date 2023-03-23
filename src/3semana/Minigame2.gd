@@ -41,6 +41,7 @@ func _process(delta):
 	
 	if process:
 		if Global.garrafa == 4:
+			$Win.play()
 			$Fundo.para_bodin()
 			$Fundo/CanvasLayer/Down.disabled = true
 			$Fundo/CanvasLayer/Up.disabled = true

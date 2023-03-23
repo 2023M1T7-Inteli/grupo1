@@ -48,6 +48,7 @@ func _on_Button2_pressed():
 func _process(delta):
 	if process:
 		if Global.coin == 5:
+			$Win.play()
 			$Fundo.para_bodin()
 			$Fundo/CanvasLayer/Down.disabled = true
 			$Fundo/CanvasLayer/Up.disabled = true

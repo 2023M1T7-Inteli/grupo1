@@ -41,6 +41,7 @@ func _on_Button2_pressed():
 func _process(delta):
 	if process:
 		if Global.pilha == 3 and Global.maca == 3:
+			$Win.play()
 			$Fundo.para_bodin()
 			$Fundo/CanvasLayer/Down.disabled = true
 			$Fundo/CanvasLayer/Up.disabled = true

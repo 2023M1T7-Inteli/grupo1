@@ -57,6 +57,8 @@ rect_scale = Vector2( 0.08, 0.08 )
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 5 )
 
+[node name="Butao" type="AudioStreamPlayer" parent="TextureButton"]
+
 [node name="Animação2" type="Sprite" parent="."]
 position = Vector2( 368.85, 667.824 )
 scale = Vector2( 0.211769, 0.192908 )

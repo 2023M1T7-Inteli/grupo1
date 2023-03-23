@@ -151,7 +151,7 @@ func _process(delta):
 			$Bode/AnimationPlayer.stop()
 			_on_lista_pressed()	
 			condition = false
-			
+
 # Let the game start
 	if comandList.size() <= 15:
 		comecar = true
