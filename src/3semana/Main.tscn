@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/fase select rua att-1.png.png" type="Texture" id=2]
@@ -9,6 +9,12 @@
 [ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=7]
 [ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=8]
 [ext_resource path="res://Imagens/cadeado.png" type="Texture" id=9]
+[ext_resource path="res://Imagens/hud_bordado_pontuacao-1.png (2).png" type="Texture" id=10]
+[ext_resource path="res://Fonts/PixelOperator8.ttf" type="DynamicFontData" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 11 )
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -103,8 +109,26 @@ scale = Vector2( 0.227811, 0.227811 )
 texture = ExtResource( 9 )
 offset = Vector2( 68.9796, -58.6327 )
 
-[connection signal="pressed" from="Button1" to="." method="_on_Button_pressed"]
+[node name="HudBordadoPontuacao-1png(1)" type="Sprite" parent="."]
+position = Vector2( 234, 733 )
+scale = Vector2( 1.15854, 1.15854 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="RichTextLabel" parent="HudBordadoPontuacao-1png(1)"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = -28.7368
+margin_top = -15.1053
+margin_right = 77.2632
+margin_bottom = 25.8947
+custom_fonts/normal_font = SubResource( 1 )
+deselect_on_focus_loss_enabled = false
+
 [connection signal="pressed" from="Button1" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="Button1" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]

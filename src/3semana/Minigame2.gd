@@ -17,14 +17,16 @@ onready var receptor = get_node("Fundo")
 
 # Show the question in the popup
 func _ready():
+	Global.desconto = 0
+	Global.desconto = 0
+	Global.garrafa = 0
 	popup.visible = true
 	var number = Global.numQuestion
 	var question = dict.get(number)
 	print(global.numQuestion)
-	$WindowDialog/RichTextLabel.text = "insira  questão eduh"
+	$WindowDialog/RichTextLabel.text = "Colete apenas garrafas"
 	$WindowDialog/restart.hide()
 	$WindowDialog/Next.hide()
-	$"Palmeira-1/AnimationPlayer".play("Palmeira")
 	$"Palmeira-2/AnimationPlayer".play("Palmeira")
 	$"Palmeira-3/AnimationPlayer".play("Palmeira")
 	$"Agua-animada/AnimationPlayer".play("Agua-animada")
@@ -36,8 +38,14 @@ func _on_Button2_pressed():
 
 # Show the wining message to the player
 func _process(delta):
+	
 	if process:
-		if Global.coin == 5:
+		if Global.garrafa == 4:
+			$Fundo.para_bodin()
+			$Fundo/CanvasLayer/Down.disabled = true
+			$Fundo/CanvasLayer/Up.disabled = true
+			$Fundo/CanvasLayer/Left.disabled = true
+			$Fundo/CanvasLayer/Right.disabled = true
 			print("entrou")
 			$WindowDialog/RichTextLabel.text = ""
 			$WindowDialog/RichTextLabel.visible = true

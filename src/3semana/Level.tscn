@@ -152,7 +152,7 @@ anims/walkLeft = SubResource( 5 )
 anims/walkRight = SubResource( 1 )
 anims/walkup = SubResource( 7 )
 
-[node name="Area2D" type="Area2D" parent="Bode"]
+[node name="Area2D" type="Area2D" parent="Bode" groups=["bode"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bode/Area2D" groups=["bode"]]
 position = Vector2( 12, 9 )

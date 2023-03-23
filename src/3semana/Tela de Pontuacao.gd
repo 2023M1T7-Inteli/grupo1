@@ -35,7 +35,8 @@ func _on_Pronto_pressed():
 	else:
 		score = 200
 	
+	Global.score += score - Global.desconto 
 	set_process(false)
 	$Bordado.show()
-	$Mensagem.text = "Parabéns! Você conseguiu "+str(score)+" filés!"
+	$Mensagem.text = "Parabéns! Você conseguiu "+str(score - Global.desconto)+" filés!"
 

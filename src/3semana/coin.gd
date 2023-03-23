@@ -11,6 +11,8 @@ func coin():
 	Global.coin += 1
 
 func _on_Sprite_area_entered(area):
+	if area.is_in_group("bode"):
+		print("so eeeeeeeeeeu")
 		print($area2d/CollisionShape2D.disabled)
 		$AudioStreamPlayer.play()
 		coin()

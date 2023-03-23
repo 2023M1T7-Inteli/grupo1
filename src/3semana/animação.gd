@@ -8,7 +8,7 @@ var count = 0
 # Array that stores the frases of the dialogue
 var msg_queue: Array = [ 
 	"Em uma tarde tranquila na cidade de Pilar," ,
-	"o Prefeito Bode Frederico estava sentado em sua sala quando...",
+	"o Governador Bode Frederico estava sentado em sua sala quando...",
 	"PREFEITO!!" ,
 	"A CIDADE PRECISA DE VOCÊ!!" , 
 	"A POPULAÇÃO PRECISA DE AJUDA!"

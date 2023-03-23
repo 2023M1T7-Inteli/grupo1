@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Tela de Pontuacao.gd" type="Script" id=1]
-[ext_resource path="res://Imagens/bordado_file (1).png" type="Texture" id=2]
+[ext_resource path="res://bordado_filé_separado-1.png.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/PixelOperator8.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -20,8 +20,8 @@ margin_bottom = -559.0
 text = "aaaaaaa"
 
 [node name="Bordado" type="Sprite" parent="."]
-position = Vector2( 84, 92 )
-scale = Vector2( 0.768229, 0.784751 )
+position = Vector2( 101, 121 )
+scale = Vector2( 1.22671, 1.25309 )
 texture = ExtResource( 2 )
 
 [node name="Pronto" type="Button" parent="."]

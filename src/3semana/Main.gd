@@ -5,6 +5,7 @@ var my_dict = {1: "A", 2: "B"}
 
 # List of buttons levels and their respective levels
 func _ready():
+	$"HudBordadoPontuacao-1png(1)/Label".text = str(Global.score) / Global.divisao
 	if Global.cadeado1 != 0:
 		$Cadeado1.hide()
 	if Global.cadeado2 != 0:

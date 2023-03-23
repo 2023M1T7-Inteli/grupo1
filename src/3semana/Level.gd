@@ -13,6 +13,7 @@ var mover5 = false
 var comecar = false
 var reset = false
 var condition = true
+var parado = false
 # Texture of console arrows
 var up = load("res://Imagens/Seta_Up_console.png")
 var down = load("res://Imagens/Seta_Down_console.png")
@@ -151,4 +152,16 @@ func _process(delta):
 
 
 func _on_Area2D_area_entered(area):
-	$AudioStreamPlayer2.play()
+	if area.is_in_group("garrafa"):
+		Global.garrafa += 1
+	if area.is_in_group("coin"):
+		$AudioStreamPlayer2.play()
+	if area.is_in_group("pilha"):
+		Global.pilha += 1
+	if area.is_in_group("maca"):
+		Global.maca += 1
+	if area.is_in_group("desconto"):
+		Global.desconto += 200
+		
+func para_bodin():
+	i = comandList.size()

@@ -18,11 +18,13 @@ onready var receptor = get_node("Fundo")
 
 # Show the question in the popup
 func _ready():
+	Global.desconto = 0
+	Global.coin = 0
 	popup.visible = true
 	var number = Global.numQuestion
 	var question = dict.get(number)
 	print(global.numQuestion)
-	$WindowDialog/RichTextLabel.text = question
+	$WindowDialog/RichTextLabel.text = "Colete todos os lixos da praia"
 	$WindowDialog/restart.hide()
 	$WindowDialog/Next.hide()
 	$"Palmeira-1/AnimationPlayer".play("Palmeira")
@@ -39,6 +41,11 @@ func _on_Button2_pressed():
 func _process(delta):
 	if process:
 		if Global.coin == 5:
+			$Fundo.para_bodin()
+			$Fundo/CanvasLayer/Down.disabled = true
+			$Fundo/CanvasLayer/Up.disabled = true
+			$Fundo/CanvasLayer/Left.disabled = true
+			$Fundo/CanvasLayer/Right.disabled = true
 			print("entrou")
 			$WindowDialog/RichTextLabel.text = ""
 			$WindowDialog/RichTextLabel.visible = true
