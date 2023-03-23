@@ -1,39 +1,54 @@
 extends Node
 
-
 # Declare member variables here. Examples:
 var my_dict = {1: "A", 2: "B"}
 
-
-
-# Called when the node enters the scene tree for the first time.
+# List of buttons levels and their respective levels
 func _ready():
-	pass
+	$"HudBordadoPontuacao-1png(1)/Label".text = str(Global.score)
+	if Global.cadeado1 != 0:
+		$Cadeado1.hide()
+	if Global.cadeado2 != 0:
+		$Cadeado2.hide()
+	if Global.cadeado3 != 0:
+		$Cadeado3.hide()
 
-
-
-
-func _on_Button_pressed(): # Botão 1
+func _process(delta):
+	if Global.cadeado1 != 0:
+		$Cadeado1.hide()
+	if Global.cadeado2 != 0:
+		$Cadeado2.hide()
+	if Global.cadeado3 != 0:
+		$Cadeado3.hide()
+	
+# Level one
+func _on_Button_pressed(): 
 	Global.numQuestion = 1
-	get_tree().change_scene("res://Minigame1.tscn")
+	TransitionCanvas.change_scene("res://Minigame1.tscn")
 	
 	
 
+# Level two
 func _on_Button2_pressed():
-	Global.numQuestion = 2
-	get_tree().change_scene("res://Minigame1.tscn")
+	if Global.cadeado1 != 0:
+		Global.numQuestion = 2
+		TransitionCanvas.change_scene("res://Minigame2.tscn")
 	
 
-
+# Level three
 func _on_Button3_pressed():
-	Global.numQuestion = 3
-	get_tree().change_scene("res://Minigame1.tscn")
+	if Global.cadeado2 != 0:
+		Global.numQuestion = 3
+		TransitionCanvas.change_scene("res://Minigame3.tscn")
 
 
+# Level four
 func _on_Button4_pressed():
-	Global.numQuestion = 4
-	get_tree().change_scene("res://Minigame1.tscn")
+	if Global.cadeado3 != 0:
+		Global.numQuestion = 4
+		TransitionCanvas.change_scene("res://Minigame4.tscn")
 
+# Move back to the initial screen
+func _on_moveBackButton_pressed():
+	TransitionCanvas.change_scene("res://Inicio.tscn")
 
-func _on_ButtonVoltar_pressed():
-	get_tree().change_scene("res://Inicio.tscn")

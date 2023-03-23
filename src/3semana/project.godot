@@ -10,17 +10,18 @@ config_version=4
 
 [application]
 
-config/name="script1"
+config/name="script1projeto"
 run/main_scene="res://Inicio.tscn"
-config/icon="res://icon.png"
 
 [autoload]
 
 Global="*res://Global.gd"
+TransitionCanvas="*res://transitionCanvas.tscn"
+TocaMusica="*res://tocaMusica.tscn"
 
 [display]
 
-window/size/width=400
+window/size/width=466
 window/size/height=800
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
@@ -28,6 +29,14 @@ window/stretch/aspect="keep"
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+ui_reset={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":82,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [mono]
 
