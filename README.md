@@ -4,12 +4,11 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Nome do Projeto: Bodin
 
-## Nome do Grupo
+## Nome do Grupo: Bode Frederico
 
-## Integrantes: <a href="https://www.linkedin.com/in/eduardo-henrique-santos-628607233/">Eduardo Henrique</a>, <a href="https://www.linkedin.com/in/gabrielcolettosilva/">Gabriel Coletto</a>, <a href="https://www.linkedin.com/in/isabella-fernandes-saldanha-138a631b4/">Isabella Saldanha</a>, <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-brand%C3%A3o-de-moura-338636215/">João Pedro Brandão</a>, <a href="https://www.linkedin.com/in/laura-padilha-bueno-b358419a/">Laura Bueno</a>, <a href="https://www.linkedin.com/in/raideoliveira/">Raí de Oliveira</a>
-<a href="https://www.linkedin.com/in/thomas-abadi-4a44a1264">Thomas Abadi</a>
+## Integrantes: <a href="https://www.linkedin.com/in/eduardo-henrique-santos-628607233/">Eduardo Henrique</a>, <a href="https://www.linkedin.com/in/gabrielcolettosilva/">Gabriel Coletto</a>, <a href="https://www.linkedin.com/in/isabella-fernandes-saldanha-138a631b4/">Isabella Saldanha</a>, <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-brand%C3%A3o-de-moura-338636215/">João Pedro Brandão</a>, <a href="https://www.linkedin.com/in/laura-padilha-bueno-b358419a/">Laura Bueno</a>, <a href="https://www.linkedin.com/in/raideoliveira/">Raí de Oliveira</a> e <a href="https://www.linkedin.com/in/thomas-abadi-4a44a1264">Thomas Abadi</a>
 
 ## Descrição
 
@@ -29,6 +28,13 @@ Meu projeto ajuda estudantes inteli a configurarem seus githubs.
 <br><br>
 May the force be with you!
 <br><br>
+
+Bodin é um jogo educativo incrível que apresenta um conceito único de aprendizado. O jogo combina elementos de lógica matemática e computacional, criando um ambiente de aprendizagem divertido e interativo para os jogadores. A jogabilidade é baseada em resolver quebra-cabeças através da construção de algoritmos com botões de setas. A medida que o jogador avança, os desafios vão se tornando progressivamente mais difíceis, o que o torna uma ferramenta de aprendizado excepcional para todos os níveis de habilidade.
+
+Um aspecto distintivo do Bodin é seu tema cultural local do estado de Alagoas. O jogo apresenta visuais em pixel art que retratam as características da região, como praias, coqueiros e paisagens exuberantes. Além disso, os quebra-cabeças foram criados com base em temas relacionados à cultura local, como lendas, personagens históricos e eventos importantes. Isso não apenas torna o jogo divertido, mas também ajuda a incentivar a compreensão e valorização da cultura local. Em resumo, o Bodin é um jogo educativo que combina conteúdo de lógica matemática e computacional com um tema cultural alagoano em um ambiente visualmente atraente e desafiador.
+
+
+
 
 ## 🛠 Estrutura de pastas
 
