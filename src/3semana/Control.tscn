@@ -1,13 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://AudioSettings.gd" type="Script" id=1]
-[ext_resource path="res://Imagens/botaoMaster.png" type="Texture" id=2]
 [ext_resource path="res://Imagens/ajustesTitulo.png" type="Texture" id=3]
 [ext_resource path="res://Imagens/Tela de ajustes.png" type="Texture" id=4]
 [ext_resource path="res://Imagens/botaoSFX (1).png" type="Texture" id=5]
 [ext_resource path="res://Imagens/botaoMusica (1).png" type="Texture" id=6]
-[ext_resource path="res://Imagens/botaoMusica.png" type="Texture" id=7]
-[ext_resource path="res://Imagens/botaoSFX.png" type="Texture" id=8]
 [ext_resource path="res://Imagens/botaoMaster (3).png" type="Texture" id=9]
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -42,8 +39,8 @@ text = " Volume principal"
 margin_top = 18.0
 margin_right = 119.0
 margin_bottom = 34.0
-custom_icons/grabber_disabled = ExtResource( 2 )
-custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber_disabled = ExtResource( 9 )
+custom_icons/grabber_highlight = ExtResource( 9 )
 custom_icons/grabber = ExtResource( 9 )
 min_value = -30.0
 max_value = 0.0
@@ -65,8 +62,8 @@ align = 1
 margin_top = 74.0
 margin_right = 119.0
 margin_bottom = 90.0
-custom_icons/grabber_disabled = ExtResource( 7 )
-custom_icons/grabber_highlight = ExtResource( 7 )
+custom_icons/grabber_disabled = ExtResource( 6 )
+custom_icons/grabber_highlight = ExtResource( 6 )
 custom_icons/grabber = ExtResource( 6 )
 min_value = -30.0
 max_value = 0.0
@@ -88,8 +85,8 @@ align = 1
 margin_top = 130.0
 margin_right = 119.0
 margin_bottom = 146.0
-custom_icons/grabber_disabled = ExtResource( 8 )
-custom_icons/grabber_highlight = ExtResource( 8 )
+custom_icons/grabber_disabled = ExtResource( 5 )
+custom_icons/grabber_highlight = ExtResource( 5 )
 custom_icons/grabber = ExtResource( 5 )
 min_value = -30.0
 max_value = 0.0

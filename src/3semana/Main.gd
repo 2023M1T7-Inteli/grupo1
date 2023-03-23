@@ -12,7 +12,14 @@ func _ready():
 		$Cadeado2.hide()
 	if Global.cadeado3 != 0:
 		$Cadeado3.hide()
-	
+
+func _process(delta):
+	if Global.cadeado1 != 0:
+		$Cadeado1.hide()
+	if Global.cadeado2 != 0:
+		$Cadeado2.hide()
+	if Global.cadeado3 != 0:
+		$Cadeado3.hide()
 	
 # Level one
 func _on_Button_pressed(): 
