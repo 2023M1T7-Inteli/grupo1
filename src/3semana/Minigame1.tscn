@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Imagens/Areia da praia com malha quadriculada.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/PixelOperator-Bold.ttf" type="DynamicFontData" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://Imagens/botao_start-1.png (1).png" type="Texture" id=29]
 [ext_resource path="res://Imagens/Botao-start-pressionado.png" type="Texture" id=30]
 [ext_resource path="res://Imagens/Lixos/Lixo 1-1.png.png" type="Texture" id=31]
+[ext_resource path="res://Imagens/seta nova.png" type="Texture" id=32]
 
 [sub_resource type="Animation" id=14]
 resource_name = "Agua-animada"
@@ -158,6 +159,74 @@ extents = Vector2( 34.5, 87 )
 [sub_resource type="DynamicFont" id=20]
 size = 30
 font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=21]
+resource_name = "setinha"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "setinha2"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "arrow3"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 1 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "setinha4"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
@@ -305,7 +374,7 @@ scale = Vector2( 0.64644, 0.64644 )
 texture = ExtResource( 26 )
 
 [node name="coin3" parent="." instance=ExtResource( 23 )]
-position = Vector2( 234, 633 )
+position = Vector2( 364, 496 )
 scale = Vector2( 0.64644, 0.64644 )
 texture = ExtResource( 24 )
 
@@ -390,7 +459,6 @@ texture_disabled = ExtResource( 7 )
 texture_focused = ExtResource( 7 )
 
 [node name="WindowDialog" type="Sprite" parent="."]
-visible = false
 position = Vector2( 220, 377 )
 scale = Vector2( 0.559091, 0.559091 )
 texture = ExtResource( 8 )
@@ -448,6 +516,51 @@ margin_bottom = 623.0
 rect_scale = Vector2( 0.071633, 0.071633 )
 texture_normal = ExtResource( 9 )
 
+[node name="Arrow" type="Sprite" parent="."]
+position = Vector2( 203, 248 )
+rotation = -3.13944
+scale = Vector2( 0.247, 0.247 )
+texture = ExtResource( 32 )
+vframes = 3
+frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
+anims/setinha = SubResource( 21 )
+
+[node name="Arrow2" type="Sprite" parent="."]
+position = Vector2( 238, 654 )
+rotation = -3.13236
+scale = Vector2( 0.247, 0.247 )
+texture = ExtResource( 32 )
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow2"]
+anims/setinha2 = SubResource( 22 )
+
+[node name="Arrow3" type="Sprite" parent="."]
+position = Vector2( 349, 110 )
+rotation = 1.5708
+scale = Vector2( 0.247, 0.247 )
+texture = ExtResource( 32 )
+vframes = 3
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow3"]
+anims/arrow3 = SubResource( 23 )
+
+[node name="Arrow4" type="Sprite" parent="."]
+position = Vector2( 353, 601 )
+rotation = -3.14159
+scale = Vector2( 0.247, 0.247 )
+texture = ExtResource( 32 )
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow4"]
+anims/setinha4 = SubResource( 24 )
+
+[connection signal="arrow2" from="Fundo" to="." method="_on_Fundo_arrow2"]
+[connection signal="arrow3" from="Fundo" to="." method="_on_Fundo_arrow3"]
+[connection signal="arrow4" from="Fundo" to="." method="_on_Fundo_arrow4"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="WindowDialog/closePopup" to="." method="_on_closePopup_pressed"]
 [connection signal="pressed" from="WindowDialog/restart" to="." method="_on_restart_pressed"]

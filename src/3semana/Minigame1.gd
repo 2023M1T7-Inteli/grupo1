@@ -15,6 +15,7 @@ onready var listaComandos = Global.listaComandos
 onready var estado = global.estado 
 var process = true
 onready var receptor = get_node("Fundo")
+var setas = 1
 
 # Show the question in the popup
 func _ready():
@@ -32,7 +33,13 @@ func _ready():
 	$"Palmeira-3/AnimationPlayer".play("Palmeira")
 	$"Agua-animada/AnimationPlayer".play("Agua-animada")
 	$barco/AnimationPlayer.play("Barco")
-	
+	$Arrow/AnimationPlayer.play("setinha")
+	$Arrow2/AnimationPlayer.play("setinha2")
+	$Arrow3/AnimationPlayer.play("arrow3")
+	$Arrow4/AnimationPlayer.play("setinha4")
+	$Arrow2.hide()
+	$Arrow3.hide()
+	$Arrow4.hide()
 # Button to go back to the previous scene
 func _on_Button2_pressed(): 
 	TransitionCanvas.change_scene("res://Main.tscn")
@@ -61,6 +68,8 @@ func _process(delta):
 func _on_closePopup_pressed():
 	popup.visible = false
 	$WindowDialog/closePopup.disabled = true
+	$Arrow.hide()
+	$Arrow2.show()
 
 # Number of missing vetors
 func _on_Fundo_vetor(comandList):
@@ -74,3 +83,22 @@ func _on_restart_pressed():
 
 func _on_TextureButton_pressed():
 	TransitionCanvas.change_scene("res://Main.tscn")
+
+
+
+func _on_Fundo_arrow2(direction):
+	if setas == 1:
+		$Arrow2.hide()
+		$Arrow3.show()
+		setas += 1
+
+func _on_Fundo_arrow3(direction2):
+	if setas == 2:
+		$Arrow3.hide()
+		$Arrow4.show()
+		setas += 1
+
+func _on_Fundo_arrow4(direction3):
+	if setas == 3:
+		$Arrow4.hide()
+		setas = 0

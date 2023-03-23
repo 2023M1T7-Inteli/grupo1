@@ -1,6 +1,9 @@
 extends Node2D
 # Emit signal to Minigame1
 signal vetor(comandList)
+signal arrow2(direction)
+signal arrow3(direction2)
+signal arrow4(direction3)
 var comandList = [] # Array of moviment commands
 var i = 0 # Wich element will be read
 # Variables of moviment
@@ -34,14 +37,17 @@ func _on_Left_pressed():
 func _on_Right_pressed():
 	if !(mover1 or mover2 or mover3 or mover4):
 		comandList.append("right")
+		emit_signal("arrow2", "right")
 func _on_Down_pressed():
 	if !(mover1 or mover2 or mover3 or mover4):
 		comandList.append("down")
 func _on_Up_pressed():
 	if !(mover1 or mover2 or mover3 or mover4):
 		comandList.append("up")
+		emit_signal("arrow3", "up")
 # Read the movemnt array
 func _on_lista_pressed():
+	emit_signal("arrow4", "lista")
 	$CanvasLayer/Rodar.disabled = true
 	if comecar:
 		reset = true
