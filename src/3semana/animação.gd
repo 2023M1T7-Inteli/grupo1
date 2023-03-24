@@ -44,10 +44,12 @@ func _show_message():
 	$texto.bbcode_text = msg
 	$Timer.start()
 
+# Finishes the text in the box
 func _on_Timer_timeout():
 	if $texto.visible_characters == $texto.bbcode_text.length():
 		$Timer.stop()
 	$texto.visible_characters += 1
 
+# Show the next message 
 func _on_TextureButton_pressed():
 	_show_message()

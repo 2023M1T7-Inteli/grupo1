@@ -16,14 +16,16 @@ onready var estado = global.estado
 var process = true
 onready var receptor = get_node("Fundo")
 
-# Show the question in the popup
+
 func _ready():
+	# Reset variables
 	Global.desconto = 0
 	Global.coin = 0
 	popup.visible = true
 	var number = Global.numQuestion
 	var question = dict.get(number)
-	print(global.numQuestion)
+
+	# Show the initial popup with the messsage and start the animations in the scenario
 	$WindowDialog/RichTextLabel.text = "Colete  5 latinhas"
 	$WindowDialog/restart.hide()
 	$WindowDialog/Next.hide()
@@ -40,13 +42,13 @@ func _on_Button2_pressed():
 func _process(delta):
 	if process:
 		if Global.coin == 5:
+			# Makes the bode incapable to move and show the popup again with the options to go to the next level or restart the current level
 			$Win.play()
 			$Fundo.para_bodin()
 			$Fundo/CanvasLayer/Down.disabled = true
 			$Fundo/CanvasLayer/Up.disabled = true
 			$Fundo/CanvasLayer/Left.disabled = true
 			$Fundo/CanvasLayer/Right.disabled = true
-			print("entrou")
 			$WindowDialog/RichTextLabel.text = ""
 			$WindowDialog/RichTextLabel.visible = true
 			popup.visible = true
@@ -72,5 +74,6 @@ func _on_Fundo_vetor(comandList):
 func _on_restart_pressed():
 	TransitionCanvas.change_scene("res://Minigame3.tscn")
 
+# Move bakc to the previous scene
 func _on_Next_pressed():
 	TransitionCanvas.change_scene("res://Main.tscn")

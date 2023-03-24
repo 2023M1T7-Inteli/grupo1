@@ -17,14 +17,16 @@ var process = true
 onready var receptor = get_node("Fundo")
 var setas = 1
 
-# Show the question in the popup
+
 func _ready():
+	# Reset variables
 	Global.desconto = 0
 	Global.coin = 0
 	popup.visible = true
 	var number = Global.numQuestion
 	var question = dict.get(number)
-	print(global.numQuestion)
+	
+	# Show the initial popup with the messsage and start the animations in the scenario
 	$WindowDialog/RichTextLabel.text = "Colete todos os lixos da praia"
 	$WindowDialog/restart.hide()
 	$WindowDialog/Next.hide()
@@ -49,16 +51,19 @@ func _process(delta):
 	if process:
 		if Global.coin == 5:
 			$Win.play()
+			
+			# Makes the bode incapable to move and show the popup again with the options to go to the next level or restart the current level
 			$Fundo.para_bodin()
 			$Fundo/CanvasLayer/Down.disabled = true
 			$Fundo/CanvasLayer/Up.disabled = true
 			$Fundo/CanvasLayer/Left.disabled = true
 			$Fundo/CanvasLayer/Right.disabled = true
-			print("entrou")
 			$WindowDialog/RichTextLabel.text = ""
 			$WindowDialog/RichTextLabel.visible = true
 			popup.visible = true
 			$WindowDialog/Node2D._on_Pronto_pressed()
+			
+			# Reset the variables and show the buttons
 			Global.coin == 0
 			process = false
 			Global.cadeado1 += 1
@@ -82,10 +87,12 @@ func _on_Fundo_vetor(comandList):
 func _on_restart_pressed():
 	TransitionCanvas.change_scene("res://Minigame1.tscn")
 
+# Move back to the previous scene
 func _on_TextureButton_pressed():
 	TransitionCanvas.change_scene("res://Main.tscn")
 
 
+# Functions that makes the tutorial
 
 func _on_Fundo_arrow2(direction):
 	if setas == 1:

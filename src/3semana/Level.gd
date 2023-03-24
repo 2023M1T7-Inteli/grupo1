@@ -1,5 +1,5 @@
 extends Node2D
-# Emit signal to Minigame1
+# Emit signal to Minigame1 for the tutorial
 signal vetor(comandList)
 signal arrow2(direction)
 signal arrow3(direction2)
@@ -156,7 +156,7 @@ func _process(delta):
 	if comandList.size() <= 15:
 		comecar = true
 
-
+# Function that identify the area that entered the bode and react according it
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("garrafa"):
 		Global.garrafa += 1
@@ -168,6 +168,7 @@ func _on_Area2D_area_entered(area):
 		Global.maca += 1
 	if area.is_in_group("desconto"):
 		Global.desconto += 200
-		
+
+# Make the bode stop when called
 func para_bodin():
 	i = comandList.size()

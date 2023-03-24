@@ -15,15 +15,17 @@ onready var listaComandos = Global.listaComandos
 var process = true
 onready var receptor = get_node("Fundo")
 
-# Show the question in the popup
+
 func _ready():
+	# Reset the variables
 	Global.desconto = 0
 	Global.desconto = 0
 	Global.garrafa = 0
 	popup.visible = true
 	var number = Global.numQuestion
 	var question = dict.get(number)
-	print(global.numQuestion)
+	
+	# Show the initial popup with the messsage and start the animations in the scenario
 	$WindowDialog/RichTextLabel.text = "Colete apenas garrafas"
 	$WindowDialog/restart.hide()
 	$WindowDialog/Next.hide()
@@ -41,18 +43,18 @@ func _process(delta):
 	
 	if process:
 		if Global.garrafa == 4:
+			# Makes the bode incapable to move and show the popup again with the options to go to the next level or restart the current level
 			$Win.play()
 			$Fundo.para_bodin()
 			$Fundo/CanvasLayer/Down.disabled = true
 			$Fundo/CanvasLayer/Up.disabled = true
 			$Fundo/CanvasLayer/Left.disabled = true
 			$Fundo/CanvasLayer/Right.disabled = true
-			print("entrou")
 			$WindowDialog/RichTextLabel.text = ""
 			$WindowDialog/RichTextLabel.visible = true
 			popup.visible = true
 			$WindowDialog/Node2D._on_Pronto_pressed()
-			Global.coin == 0
+			Global.coin = 0
 			process = false
 			Global.cadeado2 += 1
 			$WindowDialog/restart.show()
@@ -73,5 +75,6 @@ func _on_Fundo_vetor(comandList):
 func _on_restart_pressed():
 	TransitionCanvas.change_scene("res://Minigame2.tscn")
 
+# Move to the previous scene
 func _on_Next_pressed():
 	TransitionCanvas.change_scene("res://Main.tscn")

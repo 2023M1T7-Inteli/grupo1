@@ -3,7 +3,7 @@ extends Node
 # Declare member variables here. Examples:
 var my_dict = {1: "A", 2: "B"}
 
-# List of buttons levels and their respective levels
+# Show in the screen the Total score of the player and verify if the locks gonna be unlocked
 func _ready():
 	$"HudBordadoPontuacao-1png(1)/Label".text = str(Global.score)
 	if Global.cadeado1 != 0:
@@ -14,13 +14,16 @@ func _ready():
 		$Cadeado3.hide()
 
 func _process(delta):
+	# Verify if the locks gonna be unlocked
 	if Global.cadeado1 != 0:
 		$Cadeado1.hide()
 	if Global.cadeado2 != 0:
 		$Cadeado2.hide()
 	if Global.cadeado3 != 0:
 		$Cadeado3.hide()
-	
+
+# List of buttons levels and their respective levels
+
 # Level one
 func _on_Button_pressed(): 
 	$Botao.play()

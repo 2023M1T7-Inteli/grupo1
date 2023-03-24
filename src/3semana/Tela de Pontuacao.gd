@@ -1,13 +1,15 @@
 extends Node2D
-
+# Variables of time and score
 var ms = 0
 var s = 0
 var m = 0
 var score = 0
 
+# Hides the image of bordado filé
 func _ready():
 	$Bordado.hide() 
 
+# Make the timer work
 func _process(delta):
 	ms += 1
 	
@@ -22,7 +24,7 @@ func _process(delta):
 	$Tempo.set_text(str(m)+":"+str(s)+":"+str(ms))
 
 
-
+# Set the score based in the timer
 func _on_Pronto_pressed():
 	if m <= 1:
 		score = 1000
@@ -35,6 +37,7 @@ func _on_Pronto_pressed():
 	else:
 		score = 200
 	
+	# Record the score in the global and show in the screen how much  score you got
 	Global.score += score - Global.desconto 
 	set_process(false)
 	$Bordado.show()
