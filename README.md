@@ -98,18 +98,26 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 1.2.1 - 15/03/2023
+    * MUDANÇA: 
+* 1.2.0 - 10/03/2023
+    * ADD: Artefatos 5 e 6 da sprint 3
+* 1.1.2 - 09/03/2023
+    * ADD: Apresentação da sprint 3`
+* 1.1.1 - 07/03/2023
+    * ADD: Versão para teste do jogo Bodin
+* 1.0.1 - 03/03/2023
+    * MUDANÇA: Atualização do README.md
+* 1.0.0 - 24/02/2023
+    * ADD: Colocando o GDD
+    * MUDANÇA: Atualização de algumas sprites
+    * ADD: Implementação de alguns efeitos sonoros
+    * MUDANÇA: Alteração do INDEX
+    * MUDANÇA: Atualização do gitpage do grupo
+    * ADD: Adicionando algumas sprites
+    * ADD: Adicionando funcionalidades de movimentação do personagem
+    * ADD: Implementação de alguns efeitos sonoros
+    * ADD: Implementação de alguns efeitos sonoros
 
 ## 📋 Licença/License
 

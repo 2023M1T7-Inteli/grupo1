@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=74 format=2]
 
 [ext_resource path="res://Imagens/Restart.png" type="Texture" id=1]
 [ext_resource path="res://Imagens/AnimaÃ§Ã£o Palmeira.png" type="Texture" id=2]
@@ -10,7 +10,7 @@
 [ext_resource path="res://Imagens/Botao-X.png" type="Texture" id=8]
 [ext_resource path="res://Imagens/Arbusto 3.png" type="Texture" id=9]
 [ext_resource path="res://Imagens/Areia da praia com malha quadriculada.png" type="Texture" id=10]
-[ext_resource path="res://Imagens/Lixos/Lixo 10-2.png (2).png" type="Texture" id=11]
+[ext_resource path="res://Imagens/Lixos/Lixos2/Lixo 9.png" type="Texture" id=11]
 [ext_resource path="res://Level.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Fonts/PixelOperator-Bold.ttf" type="DynamicFontData" id=13]
 [ext_resource path="res://Imagens/Guarda sol com esteira.png" type="Texture" id=14]
@@ -25,11 +25,12 @@
 [ext_resource path="res://Imagens/botao_start-1.png (1).png" type="Texture" id=23]
 [ext_resource path="res://Imagens/Botao-start-pressionado.png" type="Texture" id=24]
 [ext_resource path="res://Tela de pontuacao.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Imagens/Lixos/lixo 5-2.png (1).png" type="Texture" id=26]
-[ext_resource path="res://Imagens/Lixos/Lixo 7-2.png (1).png" type="Texture" id=27]
+[ext_resource path="res://Imagens/Lixos/Lixos2/lixo 5 (1).png" type="Texture" id=26]
+[ext_resource path="res://Imagens/Lixos/Lixos2/Lixo 10 (1).png" type="Texture" id=27]
 [ext_resource path="res://coin.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Imagens/Lixos/Lixo 9-2.png.png" type="Texture" id=29]
+[ext_resource path="res://Imagens/Lixos/Lixos2/Lixo 7 (2).png" type="Texture" id=29]
 [ext_resource path="res://audios/Vitória.wav" type="AudioStream" id=30]
+[ext_resource path="res://caixa de texto.png" type="Texture" id=31]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Agua-animada"
@@ -114,17 +115,156 @@ tracks/0/keys = {
 "values": [ 0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
 }
 
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 29 )
+region = Rect2( 0, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 29 )
+region = Rect2( 192, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 29 )
+region = Rect2( 384, 0, 192, 192 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 22 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [sub_resource type="CircleShape2D" id=16]
 radius = 37.0
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 192, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 384, 0, 192, 192 )
+
+[sub_resource type="SpriteFrames" id=28]
+animations = [ {
+"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 26 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [sub_resource type="CircleShape2D" id=17]
 radius = 36.7307
 
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 29 )
+region = Rect2( 0, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 29 )
+region = Rect2( 192, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 29 )
+region = Rect2( 384, 0, 192, 192 )
+
+[sub_resource type="SpriteFrames" id=32]
+animations = [ {
+"frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 30 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 27 )
+region = Rect2( 0, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 27 )
+region = Rect2( 192, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 27 )
+region = Rect2( 384, 0, 192, 192 )
+
+[sub_resource type="SpriteFrames" id=36]
+animations = [ {
+"frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 34 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [sub_resource type="CircleShape2D" id=18]
 radius = 37.2
 
+[sub_resource type="SpriteFrames" id=37]
+animations = [ {
+"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 26 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 26 )
+region = Rect2( 0, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 26 )
+region = Rect2( 192, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 26 )
+region = Rect2( 384, 0, 192, 192 )
+
+[sub_resource type="SpriteFrames" id=41]
+animations = [ {
+"frames": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 39 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [sub_resource type="CircleShape2D" id=19]
 radius = 38.7097
+
+[sub_resource type="SpriteFrames" id=42]
+animations = [ {
+"frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 34 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=43]
+animations = [ {
+"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 26 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 213, 10 )
@@ -139,7 +279,7 @@ extents = Vector2( 16.125, 374 )
 extents = Vector2( 195.5, 4.5 )
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 30.625, 37 )
+extents = Vector2( 32.8125, 37 )
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 65.75, 71 )
@@ -151,6 +291,10 @@ extents = Vector2( 34.5, 99.5 )
 
 [sub_resource type="DynamicFont" id=15]
 size = 30
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 200
 font_data = ExtResource( 13 )
 
 [node name="Node2D" type="Node2D"]
@@ -261,8 +405,8 @@ root_node = NodePath("../../Palmeira-2")
 anims/Palmeira = SubResource( 4 )
 
 [node name="barco" type="Sprite" parent="."]
-position = Vector2( 304, 384 )
-scale = Vector2( 0.124163, 0.115257 )
+position = Vector2( 301, 376 )
+scale = Vector2( 0.142706, 0.13247 )
 texture = ExtResource( 19 )
 hframes = 4
 vframes = 4
@@ -272,9 +416,10 @@ frame = 6
 anims/Barco = SubResource( 6 )
 
 [node name="coin2" parent="." instance=ExtResource( 28 )]
-position = Vector2( 300, 495 )
+position = Vector2( 166, 292 )
 scale = Vector2( 0.723958, 0.723958 )
-texture = ExtResource( 27 )
+frames = SubResource( 24 )
+playing = true
 
 [node name="ruim" type="Area2D" parent="coin2" groups=["desconto"]]
 
@@ -285,7 +430,9 @@ shape = SubResource( 16 )
 [node name="coin3" parent="." instance=ExtResource( 28 )]
 position = Vector2( 168, 228 )
 scale = Vector2( 0.79, 0.79 )
-texture = ExtResource( 11 )
+frames = SubResource( 28 )
+frame = 3
+playing = true
 
 [node name="Area2D" type="Area2D" parent="coin3" groups=["pilha"]]
 
@@ -294,9 +441,10 @@ position = Vector2( 6.32912, 5.06326 )
 shape = SubResource( 17 )
 
 [node name="coin4" parent="." instance=ExtResource( 28 )]
-position = Vector2( 161, 294 )
+position = Vector2( 234, 562 )
 scale = Vector2( 0.78375, 0.78375 )
-texture = ExtResource( 27 )
+frame = 2
+playing = true
 
 [node name="Area2D" type="Area2D" parent="coin4" groups=["desconto"]]
 
@@ -305,9 +453,10 @@ position = Vector2( 5.68184, 4.54547 )
 shape = SubResource( 16 )
 
 [node name="coin5" parent="." instance=ExtResource( 28 )]
-position = Vector2( 236, 562 )
-scale = Vector2( 0.865, 0.865 )
-texture = ExtResource( 11 )
+position = Vector2( 298, 492 )
+scale = Vector2( 0.760625, 0.760625 )
+frames = SubResource( 32 )
+playing = true
 
 [node name="Area2D" type="Area2D" parent="coin5" groups=["pilha"]]
 
@@ -318,7 +467,9 @@ shape = SubResource( 17 )
 [node name="coin6" parent="." instance=ExtResource( 28 )]
 position = Vector2( 99, 496 )
 scale = Vector2( 0.679687, 0.679687 )
-texture = ExtResource( 29 )
+frames = SubResource( 36 )
+frame = 3
+playing = true
 
 [node name="Area2D" type="Area2D" parent="coin6" groups=["maca"]]
 
@@ -329,7 +480,9 @@ shape = SubResource( 18 )
 [node name="coin7" parent="." instance=ExtResource( 28 )]
 position = Vector2( 32, 359 )
 scale = Vector2( 0.68, 0.68 )
-texture = ExtResource( 29 )
+frames = SubResource( 37 )
+frame = 2
+playing = true
 
 [node name="Area2D" type="Area2D" parent="coin7" groups=["maca"]]
 
@@ -340,7 +493,9 @@ shape = SubResource( 18 )
 [node name="coin8" parent="." instance=ExtResource( 28 )]
 position = Vector2( 163, 428 )
 scale = Vector2( 0.678333, 0.678333 )
-texture = ExtResource( 26 )
+frames = SubResource( 41 )
+frame = 3
+playing = true
 
 [node name="Area2D" type="Area2D" parent="coin8" groups=["desconto"]]
 
@@ -351,7 +506,9 @@ shape = SubResource( 19 )
 [node name="coin9" parent="." instance=ExtResource( 28 )]
 position = Vector2( 369, 357 )
 scale = Vector2( 0.68, 0.68 )
-texture = ExtResource( 29 )
+frames = SubResource( 42 )
+frame = 2
+playing = true
 
 [node name="Area2D" type="Area2D" parent="coin9" groups=["maca"]]
 
@@ -362,7 +519,9 @@ shape = SubResource( 18 )
 [node name="coin10" parent="." instance=ExtResource( 28 )]
 position = Vector2( 367, 298 )
 scale = Vector2( 0.7825, 0.7825 )
-texture = ExtResource( 11 )
+frames = SubResource( 43 )
+frame = 2
+playing = true
 
 [node name="Area2D" type="Area2D" parent="coin10" groups=["pilha"]]
 
@@ -401,11 +560,11 @@ position = Vector2( 369, 236 )
 shape = SubResource( 11 )
 
 [node name="obstaculo3" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 166, 361 )
+position = Vector2( 168, 361 )
 shape = SubResource( 11 )
 
 [node name="obstaculo4" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 102, 300 )
+position = Vector2( 99.8125, 300 )
 shape = SubResource( 11 )
 
 [node name="obstaculo5" type="CollisionShape2D" parent="colisionBoard"]
@@ -501,6 +660,20 @@ texture_normal = ExtResource( 1 )
 
 [node name="Win" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 30 )
+
+[node name="Contador" type="Sprite" parent="."]
+position = Vector2( 197, 31 )
+scale = Vector2( 0.160462, 0.252322 )
+texture = ExtResource( 31 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Contador"]
+margin_left = -211.888
+margin_top = -87.1902
+margin_right = 87.1115
+margin_bottom = 114.81
+rect_scale = Vector2( 1.5, 1 )
+custom_fonts/normal_font = SubResource( 20 )
+text = "0/5"
 
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="WindowDialog/closePopup" to="." method="_on_closePopup_pressed"]

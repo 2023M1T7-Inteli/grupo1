@@ -111,7 +111,7 @@ texture = ExtResource( 9 )
 offset = Vector2( 68.9796, -58.6327 )
 
 [node name="HudBordadoPontuacao-1png(1)" type="Sprite" parent="."]
-position = Vector2( 234, 733 )
+position = Vector2( 284, 71.0001 )
 scale = Vector2( 1.15854, 1.15854 )
 texture = ExtResource( 10 )
 __meta__ = {

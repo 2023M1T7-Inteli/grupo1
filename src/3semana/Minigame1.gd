@@ -19,6 +19,7 @@ var setas = 1
 
 
 func _ready():
+	TocaMusica.resume()
 	# Reset variables
 	Global.desconto = 0
 	Global.coin = 0
@@ -44,11 +45,14 @@ func _ready():
 	$Arrow4.hide()
 # Button to go back to the previous scene
 func _on_Button2_pressed(): 
+	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://Main.tscn")
 
 # Show the wining message to the player
 func _process(delta):
 	if process:
+		$Contador/RichTextLabel.text = str(Global.coin) + "/5"
+		
 		if Global.coin == 5:
 			$Win.play()
 			
@@ -85,10 +89,12 @@ func _on_Fundo_vetor(comandList):
 
 # Restart the Scene
 func _on_restart_pressed():
+	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://Minigame1.tscn")
 
 # Move back to the previous scene
 func _on_TextureButton_pressed():
+	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://Main.tscn")
 
 

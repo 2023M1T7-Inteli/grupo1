@@ -1,4 +1,4 @@
-extends Sprite
+extends AnimatedSprite
 
 # Variables for interaction and sound effect
 var coletou = false

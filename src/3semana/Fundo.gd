@@ -5,6 +5,8 @@ func _ready():
 	$"../Sprite/CanvasLayer".hide() # Hide the Canvas layer screen
 	if Global.intro: # Play the intro just once
 		$ColorRect.visible = true
+	else:
+		TocaMusica.resume()
 	$"AnimaçãoCaraDoBode/AnimationPlayer".play("animation")
 	$LogoBodin/AnimationPlayer.play("animation")
 	# Timers for the music starts and the sfx in the beggining
@@ -17,6 +19,7 @@ func _ready():
 # Opens the main scene
 func _on_jogar_pressed():
 	$"../botao".play()
+	TocaMusica.pause()
 	Global.intro = false # Variable that controls if the introdution scene show or not
 # Just play the animation once
 	if Global.animationCount:
@@ -36,7 +39,9 @@ func _on_config_pressed():
 func _on_creditos_pressed():
 	$"../botao".play()
 	Global.intro = false
+	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://Node2D.tscn")
+
 
 # Go back to the initial scene
 func _on_TextureButton_pressed():

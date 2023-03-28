@@ -5,7 +5,8 @@ var my_dict = {1: "A", 2: "B"}
 
 # Show in the screen the Total score of the player and verify if the locks gonna be unlocked
 func _ready():
-	$"HudBordadoPontuacao-1png(1)/Label".text = str(Global.score)
+	TocaMusica.resume()
+	$"HudBordadoPontuacao-1png(1)/Label".text = str(Global.score) 
 	if Global.cadeado1 != 0:
 		$Cadeado1.hide()
 	if Global.cadeado2 != 0:
@@ -26,6 +27,7 @@ func _process(delta):
 
 # Level one
 func _on_Button_pressed(): 
+	TocaMusica.pause()
 	$Botao.play()
 	Global.numQuestion = 1
 	TransitionCanvas.change_scene("res://Minigame1.tscn")
@@ -35,6 +37,7 @@ func _on_Button_pressed():
 # Level two
 func _on_Button2_pressed():
 	if Global.cadeado1 != 0:
+		TocaMusica.pause()
 		$Botao.play()
 		Global.numQuestion = 2
 		TransitionCanvas.change_scene("res://Minigame2.tscn")
@@ -43,6 +46,7 @@ func _on_Button2_pressed():
 # Level three
 func _on_Button3_pressed():
 	if Global.cadeado2 != 0:
+		TocaMusica.pause()
 		$Botao.play()
 		Global.numQuestion = 3
 		TransitionCanvas.change_scene("res://Minigame3.tscn")
@@ -51,11 +55,13 @@ func _on_Button3_pressed():
 # Level four
 func _on_Button4_pressed():
 	if Global.cadeado3 != 0:
+		TocaMusica.pause()
 		$Botao.play()
 		Global.numQuestion = 4
 		TransitionCanvas.change_scene("res://Minigame4.tscn")
 
 # Move back to the initial screen
 func _on_moveBackButton_pressed():
+	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://Inicio.tscn")
 

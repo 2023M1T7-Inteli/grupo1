@@ -15,6 +15,7 @@ var msg_queue: Array = [
 	]
 
 func _ready():
+	TocaMusica.resume()
 	# Calls the function
 	_show_message()
 	# Set the secretary to invisible
@@ -33,7 +34,9 @@ func _show_message():
 		$ColorRect.hide() # Hide the color rect
 
 	# Change Scene
+	
 		TransitionCanvas.change_scene("res://Main.tscn")
+		TocaMusica.pause()
 		return
 
 # Return the first element and delet him after that

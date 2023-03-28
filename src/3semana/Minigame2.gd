@@ -17,8 +17,8 @@ onready var receptor = get_node("Fundo")
 
 
 func _ready():
+	TocaMusica.resume()
 	# Reset the variables
-	Global.desconto = 0
 	Global.desconto = 0
 	Global.garrafa = 0
 	popup.visible = true
@@ -36,12 +36,15 @@ func _ready():
 	
 # Button to go back to the previous scene
 func _on_Button2_pressed(): 
+	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://Main.tscn")
 
 # Show the wining message to the player
 func _process(delta):
-	
 	if process:
+		
+		$Contador/RichTextLabel.text = str(Global.garrafa) + "/4"
+		
 		if Global.garrafa == 4:
 			# Makes the bode incapable to move and show the popup again with the options to go to the next level or restart the current level
 			$Win.play()
@@ -73,8 +76,10 @@ func _on_Fundo_vetor(comandList):
 
 # Restart the Scene
 func _on_restart_pressed():
+	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://Minigame2.tscn")
 
 # Move to the previous scene
 func _on_Next_pressed():
+	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://Main.tscn")
