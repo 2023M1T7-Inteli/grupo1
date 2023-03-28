@@ -98,26 +98,40 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 1.2.1 - 15/03/2023
-    * MUDANÇA: 
+* 2.2.0 - 28/03.2023
+    * MUDANÇA: Mudança da música para uma sem direitos autorais.
+    * ADD: Implementação de mais efeitos sonoros.
+* 2.1.1 - 24/03/2023
+    * ADD: Entrega dos artefatos 7, 8 e 9.
+* 2.1.0 - 23/03/2023
+    * MUDANÇA: Atualização das fases 2, 3 e 4.
+    * ADD: Fase de tutorial.
+    * MUDANÇA: Atualizações do design para ficar mais intuitivo.
+    * MUDANÇA: Arrumamos o bug do jogo finalizar sem realizar todas as tarefas.
+    * MUDANÇA: Arrumamos o bug do jogo não pertimir voltar para a tela inicial.
+    * MUDANÇA: Última atualização do jogo para a sprint 4. 
+* 2.0.0 - 22/03/2023
+    * ADD: Implementação dos minigames 2, 3 e 4.
+    * MUDANÇA: Atualização do HTML.
+* 1.4.0 - 21/03/2023
+    * MUDANÇA: Atualização dos testes de colisão do minigame 1.
+    * ADD: Sistema de configurações de áudio
+* 1.3.0 - 17/03/2023
+    * MUDANÇA: Atualização do INDEX.html.
+    * ADD: Sistema de áudio.
 * 1.2.0 - 10/03/2023
-    * ADD: Artefatos 5 e 6 da sprint 3
-* 1.1.2 - 09/03/2023
-    * ADD: Apresentação da sprint 3`
-* 1.1.1 - 07/03/2023
-    * ADD: Versão para teste do jogo Bodin
-* 1.0.1 - 03/03/2023
-    * MUDANÇA: Atualização do README.md
+    * ADD: Artefatos 5 e 6 da sprint 3.
+* 1.1.0 - 07/03/2023
+    * ADD: Versão para teste do jogo Bodin.
 * 1.0.0 - 24/02/2023
-    * ADD: Colocando o GDD
-    * MUDANÇA: Atualização de algumas sprites
-    * ADD: Implementação de alguns efeitos sonoros
-    * MUDANÇA: Alteração do INDEX
-    * MUDANÇA: Atualização do gitpage do grupo
-    * ADD: Adicionando algumas sprites
-    * ADD: Adicionando funcionalidades de movimentação do personagem
-    * ADD: Implementação de alguns efeitos sonoros
-    * ADD: Implementação de alguns efeitos sonoros
+    * ADD: Colocando o GDD.
+    * MUDANÇA: Atualização de algumas sprites.
+    * ADD: Implementação de alguns efeitos sonoros.
+    * MUDANÇA: Alteração do INDEX.
+    * MUDANÇA: Atualização do gitpage do grupo.
+    * ADD: Adicionando algumas sprites.
+    * ADD: Adicionando funcionalidades de movimentação do personagem.
+    * ADD: Implementação de alguns efeitos sonoros.
 
 ## 📋 Licença/License
 
