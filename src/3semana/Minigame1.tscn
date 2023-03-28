@@ -457,32 +457,32 @@ anims/Barco = SubResource( 16 )
 position = Vector2( 168, 103 )
 scale = Vector2( 0.64644, 0.64644 )
 frames = SubResource( 29 )
-frame = 1
 playing = true
 
 [node name="coin2" parent="." instance=ExtResource( 23 )]
 position = Vector2( 233, 496 )
 scale = Vector2( 0.64644, 0.64644 )
 frames = SubResource( 33 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="coin3" parent="." instance=ExtResource( 23 )]
 position = Vector2( 364, 496 )
 scale = Vector2( 0.64644, 0.64644 )
+frame = 1
 playing = true
 
 [node name="coin4" parent="." instance=ExtResource( 23 )]
 position = Vector2( 304, 228 )
 scale = Vector2( 0.64644, 0.64644 )
 frames = SubResource( 37 )
+frame = 3
 playing = true
 
 [node name="coin5" parent="." instance=ExtResource( 23 )]
 position = Vector2( 98, 292 )
 scale = Vector2( 0.64644, 0.64644 )
 frames = SubResource( 41 )
-frame = 1
 playing = true
 
 [node name="Fundo" parent="." instance=ExtResource( 4 )]
