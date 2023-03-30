@@ -12,21 +12,13 @@
 
 ## Descrição
 
-📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
-Meu projeto é um exemplo de como utilizar o github.
+Meu projeto ajuda estudantes e professores de Alagoas a se tornarem protagonistas no aprendizado de matemática e programação.
 <br><br>
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
-</p>
+<img src="/imagens/Logo.png" alt="NOME DO JOGO" border="0">
 
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
-<br><br>
-May the force be with you!
 <br><br>
 
 Bodin é um jogo educativo incrível que apresenta um conceito único de aprendizado. O jogo combina elementos de lógica matemática e computacional, criando um ambiente de aprendizagem divertido e interativo para os jogadores. A jogabilidade é baseada em resolver quebra-cabeças através da construção de algoritmos com botões de setas. A medida que o jogador avança, os desafios vão se tornando progressivamente mais difíceis, o que o torna uma ferramenta de aprendizado excepcional para todos os níveis de habilidade.
