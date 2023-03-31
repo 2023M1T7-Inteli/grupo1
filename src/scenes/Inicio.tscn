@@ -1,0 +1,192 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Imagens/mapa (1) (1).png" type="Texture" id=1]
+[ext_resource path="res://script/Fundo.gd" type="Script" id=2]
+[ext_resource path="res://Imagens/botao_start-1.png (1).png" type="Texture" id=3]
+[ext_resource path="res://Imagens/botao_config_pressionado.png" type="Texture" id=4]
+[ext_resource path="res://Imagens/botao_config.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/Botao-start-pressionado.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/animaçãoCaraDoBode.png" type="Texture" id=7]
+[ext_resource path="res://Imagens/creditos.png-1.png.png" type="Texture" id=8]
+[ext_resource path="res://Imagens/botao_creditos_pressionado.png" type="Texture" id=9]
+[ext_resource path="res://Imagens/logo_bodin.png" type="Texture" id=10]
+[ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=11]
+[ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=12]
+[ext_resource path="res://scenes/Control.tscn" type="PackedScene" id=13]
+[ext_resource path="res://audios/Botões Menu.wav" type="AudioStream" id=14]
+[ext_resource path="res://audios/Tela inicial bode.wav" type="AudioStream" id=15]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "animation"
+length = 4.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "animation"
+length = 4.9
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95, 2, 2.05, 2.1, 2.15, 2.2, 2.25, 2.3, 2.35, 2.4, 2.45, 2.5, 2.55, 2.6, 2.65, 2.7, 2.75, 2.8, 2.85, 2.9, 2.95, 3, 3.05, 3.1, 3.15, 3.2, 3.25, 3.3, 3.35, 3.4, 3.45, 3.5, 3.55, 3.6, 3.65, 3.7, 3.75, 3.8, 3.85, 3.9, 3.95, 4, 4.05, 4.1, 4.15, 4.2, 4.25, 4.3, 4.35, 4.4, 4.45, 4.5, 4.55, 4.6, 4.65, 4.7, 4.75, 4.8, 4.85 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 ]
+}
+
+[node name="start" type="Node2D"]
+
+[node name="backGround" type="Sprite" parent="."]
+position = Vector2( 232, 382 )
+scale = Vector2( 0.308254, 0.244466 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="play" type="TextureButton" parent="backGround"]
+anchor_left = 0.000195808
+anchor_top = 1.84674e-05
+anchor_right = 0.000195808
+anchor_bottom = 1.84674e-05
+margin_left = -376.313
+margin_top = -319.063
+margin_right = 214.687
+margin_bottom = 271.937
+rect_scale = Vector2( 1.0706, 1.26563 )
+rect_pivot_offset = Vector2( -1589.09, -515.385 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="config" type="TextureButton" parent="backGround"]
+margin_left = -710.454
+margin_top = 110.445
+margin_right = -361.454
+margin_bottom = 431.445
+rect_scale = Vector2( 1.04847, 1.04847 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
+
+[node name="credits" type="TextureButton" parent="backGround"]
+margin_left = 480.124
+margin_top = 110.445
+margin_right = 831.123
+margin_bottom = 431.445
+rect_scale = Vector2( 0.836965, 0.836965 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+
+[node name="ColorRect" type="ColorRect" parent="backGround"]
+visible = false
+margin_left = -801.0
+margin_top = -1702.0
+margin_right = 805.0
+margin_bottom = 1714.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimaçãoCaraDoBode" type="Sprite" parent="backGround"]
+position = Vector2( 29.1967, -1067.63 )
+scale = Vector2( 1.82903, 2.30628 )
+texture = ExtResource( 7 )
+offset = Vector2( -16.254, -0.00184631 )
+hframes = 6
+vframes = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="backGround/AnimaçãoCaraDoBode"]
+anims/RESET = SubResource( 1 )
+anims/animation = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="backGround"]
+wait_time = 5.0
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="backGround"]
+wait_time = 2.9
+one_shot = true
+
+[node name="LogoBodin" type="Sprite" parent="backGround"]
+position = Vector2( 107.055, -314.972 )
+scale = Vector2( 0.98843, 1.24634 )
+texture = ExtResource( 10 )
+offset = Vector2( -128, -0.00012207 )
+hframes = 10
+vframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="backGround/LogoBodin"]
+anims/RESET = SubResource( 3 )
+anims/animation = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 252, 375 )
+
+[node name="CanvasLayer" parent="Sprite" instance=ExtResource( 13 )]
+visible = false
+
+[node name="TextureButton" type="TextureButton" parent="Sprite/CanvasLayer"]
+margin_left = 9.0
+margin_top = 22.0
+margin_right = 174.0
+margin_bottom = 149.0
+rect_scale = Vector2( 0.39517, 0.39517 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+
+[node name="botao" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[node name="piscadela" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[connection signal="pressed" from="backGround/play" to="backGround" method="_on_jogar_pressed"]
+[connection signal="pressed" from="backGround/config" to="backGround" method="_on_config_pressed"]
+[connection signal="pressed" from="backGround/credits" to="backGround" method="_on_creditos_pressed"]
+[connection signal="timeout" from="backGround/Timer2" to="backGround" method="_on_Timer2_timeout"]
+[connection signal="pressed" from="Sprite/CanvasLayer/TextureButton" to="backGround" method="_on_TextureButton_pressed"]

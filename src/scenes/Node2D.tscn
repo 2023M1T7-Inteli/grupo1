@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://script/Node2D.gd" type="Script" id=1]
+[ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=3]
+[ext_resource path="res://Imagens/Tela creditos (3) (1).png" type="Texture" id=4]
+
+[node name="Node2D" type="Sprite"]
+position = Vector2( 233.063, 393.625 )
+scale = Vector2( 0.654473, 0.528153 )
+script = ExtResource( 1 )
+
+[node name="TelaCreditos(3)(1)" type="Sprite" parent="."]
+position = Vector2( 0.490326, 23.1426 )
+scale = Vector2( 1.15024, 1.15024 )
+texture = ExtResource( 4 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = -270.542
+margin_top = 553.58
+margin_right = -105.542
+margin_bottom = 680.58
+rect_scale = Vector2( 1.14003, 1.14003 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

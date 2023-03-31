@@ -12,21 +12,13 @@
 
 ## Descrição
 
-📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
-Meu projeto é um exemplo de como utilizar o github.
+Meu projeto ajuda estudantes e professores de Alagoas a se tornarem protagonistas no aprendizado de matemática e programação.
 <br><br>
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
-</p>
+<img src="/imagens/Logo.png" alt="NOME DO JOGO" border="0">
 
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
-<br><br>
-May the force be with you!
 <br><br>
 
 Bodin é um jogo educativo incrível que apresenta um conceito único de aprendizado. O jogo combina elementos de lógica matemática e computacional, criando um ambiente de aprendizagem divertido e interativo para os jogadores. A jogabilidade é baseada em resolver quebra-cabeças através da construção de algoritmos com botões de setas. A medida que o jogador avança, os desafios vão se tornando progressivamente mais difíceis, o que o torna uma ferramenta de aprendizado excepcional para todos os níveis de habilidade.
@@ -98,18 +90,40 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 2.2.0 - 28/03.2023
+    * MUDANÇA: Mudança da música para uma sem direitos autorais.
+    * ADD: Implementação de mais efeitos sonoros.
+* 2.1.1 - 24/03/2023
+    * ADD: Entrega dos artefatos 7, 8 e 9.
+* 2.1.0 - 23/03/2023
+    * MUDANÇA: Atualização das fases 2, 3 e 4.
+    * ADD: Fase de tutorial.
+    * MUDANÇA: Atualizações do design para ficar mais intuitivo.
+    * MUDANÇA: Arrumamos o bug do jogo finalizar sem realizar todas as tarefas.
+    * MUDANÇA: Arrumamos o bug do jogo não pertimir voltar para a tela inicial.
+    * MUDANÇA: Última atualização do jogo para a sprint 4. 
+* 2.0.0 - 22/03/2023
+    * ADD: Implementação dos minigames 2, 3 e 4.
+    * MUDANÇA: Atualização do HTML.
+* 1.4.0 - 21/03/2023
+    * MUDANÇA: Atualização dos testes de colisão do minigame 1.
+    * ADD: Sistema de configurações de áudio
+* 1.3.0 - 17/03/2023
+    * MUDANÇA: Atualização do INDEX.html.
+    * ADD: Sistema de áudio.
+* 1.2.0 - 10/03/2023
+    * ADD: Artefatos 5 e 6 da sprint 3.
+* 1.1.0 - 07/03/2023
+    * ADD: Versão para teste do jogo Bodin.
+* 1.0.0 - 24/02/2023
+    * ADD: Colocando o GDD.
+    * MUDANÇA: Atualização de algumas sprites.
+    * ADD: Implementação de alguns efeitos sonoros.
+    * MUDANÇA: Alteração do INDEX.
+    * MUDANÇA: Atualização do gitpage do grupo.
+    * ADD: Adicionando algumas sprites.
+    * ADD: Adicionando funcionalidades de movimentação do personagem.
+    * ADD: Implementação de alguns efeitos sonoros.
 
 ## 📋 Licença/License
 
