@@ -20,10 +20,10 @@ var reset = false
 var condition = true
 var parado = false
 # Texture of console arrows
-var up = load("res://Imagens/Seta_Up_console.png")
-var down = load("res://Imagens/Seta_Down_console.png")
-var left = load("res://Imagens/Seta_Left_console.png")
-var right = load("res://Imagens/Seta_Right_console.png")
+var up = load("res://Imagens/setaCimaConsole.png")
+var down = load("res://Imagens/setaBaixoConsole.png")
+var left = load("res://Imagens/setaEsquerdaConsole.png")
+var right = load("res://Imagens/setaDireitaConsole.png")
 # Save the initial cordinates of the bode
 var x
 var y

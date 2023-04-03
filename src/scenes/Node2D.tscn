@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://script/Node2D.gd" type="Script" id=1]
-[ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=2]
-[ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=3]
-[ext_resource path="res://Imagens/Tela creditos (3) (1).png" type="Texture" id=4]
+[ext_resource path="res://Imagens/botaoVoltar.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/botaoVoltarPressionado.png" type="Texture" id=3]
+[ext_resource path="res://Imagens/creditosFundo.png" type="Texture" id=4]
 
 [node name="Node2D" type="Sprite"]
 position = Vector2( 233.063, 393.625 )

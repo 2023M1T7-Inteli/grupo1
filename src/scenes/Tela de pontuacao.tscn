@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://script/Tela de Pontuacao.gd" type="Script" id=1]
-[ext_resource path="res://Imagens/bordado_filé_separado-1.png.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/bordadoFile.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/PixelOperator8.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
