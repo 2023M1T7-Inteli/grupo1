@@ -1,26 +1,23 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://script/Main.gd" type="Script" id=1]
-[ext_resource path="res://Imagens/fase select rua att-1.png.png" type="Texture" id=2]
-[ext_resource path="res://Imagens/mapa-3.png (1).png" type="Texture" id=3]
-[ext_resource path="res://Imagens/fase select rua att-3.png.png" type="Texture" id=4]
-[ext_resource path="res://Imagens/fase select rua att-4.png.png" type="Texture" id=5]
-[ext_resource path="res://Imagens/fase select rua att-2.png.png" type="Texture" id=6]
-[ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=7]
-[ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=8]
+[ext_resource path="res://Imagens/botaoSelecaoFase1.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/selecaoFasesFundo.png" type="Texture" id=3]
+[ext_resource path="res://Imagens/botaoSelecaoFase3.png" type="Texture" id=4]
+[ext_resource path="res://Imagens/botaoSelecaoFase4.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/botaoSelecaoFase2.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/botaoVoltar.png" type="Texture" id=7]
+[ext_resource path="res://Imagens/botaoVoltarPressionado.png" type="Texture" id=8]
 [ext_resource path="res://Imagens/cadeado.png" type="Texture" id=9]
-[ext_resource path="res://Imagens/hud_bordado_pontuacao-1.png (2).png" type="Texture" id=10]
+[ext_resource path="res://Imagens/hudPontuacaoBordado.png" type="Texture" id=10]
 [ext_resource path="res://Fonts/PixelOperator8.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://audios/Botões Menu.wav" type="AudioStream" id=12]
-[ext_resource path="res://Fonts/PixelOperator-Bold.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://audios/botoesMenus.wav" type="AudioStream" id=12]
+[ext_resource path="res://Imagens/fase2/Fase2-2.png" type="Texture" id=13]
+[ext_resource path="res://Imagens/fase2/Fase2-1.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 11 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 52
-font_data = ExtResource( 13 )
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -136,20 +133,21 @@ deselect_on_focus_loss_enabled = false
 [node name="Botao" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
 
-[node name="fase2" type="Button" parent="."]
+[node name="fase2" type="TextureButton" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -80.0
-margin_top = -62.0
-margin_right = 82.0
-margin_bottom = -2.0
-custom_fonts/font = SubResource( 2 )
-text = "FASE 2"
+margin_left = -153.0
+margin_top = -208.0
+margin_right = 345.0
+margin_bottom = 152.0
+rect_scale = Vector2( 0.559999, 0.559999 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
 
-[connection signal="pressed" from="Button1" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button1" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="Button1" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]

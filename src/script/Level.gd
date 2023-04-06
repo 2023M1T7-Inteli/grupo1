@@ -20,18 +20,20 @@ var reset = false
 var condition = true
 var parado = false
 # Texture of console arrows
-var up = load("res://Imagens/Seta_Up_console.png")
-var down = load("res://Imagens/Seta_Down_console.png")
-var left = load("res://Imagens/Seta_Left_console.png")
-var right = load("res://Imagens/Seta_Right_console.png")
+var up = load("res://Imagens/setaCimaConsole.png")
+var down = load("res://Imagens/setaBaixoConsole.png")
+var left = load("res://Imagens/setaEsquerdaConsole.png")
+var right = load("res://Imagens/setaDireitaConsole.png")
 # Save the initial cordinates of the bode
 var x
 var y
 var in1 = false
+var audioCollision = true
 # Reset the number of coins
 func _ready():
 	Global.coin = 0
 	$Bode/AnimationPlayer.play("Stop")
+	
 # Functions that apped vetors in the array
 func _on_Left_pressed():
 	if !(mover1 or mover2 or mover3 or mover4):
@@ -64,18 +66,22 @@ func _on_lista_pressed():
 				i += 1
 				mover1 = true
 				$AudioStreamPlayer.play()
+				
 			elif comandList[i] == ("left"):
 				i += 1
 				mover2 = true
 				$AudioStreamPlayer.play()
+				
 			elif comandList[i] == ("down"):
 				i += 1
 				mover3 = true
 				$AudioStreamPlayer.play()
+			
 			elif comandList[i] == ("up"):
 				i += 1
 				mover4 = true
 				$AudioStreamPlayer.play()
+				
 # Reset the func for another set of moviments
 		else:
 			i = 0
@@ -94,6 +100,8 @@ func _on_lista_pressed():
 			comandList = []
 			for j in range(15):
 				get_node("Sprite"+str(j)).texture = null
+				
+	audioCollision = true
 
 	# Function that makes the bode move
 func _process(delta):
@@ -157,13 +165,25 @@ func _process(delta):
 # Let the game start
 	if comandList.size() <= 15:
 		comecar = true
-
+	
+	if $Bode.get_slide_collision(0) != null and audioCollision == true:
+		print("hello")
+		$AudioStreamPlayer3.play()
+		audioCollision = false
+		
+		
+		
+		
 # Function that identify the area that entered the bode and react according it
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("garrafa"):
 		Global.garrafa += 1
+	if area.is_in_group("not-colect"):
+		# Bad sound
+		$Audio_NotColect.play()
 	if area.is_in_group("coin"):
 		$AudioStreamPlayer2.play()
+	if area.is_in_group("coletaveis"):
 		emit_signal("showQuestion")
 	if area.is_in_group("pilha"):
 		Global.pilha += 1
@@ -171,7 +191,12 @@ func _on_Area2D_area_entered(area):
 		Global.maca += 1
 	if area.is_in_group("desconto"):
 		Global.desconto += 200
+		Global.coin -= 1
+		
+	
 
 # Make the bode stop when called
 func para_bodin():
 	i = comandList.size()
+
+

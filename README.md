@@ -16,7 +16,7 @@
 Meu projeto ajuda estudantes e professores de Alagoas a se tornarem protagonistas no aprendizado de matemática e programação.
 <br><br>
 <p align="center">
-<img src="/imagens/Logo.png" alt="NOME DO JOGO" border="0">
+<img src="/imagens/LogoDoJogo.png" alt="NOME DO JOGO" border="0">
 
 
 <br><br>
@@ -89,8 +89,13 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
-
-* 2.2.0 - 28/03.2023
+  
+* 3.1.0 - 01/04/2023
+    * ADD: Implementação da base dos minigames da fase 2.
+* 3.0.0 - 31/03/2023
+    * MUDANÇA: Organização do código em pastas.
+    * ADD: Introdução da fase 2.
+* 2.2.0 - 28/03/2023
     * MUDANÇA: Mudança da música para uma sem direitos autorais.
     * ADD: Implementação de mais efeitos sonoros.
 * 2.1.1 - 24/03/2023

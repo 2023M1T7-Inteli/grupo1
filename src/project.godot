@@ -10,8 +10,9 @@ config_version=4
 
 [application]
 
-config/name="script1projeto"
+config/name="Bodin"
 run/main_scene="res://scenes/Inicio.tscn"
+config/icon="res://Imagens/iconBodin.png"
 
 [autoload]
 
@@ -23,6 +24,7 @@ TocaMusica="*res://scenes/tocaMusica.tscn"
 
 window/size/width=466
 window/size/height=800
+window/handheld/orientation="portrait"
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 

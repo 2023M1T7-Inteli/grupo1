@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://audios/MúsicaJogo.wav" type="AudioStream" id=1]
+[ext_resource path="res://audios/musicaFundo.wav" type="AudioStream" id=1]
 [ext_resource path="res://script/tocaMusica.gd" type="Script" id=2]
 
 [node name="tocaMusica" type="Node"]

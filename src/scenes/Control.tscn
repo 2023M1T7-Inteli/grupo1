@@ -2,10 +2,10 @@
 
 [ext_resource path="res://script/AudioSettings.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/ajustesTitulo.png" type="Texture" id=3]
-[ext_resource path="res://Imagens/Tela de ajustes.png" type="Texture" id=4]
-[ext_resource path="res://Imagens/botaoSFX (1).png" type="Texture" id=5]
-[ext_resource path="res://Imagens/botaoMusica (1).png" type="Texture" id=6]
-[ext_resource path="res://Imagens/botaoMaster (3).png" type="Texture" id=9]
+[ext_resource path="res://Imagens/fundoAjustes.png" type="Texture" id=4]
+[ext_resource path="res://Imagens/botaoSFX.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/botaoMusica.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/botaoMaster.png" type="Texture" id=9]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 1 )

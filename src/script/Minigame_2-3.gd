@@ -1,5 +1,6 @@
 extends Node2D
 
+
 # Dictionary with the questions
 var dict = { 
 	1: "Colete todos os lixos da praia",
@@ -26,24 +27,29 @@ func _ready():
 	var question = dict.get(number)
 	
 	# Show the initial popup with the messsage and start the animations in the scenario
-	$WindowDialog/RichTextLabel.text = "Colete apenas garrafas"
+	$WindowDialog/RichTextLabel.text = "Colete os todos os itens"
 	$WindowDialog/restart.hide()
 	$WindowDialog/Next.hide()
-	$"Palmeira-2/AnimationPlayer".play("Palmeira")
-	$"Palmeira-3/AnimationPlayer".play("Palmeira")
-	$"Agua-animada/AnimationPlayer".play("Agua-animada")
-	$barco/AnimationPlayer.play("Barco")
+	$WindowDialog/buttonAnswer1.hide()
+	$WindowDialog/buttonAnswer2.hide()
+	$WindowDialog/buttonAnswer3.hide()
+	$WindowDialog/buttonAnswer4.hide()
+	
 	
 # Button to go back to the previous scene
 func _on_Button2_pressed(): 
 	TocaMusica.pause()
-	TransitionCanvas.change_scene("res://scenes/Main.tscn")
+	TransitionCanvas.change_scene("res://scenes/Main2f.tscn")
 
 # Show the wining message to the player
 func _process(delta):
 	if process:
 		
-		$Contador/RichTextLabel.text = str(Global.garrafa) + "/4"
+		$Contador/RichTextLabel.text = str(Global.coin) + "/4"
+		if Global.coin >= 2:
+			$colisionBoard/obstaculo7.position = Vector2(500,200)
+			if $coin:
+				$coin.set_animation("default")
 		
 		if Global.garrafa == 4:
 			# Makes the bode incapable to move and show the popup again with the options to go to the next level or restart the current level
@@ -59,12 +65,13 @@ func _process(delta):
 			$WindowDialog/Node2D._on_Pronto_pressed()
 			Global.coin = 0
 			process = false
-			Global.cadeado2 += 1
+			Global.cadeado23 += 1
 			$WindowDialog/restart.show()
 			$WindowDialog/Next.show()
 
 # Close popup
 func _on_closePopup_pressed():
+	$popWarn.visible = true
 	popup.visible = false
 	$WindowDialog/closePopup.disabled = true
 
@@ -77,9 +84,61 @@ func _on_Fundo_vetor(comandList):
 # Restart the Scene
 func _on_restart_pressed():
 	TocaMusica.pause()
-	TransitionCanvas.change_scene("res://scenes/Minigame2.tscn")
+	TransitionCanvas.change_scene("res://scenes/Minigame_2-3.tscn")
 
 # Move to the previous scene
 func _on_Next_pressed():
 	TocaMusica.pause()
-	TransitionCanvas.change_scene("res://scenes/Main.tscn")
+	TransitionCanvas.change_scene("res://scenes/Main2f.tscn")
+
+
+func _on_Fundo_showQuestion():
+	$Fundo.para_bodin()
+	$WindowDialog/RichTextLabel.text = "14 - 5 = ?"
+	$WindowDialog/RichTextLabel.visible = true
+	$WindowDialog/buttonAnswer1.show()
+	$WindowDialog/buttonAnswer2.show()
+	$WindowDialog/buttonAnswer3.show()
+	$WindowDialog/buttonAnswer4.show()
+	$WindowDialog.visible = true
+	$Fundo/CanvasLayer/Down.disabled = true
+	$Fundo/CanvasLayer/Up.disabled = true
+	$Fundo/CanvasLayer/Left.disabled = true
+	$Fundo/CanvasLayer/Right.disabled = true
+
+
+func _on_buttonAnswer1_pressed():
+	TocaMusica.pause()
+	TransitionCanvas.change_scene("res://scenes/Minigame_2-3.tscn")
+
+func _on_buttonAnswer2_pressed():
+	TocaMusica.pause()
+	TransitionCanvas.change_scene("res://scenes/Minigame_2-3.tscn")
+
+
+func _on_buttonAnswer3_pressed():
+	TocaMusica.pause()
+	TransitionCanvas.change_scene("res://scenes/Minigame_2-3.tscn")
+
+
+func _on_buttonAnswer4_pressed():
+	$Win.play()
+	$WindowDialog/RichTextLabel.text = ""
+	$WindowDialog/RichTextLabel.visible = true
+	popup.visible = true
+	$WindowDialog/Node2D._on_Pronto_pressed()
+	Global.coin = 0
+	process = false
+	Global.cadeado23 += 1
+	$WindowDialog/restart.show()
+	$WindowDialog/Next.show()
+	$WindowDialog/Next.disabled = false
+	$WindowDialog/buttonAnswer1.hide()
+	$WindowDialog/buttonAnswer2.hide()
+	$WindowDialog/buttonAnswer3.hide()
+	$WindowDialog/buttonAnswer4.hide()
+	
+
+
+func _on_closePopWarn_pressed():
+	$popWarn.visible = false

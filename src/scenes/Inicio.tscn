@@ -1,20 +1,20 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Imagens/mapa (1) (1).png" type="Texture" id=1]
+[ext_resource path="res://Imagens/mainFundo.png" type="Texture" id=1]
 [ext_resource path="res://script/Fundo.gd" type="Script" id=2]
-[ext_resource path="res://Imagens/botao_start-1.png (1).png" type="Texture" id=3]
-[ext_resource path="res://Imagens/botao_config_pressionado.png" type="Texture" id=4]
-[ext_resource path="res://Imagens/botao_config.png" type="Texture" id=5]
-[ext_resource path="res://Imagens/Botao-start-pressionado.png" type="Texture" id=6]
-[ext_resource path="res://Imagens/animaçãoCaraDoBode.png" type="Texture" id=7]
-[ext_resource path="res://Imagens/creditos.png-1.png.png" type="Texture" id=8]
-[ext_resource path="res://Imagens/botao_creditos_pressionado.png" type="Texture" id=9]
-[ext_resource path="res://Imagens/logo_bodin.png" type="Texture" id=10]
-[ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=11]
-[ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=12]
+[ext_resource path="res://Imagens/botaoStart.png" type="Texture" id=3]
+[ext_resource path="res://Imagens/botaoConfigPressionado.png" type="Texture" id=4]
+[ext_resource path="res://Imagens/botaoConfig.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/botaoStartPressionado.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/animacaoCaraDoBode.png" type="Texture" id=7]
+[ext_resource path="res://Imagens/botaoCreditos.png" type="Texture" id=8]
+[ext_resource path="res://Imagens/botaoCreditosPressionado.png" type="Texture" id=9]
+[ext_resource path="res://Imagens/logoBodin.png" type="Texture" id=10]
+[ext_resource path="res://Imagens/botaoVoltar.png" type="Texture" id=11]
+[ext_resource path="res://Imagens/botaoVoltarPressionado.png" type="Texture" id=12]
 [ext_resource path="res://scenes/Control.tscn" type="PackedScene" id=13]
-[ext_resource path="res://audios/Botões Menu.wav" type="AudioStream" id=14]
-[ext_resource path="res://audios/Tela inicial bode.wav" type="AudioStream" id=15]
+[ext_resource path="res://audios/botoesMenus.wav" type="AudioStream" id=14]
+[ext_resource path="res://audios/piscadinha.wav" type="AudioStream" id=15]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -84,8 +84,8 @@ tracks/0/keys = {
 [node name="start" type="Node2D"]
 
 [node name="backGround" type="Sprite" parent="."]
-position = Vector2( 232, 382 )
-scale = Vector2( 0.308254, 0.244466 )
+position = Vector2( 238, 403 )
+scale = Vector2( 0.3, 0.25 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
@@ -94,12 +94,12 @@ anchor_left = 0.000195808
 anchor_top = 1.84674e-05
 anchor_right = 0.000195808
 anchor_bottom = 1.84674e-05
-margin_left = -376.313
-margin_top = -319.063
-margin_right = 214.687
-margin_bottom = 271.937
+margin_left = -308.583
+margin_top = -94.4351
+margin_right = 282.417
+margin_bottom = 496.565
 rect_scale = Vector2( 1.0706, 1.26563 )
-rect_pivot_offset = Vector2( -1589.09, -515.385 )
+rect_pivot_offset = Vector2( 289.128, 273.21 )
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 6 )
 __meta__ = {
@@ -107,20 +107,18 @@ __meta__ = {
 }
 
 [node name="config" type="TextureButton" parent="backGround"]
-margin_left = -710.454
-margin_top = 110.445
-margin_right = -361.454
-margin_bottom = 431.445
-rect_scale = Vector2( 1.04847, 1.04847 )
+margin_left = -635.374
+margin_top = 102.891
+margin_right = -320.374
+margin_bottom = 417.891
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 4 )
 
 [node name="credits" type="TextureButton" parent="backGround"]
-margin_left = 480.124
-margin_top = 110.445
-margin_right = 831.123
-margin_bottom = 431.445
-rect_scale = Vector2( 0.836965, 0.836965 )
+margin_left = 291.626
+margin_top = 102.891
+margin_right = 606.626
+margin_bottom = 417.891
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
 
@@ -133,7 +131,7 @@ margin_bottom = 1714.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="AnimaçãoCaraDoBode" type="Sprite" parent="backGround"]
-position = Vector2( 29.1967, -1067.63 )
+position = Vector2( -16, -1124 )
 scale = Vector2( 1.82903, 2.30628 )
 texture = ExtResource( 7 )
 offset = Vector2( -16.254, -0.00184631 )
@@ -153,7 +151,7 @@ wait_time = 2.9
 one_shot = true
 
 [node name="LogoBodin" type="Sprite" parent="backGround"]
-position = Vector2( 107.055, -314.972 )
+position = Vector2( 29.1143, -364.348 )
 scale = Vector2( 0.98843, 1.24634 )
 texture = ExtResource( 10 )
 offset = Vector2( -128, -0.00012207 )

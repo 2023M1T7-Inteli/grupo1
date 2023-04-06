@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://script/Tela de Pontuacao.gd" type="Script" id=1]
-[ext_resource path="res://Imagens/bordado_filé_separado-1.png.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/bordadoFile.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/PixelOperator8.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -24,14 +24,6 @@ position = Vector2( 101, 121 )
 scale = Vector2( 1.22671, 1.25309 )
 texture = ExtResource( 2 )
 
-[node name="Pronto" type="Button" parent="."]
-modulate = Color( 0.803922, 0.227451, 0.619608, 1 )
-margin_left = 2587.0
-margin_top = -387.0
-margin_right = 2641.0
-margin_bottom = -367.0
-text = "Pronto"
-
 [node name="Mensagem" type="RichTextLabel" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
@@ -40,5 +32,3 @@ margin_top = 16.0
 margin_right = 530.0
 margin_bottom = 193.0
 custom_fonts/normal_font = SubResource( 1 )
-
-[connection signal="pressed" from="Pronto" to="." method="_on_Pronto_pressed"]

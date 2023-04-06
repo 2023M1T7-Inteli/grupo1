@@ -13,8 +13,12 @@ func coin():
 # Identify the area that entered in the coin
 func _on_Sprite_area_entered(area):
 	if area.is_in_group("bode"):
-		print($area2d/CollisionShape2D.disabled)
-		$AudioStreamPlayer.play()
-		coin()
-		queue_free()
+		print(self)
+		if self.is_in_group("coletaveis"):
+			pass
+		else:
+			print($area2d/CollisionShape2D.disabled)
+			$AudioStreamPlayer.play()
+			coin()
+			queue_free()
 		

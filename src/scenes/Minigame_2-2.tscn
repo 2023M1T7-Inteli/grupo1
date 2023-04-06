@@ -1,224 +1,144 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=63 format=2]
 
-[ext_resource path="res://Imagens/Areia da praia com malha quadriculada.png" type="Texture" id=1]
+[ext_resource path="res://Imagens/fase2/tapioca (1).png" type="Texture" id=1]
 [ext_resource path="res://Fonts/PixelOperator-Bold.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Imagens/AnimaÃ§Ã£o Palmeira.png" type="Texture" id=3]
+[ext_resource path="res://script/Minigame_2-2.gd" type="Script" id=3]
 [ext_resource path="res://scenes/Level.tscn" type="PackedScene" id=4]
-[ext_resource path="res://script/Minigame_2-2.gd" type="Script" id=5]
-[ext_resource path="res://Imagens/voltar-2.png.png" type="Texture" id=6]
-[ext_resource path="res://Imagens/Botao-voltar-pressionado.png" type="Texture" id=7]
-[ext_resource path="res://Imagens/caixa_pergunta.png" type="Texture" id=8]
-[ext_resource path="res://Imagens/Restart.png" type="Texture" id=9]
-[ext_resource path="res://Imagens/caixa de texto.png" type="Texture" id=10]
-[ext_resource path="res://Imagens/Botao-X.png" type="Texture" id=11]
-[ext_resource path="res://Imagens/arbusto 2.png" type="Texture" id=12]
-[ext_resource path="res://Imagens/Arbusto 4.png" type="Texture" id=13]
-[ext_resource path="res://Imagens/Arbusto 3.png" type="Texture" id=14]
-[ext_resource path="res://Imagens/Arbusto 1.png" type="Texture" id=15]
-[ext_resource path="res://Imagens/Guarda sol com cadeira.png" type="Texture" id=16]
-[ext_resource path="res://Imagens/Baldinho de areia.png" type="Texture" id=17]
-[ext_resource path="res://Imagens/Carrinho de sorvete.png" type="Texture" id=18]
-[ext_resource path="res://Imagens/AGUA ANIMADA.png" type="Texture" id=19]
-[ext_resource path="res://Imagens/Estrela e concha.png" type="Texture" id=20]
-[ext_resource path="res://Imagens/Guarda sol com esteira.png" type="Texture" id=21]
-[ext_resource path="res://Imagens/barco_bandeira (1).png" type="Texture" id=22]
+[ext_resource path="res://Imagens/fase2/background 2-2.png.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/botaoVoltar.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/botaoVoltarPressionado.png" type="Texture" id=7]
+[ext_resource path="res://Imagens/caixaPergunta.png" type="Texture" id=8]
+[ext_resource path="res://Imagens/botaoRestart.png" type="Texture" id=9]
+[ext_resource path="res://Imagens/caixaDeTexto.png" type="Texture" id=10]
+[ext_resource path="res://Imagens/botaoX.png" type="Texture" id=11]
+[ext_resource path="res://Imagens/cactoNovo.png" type="Texture" id=12]
+[ext_resource path="res://Imagens/fase2/cifre.png" type="Texture" id=13]
+[ext_resource path="res://Imagens/fase2/mandioca.png" type="Texture" id=14]
+[ext_resource path="res://Imagens/fase2/Cuzcuz.png" type="Texture" id=15]
+[ext_resource path="res://Imagens/fase2/Banco-1.png.png" type="Texture" id=16]
+[ext_resource path="res://Imagens/fase2/chifre-1.png (2).png" type="Texture" id=17]
+[ext_resource path="res://Imagens/fase2/farol.png" type="Texture" id=18]
+[ext_resource path="res://Imagens/fase2/answerButton (2).png" type="Texture" id=19]
+[ext_resource path="res://Imagens/nuvem2-1.png.png" type="Texture" id=20]
+[ext_resource path="res://Fonts/Stay Pixel DEMO.ttf" type="DynamicFontData" id=21]
 [ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Imagens/Lixos/Lixos2/Lixo 9.png" type="Texture" id=24]
-[ext_resource path="res://Imagens/Lixos/Lixos2/lixo 5 (2).png" type="Texture" id=25]
-[ext_resource path="res://Imagens/Lixos/Lixos2/Lixo 7 (3).png" type="Texture" id=26]
-[ext_resource path="res://Imagens/Lixos/Lixos2/Lixo 1 (1).png" type="Texture" id=27]
+[ext_resource path="res://Imagens/fase2/answerButton (1).png" type="Texture" id=24]
 [ext_resource path="res://scenes/Tela de pontuacao.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Imagens/botao_start-1.png (1).png" type="Texture" id=29]
-[ext_resource path="res://Imagens/Botao-start-pressionado.png" type="Texture" id=30]
-[ext_resource path="res://audios/Vitória.wav" type="AudioStream" id=33]
+[ext_resource path="res://Imagens/botaoStart.png" type="Texture" id=29]
+[ext_resource path="res://Imagens/botaoStartPressionado.png" type="Texture" id=30]
+[ext_resource path="res://audios/vitoria.wav" type="AudioStream" id=33]
 
-[sub_resource type="Animation" id=14]
-resource_name = "Agua-animada"
-length = 3.2
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.6, 1.9, 2.2, 2.5, 2.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 4, 5, 6, 7, 8, 7, 6, 8, 1 ]
-}
-
-[sub_resource type="Animation" id=15]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 8 ]
-}
-
-[sub_resource type="Animation" id=13]
-resource_name = "Palmeira"
-length = 2.4
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4, 0.7, 1.4, 1.6, 1.8, 2.1, 2.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 4, 5 ]
-}
-
-[sub_resource type="Animation" id=12]
-resource_name = "Palmeira"
-length = 1.8
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5, 0.8, 1.1, 1.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5 ]
-}
-
-[sub_resource type="Animation" id=11]
-resource_name = "Palmeira"
-length = 1.2
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5 ]
-}
-
-[sub_resource type="Animation" id=16]
-resource_name = "Barco"
-length = 1.5
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
-}
-
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=67]
 flags = 4
-atlas = ExtResource( 25 )
-region = Rect2( 0, 0, 192, 192 )
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 266, 248 )
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=68]
 flags = 4
-atlas = ExtResource( 25 )
-region = Rect2( 192, 0, 192, 192 )
+atlas = ExtResource( 13 )
+region = Rect2( 266, 0, 266, 248 )
 
-[sub_resource type="AtlasTexture" id=28]
+[sub_resource type="AtlasTexture" id=69]
 flags = 4
-atlas = ExtResource( 25 )
-region = Rect2( 384, 0, 192, 192 )
+atlas = ExtResource( 13 )
+region = Rect2( 532, 0, 266, 248 )
 
-[sub_resource type="SpriteFrames" id=29]
+[sub_resource type="AtlasTexture" id=70]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 266, 248 )
+
+[sub_resource type="AtlasTexture" id=71]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 266, 0, 266, 248 )
+
+[sub_resource type="AtlasTexture" id=72]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 532, 0, 266, 248 )
+
+[sub_resource type="SpriteFrames" id=44]
 animations = [ {
-"frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 27 ) ],
+"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 70 ), SubResource( 71 ), SubResource( 72 ) ],
+"loop": true,
+"name": "red",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=43]
+radius = 60.8074
+height = 0.0
+
+[sub_resource type="AtlasTexture" id=49]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 198, 198 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 198, 0, 198, 198 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 396, 0, 198, 198 )
+
+[sub_resource type="SpriteFrames" id=52]
+animations = [ {
+"frames": [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=30]
+[sub_resource type="AtlasTexture" id=45]
 flags = 4
-atlas = ExtResource( 24 )
+atlas = ExtResource( 14 )
 region = Rect2( 0, 0, 192, 192 )
 
-[sub_resource type="AtlasTexture" id=31]
+[sub_resource type="AtlasTexture" id=46]
 flags = 4
-atlas = ExtResource( 24 )
+atlas = ExtResource( 14 )
 region = Rect2( 192, 0, 192, 192 )
 
-[sub_resource type="AtlasTexture" id=32]
+[sub_resource type="AtlasTexture" id=47]
 flags = 4
-atlas = ExtResource( 24 )
+atlas = ExtResource( 14 )
 region = Rect2( 384, 0, 192, 192 )
 
-[sub_resource type="SpriteFrames" id=33]
+[sub_resource type="SpriteFrames" id=62]
 animations = [ {
-"frames": [ SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 31 ) ],
+"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=34]
+[sub_resource type="AtlasTexture" id=63]
 flags = 4
-atlas = ExtResource( 26 )
-region = Rect2( 0, 0, 192, 192 )
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 160, 160 )
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=64]
 flags = 4
-atlas = ExtResource( 26 )
-region = Rect2( 192, 0, 192, 192 )
+atlas = ExtResource( 1 )
+region = Rect2( 160, 0, 160, 160 )
 
-[sub_resource type="AtlasTexture" id=36]
+[sub_resource type="AtlasTexture" id=65]
 flags = 4
-atlas = ExtResource( 26 )
-region = Rect2( 384, 0, 192, 192 )
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 160, 160 )
 
-[sub_resource type="SpriteFrames" id=37]
+[sub_resource type="SpriteFrames" id=66]
 animations = [ {
-"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 35 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="AtlasTexture" id=38]
-flags = 4
-atlas = ExtResource( 27 )
-region = Rect2( 0, 0, 192, 192 )
-
-[sub_resource type="AtlasTexture" id=39]
-flags = 4
-atlas = ExtResource( 27 )
-region = Rect2( 192, 0, 192, 192 )
-
-[sub_resource type="AtlasTexture" id=40]
-flags = 4
-atlas = ExtResource( 27 )
-region = Rect2( 384, 0, 192, 192 )
-
-[sub_resource type="SpriteFrames" id=41]
-animations = [ {
-"frames": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 39 ) ],
+"frames": [ SubResource( 63 ), SubResource( 64 ), SubResource( 65 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -237,13 +157,28 @@ extents = Vector2( 16.125, 374 )
 extents = Vector2( 195.5, 4.5 )
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 30.625, 37 )
+extents = Vector2( 30, 34.5625 )
 
-[sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 65.75, 71 )
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 55.5, 29.25 )
 
-[sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 34.5, 87 )
+[sub_resource type="RectangleShape2D" id=54]
+extents = Vector2( 34, 136 )
+
+[sub_resource type="RectangleShape2D" id=55]
+extents = Vector2( 100, 28.25 )
+
+[sub_resource type="RectangleShape2D" id=56]
+extents = Vector2( 28.5, 200.5 )
+
+[sub_resource type="RectangleShape2D" id=60]
+extents = Vector2( 95.5, 32 )
+
+[sub_resource type="RectangleShape2D" id=61]
+extents = Vector2( 34.5, 32 )
+
+[sub_resource type="DynamicFont" id=73]
+font_data = ExtResource( 21 )
 
 [sub_resource type="Theme" id=3]
 
@@ -256,7 +191,7 @@ size = 200
 font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 5 )
+script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 401.0
@@ -277,146 +212,79 @@ margin_bottom = 721.24
 color = Color( 0.392157, 0.231373, 0.0705882, 1 )
 
 [node name="map_minigame" type="Sprite" parent="."]
-position = Vector2( 203, 365 )
-scale = Vector2( 0.653884, 0.653883 )
-texture = ExtResource( 1 )
+position = Vector2( 195.5, 385.548 )
+scale = Vector2( 1.94737, 1.94737 )
+texture = ExtResource( 5 )
 
-[node name="Arbusto-1" type="Sprite" parent="."]
-position = Vector2( 339, 174 )
-scale = Vector2( 2.0875, 2.0875 )
-texture = ExtResource( 15 )
-
-[node name="Arbusto-2" type="Sprite" parent="."]
-position = Vector2( 40, 239 )
-scale = Vector2( 2.13, 2.13 )
-texture = ExtResource( 12 )
-
-[node name="Arbusto-3" type="Sprite" parent="."]
-position = Vector2( 320.5, 40.5 )
-scale = Vector2( 1.925, 1.925 )
-texture = ExtResource( 14 )
-
-[node name="Arbusto-4" type="Sprite" parent="."]
-position = Vector2( 68, 84 )
-scale = Vector2( 2.01, 2.01 )
-texture = ExtResource( 13 )
-
-[node name="Estrela" type="Sprite" parent="."]
-position = Vector2( 45.625, 508.625 )
-scale = Vector2( 1.20375, 1.20375 )
-texture = ExtResource( 20 )
-
-[node name="Carrinho" type="Sprite" parent="."]
-position = Vector2( 239, 406 )
-scale = Vector2( 2.0875, 2.0875 )
+[node name="farol" type="Sprite" parent="."]
+position = Vector2( 224, 452 )
+scale = Vector2( 0.243243, 0.243243 )
 texture = ExtResource( 18 )
 
-[node name="Balde-praia" type="Sprite" parent="."]
-position = Vector2( 27, 313 )
-scale = Vector2( 2.0875, 2.0875 )
-texture = ExtResource( 17 )
-
 [node name="Guardasol" type="Sprite" parent="."]
-position = Vector2( 359, 442 )
-scale = Vector2( 2.01, 2.01 )
-texture = ExtResource( 21 )
+position = Vector2( 31, 648 )
+scale = Vector2( 0.209063, 0.209063 )
+texture = ExtResource( 12 )
 
-[node name="Guardasol-2" type="Sprite" parent="."]
-position = Vector2( 97.6976, 643.946 )
-scale = Vector2( 2.11834, 1.96638 )
+[node name="banco" type="Sprite" parent="."]
+position = Vector2( 92, 456 )
+scale = Vector2( 0.225455, 0.209282 )
 texture = ExtResource( 16 )
 
-[node name="Agua-animada" type="Sprite" parent="."]
-position = Vector2( 202.5, 366.146 )
-scale = Vector2( 0.973301, 0.973301 )
-texture = ExtResource( 19 )
-hframes = 3
-vframes = 3
-frame = 8
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Agua-animada"]
-anims/Agua-animada = SubResource( 14 )
-anims/RESET = SubResource( 15 )
-
-[node name="Palmeira-3" type="Sprite" parent="."]
-position = Vector2( 44.0675, 84.3588 )
-scale = Vector2( -0.618199, 0.656016 )
-texture = ExtResource( 3 )
-hframes = 2
-vframes = 3
-frame = 5
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Palmeira-3"]
-root_node = NodePath("../../Palmeira-3")
-anims/Palmeira = SubResource( 13 )
-
-[node name="Palmeira-2" type="Sprite" parent="."]
-position = Vector2( 355.383, 88.1254 )
-scale = Vector2( 0.698402, 0.69316 )
-texture = ExtResource( 3 )
-hframes = 2
-vframes = 3
-frame = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Palmeira-2"]
-root_node = NodePath("../../Palmeira-2")
-anims/Palmeira = SubResource( 12 )
-
-[node name="Palmeira-1" type="Sprite" parent="."]
-position = Vector2( 335.617, 173.687 )
-scale = Vector2( 0.594235, 0.589775 )
-texture = ExtResource( 3 )
-hframes = 2
-vframes = 3
-frame = 3
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Palmeira-1"]
-anims/Palmeira = SubResource( 11 )
-
-[node name="barco" type="Sprite" parent="."]
-position = Vector2( 363, 627 )
-scale = Vector2( 0.124163, 0.115257 )
-texture = ExtResource( 22 )
-hframes = 4
-vframes = 4
-frame = 6
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="barco"]
-anims/Barco = SubResource( 16 )
+[node name="banco2" type="Sprite" parent="."]
+position = Vector2( 300, 56.0001 )
+scale = Vector2( 0.225455, 0.209282 )
+texture = ExtResource( 16 )
 
 [node name="coin" parent="." instance=ExtResource( 23 )]
-position = Vector2( 168, 103 )
-scale = Vector2( 0.64644, 0.64644 )
-frames = SubResource( 29 )
-frame = 3
+position = Vector2( 291.978, 580 )
+scale = Vector2( 0.225806, 0.225806 )
+frames = SubResource( 44 )
+animation = "red"
 playing = true
+
+[node name="Area2D" type="Area2D" parent="coin" groups=["coletaveis"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin/Area2D"]
+position = Vector2( 7.63696, 0 )
+shape = SubResource( 43 )
 
 [node name="coin2" parent="." instance=ExtResource( 23 )]
-position = Vector2( 233, 496 )
-scale = Vector2( 0.64644, 0.64644 )
-frames = SubResource( 33 )
-frame = 1
+position = Vector2( 291, 192 )
+scale = Vector2( 0.409091, 0.409091 )
+frames = SubResource( 52 )
 playing = true
+
+[node name="Area2D" type="Area2D" parent="coin2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin2/Area2D"]
+position = Vector2( 7.63696, 0 )
+shape = SubResource( 43 )
 
 [node name="coin3" parent="." instance=ExtResource( 23 )]
-position = Vector2( 367, 495 )
-scale = Vector2( 0.64644, 0.64644 )
-frames = SubResource( 33 )
-playing = true
-
-[node name="coin4" parent="." instance=ExtResource( 23 )]
-position = Vector2( 304, 228 )
-scale = Vector2( 0.64644, 0.64644 )
-frames = SubResource( 37 )
+position = Vector2( 32, 382 )
+scale = Vector2( 0.5625, 0.5625 )
+frames = SubResource( 62 )
 frame = 2
 playing = true
 
-[node name="coin5" parent="." instance=ExtResource( 23 )]
-position = Vector2( 98, 292 )
-scale = Vector2( 0.64644, 0.64644 )
-frames = SubResource( 41 )
-frame = 3
+[node name="Area2D" type="Area2D" parent="coin3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin3/Area2D"]
+position = Vector2( 7.63696, 0 )
+shape = SubResource( 43 )
+
+[node name="coin4" parent="." instance=ExtResource( 23 )]
+position = Vector2( 91, 254 )
+scale = Vector2( 0.5625, 0.5625 )
+frames = SubResource( 66 )
 playing = true
+
+[node name="Area2D" type="Area2D" parent="coin4" groups=["desconto", "not-colect"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin4/Area2D"]
+position = Vector2( 7.63696, 0 )
+shape = SubResource( 43 )
 
 [node name="Fundo" parent="." instance=ExtResource( 4 )]
 position = Vector2( 19, 14 )
@@ -425,7 +293,7 @@ scale = Vector2( 0.963007, 0.963007 )
 [node name="colisionBoard" type="StaticBody2D" parent="."]
 
 [node name="limitadorBorda" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 206, 67 )
+position = Vector2( 208, 84 )
 shape = SubResource( 7 )
 
 [node name="limitadorBorda2" type="CollisionShape2D" parent="colisionBoard"]
@@ -441,40 +309,44 @@ position = Vector2( 205, 710 )
 shape = SubResource( 9 )
 
 [node name="obstaculo" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 101.75, 630 )
+position = Vector2( 92, 456 )
 shape = SubResource( 17 )
 
 [node name="obstaculo2" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 369, 431 )
+position = Vector2( 24, 652 )
 shape = SubResource( 17 )
 
 [node name="obstaculo3" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 235, 364 )
-shape = SubResource( 17 )
-
-[node name="obstaculo4" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 35.375, 297 )
-shape = SubResource( 17 )
-
-[node name="obstaculo5" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 38, 226 )
-shape = SubResource( 17 )
-
-[node name="obstaculo6" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 105, 163 )
+position = Vector2( 231, 456 )
 shape = SubResource( 17 )
 
 [node name="obstaculo7" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 41, 98 )
+position = Vector2( 293, 581 )
 shape = SubResource( 17 )
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 72.5, 517.25 )
+shape = SubResource( 53 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 362, 680 )
+shape = SubResource( 54 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 300, 515.75 )
+shape = SubResource( 55 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="colisionBoard"]
+position = Vector2( 364, 288.5 )
+shape = SubResource( 56 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 335.25, 133 )
-shape = SubResource( 18 )
+position = Vector2( 111.5, 120 )
+shape = SubResource( 60 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="colisionBoard"]
-position = Vector2( 370.5, 619 )
-shape = SubResource( 19 )
+position = Vector2( 301.5, 120 )
+shape = SubResource( 61 )
 
 [node name="Button2" type="TextureButton" parent="."]
 margin_left = 17.0
@@ -488,8 +360,31 @@ texture_pressed = ExtResource( 7 )
 texture_disabled = ExtResource( 7 )
 texture_focused = ExtResource( 7 )
 
+[node name="popWarn" type="Sprite" parent="."]
+position = Vector2( 165, 460 )
+scale = Vector2( 1.55, 1.55 )
+texture = ExtResource( 20 )
+flip_h = true
+
+[node name="text" type="Label" parent="popWarn"]
+margin_left = -41.9355
+margin_top = -29.6774
+margin_right = 58.0645
+margin_bottom = 13.3226
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 73 )
+text = "Pegue esse item por último"
+align = 1
+autowrap = true
+
+[node name="ClosePopWarn" type="TextureButton" parent="popWarn"]
+margin_left = 38.0645
+margin_right = 452.065
+margin_bottom = 365.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 11 )
+
 [node name="WindowDialog" type="Sprite" parent="."]
-visible = false
 position = Vector2( 220, 377 )
 scale = Vector2( 0.559091, 0.559091 )
 texture = ExtResource( 8 )
@@ -539,6 +434,102 @@ rect_scale = Vector2( 0.132837, 0.132837 )
 texture_normal = ExtResource( 29 )
 texture_pressed = ExtResource( 30 )
 
+[node name="buttonAnswer1" type="TextureButton" parent="WindowDialog"]
+margin_left = -214.634
+margin_top = 198.537
+margin_right = -82.6341
+margin_bottom = 330.537
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 19 )
+
+[node name="textAnswer1" type="Label" parent="WindowDialog/buttonAnswer1"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = -0.26441
+anchor_top = -8.06808e-05
+anchor_right = 0.12953
+anchor_bottom = 0.10901
+margin_left = 70.6745
+margin_top = 28.6285
+margin_right = 58.6744
+margin_bottom = 52.2285
+rect_scale = Vector2( 2, 2 )
+theme = SubResource( 3 )
+custom_fonts/font = SubResource( 20 )
+text = "7"
+autowrap = true
+
+[node name="buttonAnswer2" type="TextureButton" parent="WindowDialog"]
+margin_left = 19.6748
+margin_top = 198.537
+margin_right = 151.675
+margin_bottom = 330.537
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 19 )
+
+[node name="textAnswer2" type="Label" parent="WindowDialog/buttonAnswer2"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = -0.26441
+anchor_top = -8.06808e-05
+anchor_right = 0.12953
+anchor_bottom = 0.10901
+margin_left = 63.52
+margin_top = 28.6285
+margin_right = 51.5199
+margin_bottom = 52.2285
+rect_scale = Vector2( 2, 2 )
+theme = SubResource( 3 )
+custom_fonts/font = SubResource( 20 )
+text = "5"
+autowrap = true
+
+[node name="buttonAnswer3" type="TextureButton" parent="WindowDialog"]
+margin_left = -214.634
+margin_top = 391.707
+margin_right = -82.6341
+margin_bottom = 523.707
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 19 )
+
+[node name="textAnswer3" type="Label" parent="WindowDialog/buttonAnswer3"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = -0.26441
+anchor_top = -8.06808e-05
+anchor_right = 0.12953
+anchor_bottom = 0.10901
+margin_left = 70.6745
+margin_top = 30.4171
+margin_right = 58.6744
+margin_bottom = 54.0172
+rect_scale = Vector2( 2, 2 )
+theme = SubResource( 3 )
+custom_fonts/font = SubResource( 20 )
+text = "10"
+autowrap = true
+
+[node name="buttonAnswer4" type="TextureButton" parent="WindowDialog"]
+margin_left = 19.6748
+margin_top = 391.707
+margin_right = 151.675
+margin_bottom = 523.707
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 19 )
+
+[node name="textAnswer4" type="Label" parent="WindowDialog/buttonAnswer4"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = -0.26441
+anchor_top = -8.06808e-05
+anchor_right = 0.12953
+anchor_bottom = 0.10901
+margin_left = 65.3086
+margin_top = 35.783
+margin_right = 53.3085
+margin_bottom = 59.383
+rect_scale = Vector2( 2, 2 )
+theme = SubResource( 3 )
+custom_fonts/font = SubResource( 20 )
+text = "4"
+autowrap = true
+
 [node name="restart" type="TextureButton" parent="."]
 margin_left = 86.0
 margin_top = 5.0
@@ -551,7 +542,7 @@ texture_normal = ExtResource( 9 )
 stream = ExtResource( 33 )
 
 [node name="Contador" type="Sprite" parent="."]
-position = Vector2( 197, 31 )
+position = Vector2( 226, 31 )
 scale = Vector2( 0.160462, 0.252322 )
 texture = ExtResource( 10 )
 
@@ -562,13 +553,19 @@ margin_right = 87.1115
 margin_bottom = 114.81
 rect_scale = Vector2( 1.5, 1 )
 custom_fonts/normal_font = SubResource( 25 )
-text = "0/5"
+text = "0/3"
 
 [connection signal="arrow2" from="Fundo" to="." method="_on_Fundo_arrow2"]
 [connection signal="arrow3" from="Fundo" to="." method="_on_Fundo_arrow3"]
 [connection signal="arrow4" from="Fundo" to="." method="_on_Fundo_arrow4"]
+[connection signal="showQuestion" from="Fundo" to="." method="_on_Fundo_showQuestion"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="popWarn/ClosePopWarn" to="." method="_on_ClosePopWarn_pressed"]
 [connection signal="pressed" from="WindowDialog/closePopup" to="." method="_on_closePopup_pressed"]
 [connection signal="pressed" from="WindowDialog/restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="WindowDialog/Next" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="WindowDialog/Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="WindowDialog/buttonAnswer1" to="." method="_on_buttonAnswer1_pressed"]
+[connection signal="pressed" from="WindowDialog/buttonAnswer2" to="." method="_on_buttonAnswer2_pressed"]
+[connection signal="pressed" from="WindowDialog/buttonAnswer3" to="." method="_on_buttonAnswer3_pressed"]
+[connection signal="pressed" from="WindowDialog/buttonAnswer4" to="." method="_on_buttonAnswer4_pressed"]
 [connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]

@@ -47,7 +47,7 @@ func _process(delta):
 		
 		$Contador/RichTextLabel.text = str(Global.maca + Global.pilha) + "/6"
 		
-		if Global.pilha == 3 and Global.maca == 3:
+		if Global.coin == 6:
 			# Makes the bode incapable to move and show the popup again with the options to go to the next level or restart the current level
 			$Win.play()
 			$Fundo.para_bodin()
@@ -82,5 +82,9 @@ func _on_restart_pressed():
 
 # Move back to the previous scene
 func _on_Next_pressed():
+	print(Global.cadeado1)
+	print(Global.cadeado2)
+	print(Global.cadeado3)
 	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://scenes/Main.tscn")
+	
