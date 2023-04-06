@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<<< HEAD:src/Imagens/fase2/bodeShop.png.import
 path="res://.import/bodeShop.png-08968b84704810767c09f6351a19565f.stex"
+========
+path="res://.import/bodeCosta.png-f20697fbfc0e620ca893fdaf64a33aef.stex"
+>>>>>>>> cb8da2fa000f26e2b8b8050690746e5257a7cf56:src/Imagens/bodeCosta.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:src/Imagens/fase2/bodeShop.png.import
 source_file="res://Imagens/fase2/bodeShop.png"
 dest_files=[ "res://.import/bodeShop.png-08968b84704810767c09f6351a19565f.stex" ]
+========
+source_file="res://Imagens/bodeCosta.png"
+dest_files=[ "res://.import/bodeCosta.png-f20697fbfc0e620ca893fdaf64a33aef.stex" ]
+>>>>>>>> cb8da2fa000f26e2b8b8050690746e5257a7cf56:src/Imagens/bodeCosta.png.import
 
 [params]
 

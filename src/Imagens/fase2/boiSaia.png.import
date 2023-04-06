@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<<< HEAD:src/Imagens/fase2/boiSaia.png.import
 path="res://.import/boiSaia.png-7a6f0b2da3b60252268755febcc616b6.stex"
+========
+path="res://.import/lixo7.png-52f872ebd40c49b947f3b1085b7804a1.stex"
+>>>>>>>> cb8da2fa000f26e2b8b8050690746e5257a7cf56:src/Imagens/Lixos/lixo7.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:src/Imagens/fase2/boiSaia.png.import
 source_file="res://Imagens/fase2/boiSaia.png"
 dest_files=[ "res://.import/boiSaia.png-7a6f0b2da3b60252268755febcc616b6.stex" ]
+========
+source_file="res://Imagens/Lixos/lixo7.png"
+dest_files=[ "res://.import/lixo7.png-52f872ebd40c49b947f3b1085b7804a1.stex" ]
+>>>>>>>> cb8da2fa000f26e2b8b8050690746e5257a7cf56:src/Imagens/Lixos/lixo7.png.import
 
 [params]
 
