@@ -65,5 +65,6 @@ func _on_moveBackButton_pressed():
 	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://scenes/Inicio.tscn")
 
+# Move on to the next phase
 func _on_fase2_pressed():
 	TransitionCanvas.change_scene("res://scenes/Main2f.tscn")

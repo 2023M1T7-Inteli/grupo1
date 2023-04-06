@@ -2,24 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-<<<<<<<< HEAD:src/Imagens/fase2/Fase2-1.png.import
 path="res://.import/Fase2-1.png-eaa7c6c5ef00a25ddf6dc6ae8e8fdf5a.stex"
-========
-path="res://.import/lixo1BA.png-d2dd4f0498288b8a17a6b97b8ff19bb4.stex"
->>>>>>>> cb8da2fa000f26e2b8b8050690746e5257a7cf56:src/Imagens/Lixos/Lixos2/lixo1BA.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:src/Imagens/fase2/Fase2-1.png.import
 source_file="res://Imagens/fase2/Fase2-1.png"
 dest_files=[ "res://.import/Fase2-1.png-eaa7c6c5ef00a25ddf6dc6ae8e8fdf5a.stex" ]
-========
-source_file="res://Imagens/Lixos/Lixos2/lixo1BA.png"
-dest_files=[ "res://.import/lixo1BA.png-d2dd4f0498288b8a17a6b97b8ff19bb4.stex" ]
->>>>>>>> cb8da2fa000f26e2b8b8050690746e5257a7cf56:src/Imagens/Lixos/Lixos2/lixo1BA.png.import
 
 [params]
 

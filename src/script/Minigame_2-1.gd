@@ -91,7 +91,7 @@ func _on_Next_pressed():
 	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://scenes/Main2f.tscn")
 
-
+# Show the question popup with the buttons with the answers
 func _on_Fundo_showQuestion():
 	$Fundo.para_bodin()
 	$WindowDialog/RichTextLabel.text = "12 + 17 = ?"
@@ -106,7 +106,7 @@ func _on_Fundo_showQuestion():
 	$Fundo/CanvasLayer/Left.disabled = true
 	$Fundo/CanvasLayer/Right.disabled = true
 
-
+# The correct answer that makes the player win the game and show the victorious popup
 func _on_buttonAnswer1_pressed():
 	$Win.play()
 	$WindowDialog/RichTextLabel.text = ""
@@ -124,19 +124,21 @@ func _on_buttonAnswer1_pressed():
 	$WindowDialog/buttonAnswer3.hide()
 	$WindowDialog/buttonAnswer4.hide()
 
+# Wrong answer, resets the scene
 func _on_buttonAnswer2_pressed():
 	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://scenes/Minigame_2-1.tscn")
 
-
+# Wrong answer, resets the scene
 func _on_buttonAnswer3_pressed():
 	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://scenes/Minigame_2-1.tscn")
 
-
+# Wrong answer, resets the scene
 func _on_buttonAnswer4_pressed():
 	TocaMusica.pause()
 	TransitionCanvas.change_scene("res://scenes/Minigame_2-1.tscn")
 
+# Close the popup
 func _on_closePopWarn_pressed():
 	$popWarn.visible = false

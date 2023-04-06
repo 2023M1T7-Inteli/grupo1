@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bode.png-bccff633d2acd7952819f6e5a974a520.stex"
+path="res://.import/Bode.png-03a904101bc551061a0fbd8e8d122b7e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagens/bode.png"
-dest_files=[ "res://.import/bode.png-bccff633d2acd7952819f6e5a974a520.stex" ]
+source_file="res://Imagens/Bode.png"
+dest_files=[ "res://.import/Bode.png-03a904101bc551061a0fbd8e8d122b7e.stex" ]
 
 [params]
 

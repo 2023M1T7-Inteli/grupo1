@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/console.png-07bc5f0ff3966bc2ab1c0f0b4032d33d.stex"
+path="res://.import/Console.png-db3092e34de7c50d46b97e73b50b9c03.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagens/console.png"
-dest_files=[ "res://.import/console.png-07bc5f0ff3966bc2ab1c0f0b4032d33d.stex" ]
+source_file="res://Imagens/Console.png"
+dest_files=[ "res://.import/Console.png-db3092e34de7c50d46b97e73b50b9c03.stex" ]
 
 [params]
 

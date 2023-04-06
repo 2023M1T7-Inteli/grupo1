@@ -1,5 +1,6 @@
 extends Sprite
 
+# Play the music of the game and start the animation
 func _ready():
 	TocaMusica.resume()
 	$AnimationPlayer.play("default")

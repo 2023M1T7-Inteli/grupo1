@@ -2,24 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-<<<<<<<< HEAD:src/Imagens/bodeCosta.png.import
 path="res://.import/bodeCosta.png-f20697fbfc0e620ca893fdaf64a33aef.stex"
-========
-path="res://.import/logoBodin.png-df57ee2a35c96642724e5e62012cd1bd.stex"
->>>>>>>> cb8da2fa000f26e2b8b8050690746e5257a7cf56:src/Imagens/logoBodin.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:src/Imagens/bodeCosta.png.import
 source_file="res://Imagens/bodeCosta.png"
 dest_files=[ "res://.import/bodeCosta.png-f20697fbfc0e620ca893fdaf64a33aef.stex" ]
-========
-source_file="res://Imagens/logoBodin.png"
-dest_files=[ "res://.import/logoBodin.png-df57ee2a35c96642724e5e62012cd1bd.stex" ]
->>>>>>>> cb8da2fa000f26e2b8b8050690746e5257a7cf56:src/Imagens/logoBodin.png.import
 
 [params]
 
