@@ -91,10 +91,11 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
-
+  
 * 4.0.1 - 06/04/2023
     * MUDANÇA: Finalização dos comentários.
     * MUDANÇA: Finalização dos códigos.
+    * ADD: Finalizaçao do APK
 * 4.0.0 - 05/04/2023
     * MUDANÇA: Fases 1 e 2 completas.
     * ADD: Versão final do jogo.
