@@ -89,7 +89,13 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
-  
+
+* 4.0.1 - 06/04/2023
+    * MUDANÇA: Finalização dos comentários.
+    * MUDANÇA: Finalização dos códigos.
+* 4.0.0 - 05/04/2023
+    * MUDANÇA: Fases 1 e 2 completas.
+    * ADD: Versão final do jogo.
 * 3.1.0 - 01/04/2023
     * ADD: Implementação da base dos minigames da fase 2.
 * 3.0.0 - 31/03/2023
