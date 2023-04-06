@@ -10,6 +10,8 @@
 
 ## Integrantes: <a href="https://www.linkedin.com/in/eduardo-henrique-santos-628607233/">Eduardo Henrique</a>, <a href="https://www.linkedin.com/in/gabrielcolettosilva/">Gabriel Coletto</a>, <a href="https://www.linkedin.com/in/isabella-fernandes-saldanha-138a631b4/">Isabella Saldanha</a>, <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-brand%C3%A3o-de-moura-338636215/">João Pedro Brandão</a>, <a href="https://www.linkedin.com/in/laura-padilha-bueno-b358419a/">Laura Bueno</a>, <a href="https://www.linkedin.com/in/raideoliveira/">Raí de Oliveira</a> e <a href="https://www.linkedin.com/in/thomas-abadi-4a44a1264">Thomas Abadi</a>
 
+<img src="/imagens/FotoDoGrupo.png" alt="NOME DO JOGO" border="0">
+
 ## Descrição
 
 <br><br>
