@@ -8,20 +8,12 @@
 
 ## Nome do Grupo: Bode Frederico
 
-## Integrantes: <a href="https://www.linkedin.com/in/eduardo-henrique-santos-628607233/">Eduardo Henrique</a>, <a href="https://www.linkedin.com/in/gabrielcolettosilva/">Gabriel Coletto</a>, <a href="https://www.linkedin.com/in/isabella-fernandes-saldanha-138a631b4/">Isabella Saldanha</a>, <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-brand%C3%A3o-de-moura-338636215/">João Pedro Brandão</a>, <a href="https://www.linkedin.com/in/laura-padilha-bueno-b358419a/">Laura Bueno</a>, <a href="https://www.linkedin.com/in/raideoliveira/">Raí de Oliveira</a> e <a href="https://www.linkedin.com/in/thomas-abadi-4a44a1264">Thomas Abadi</a>
-
-<img src="/imagens/FotoDoGrupo.png" alt="NOME DO JOGO" border="0">
+## Integrantes: <a href="https://www.linkedin.com/in/eduardo-hos/">Eduardo Henrique</a>, <a href="https://www.linkedin.com/in/gabrielcolettosilva/">Gabriel Coletto</a>, <a href="https://www.linkedin.com/in/isabella-fernandes-saldanha-138a631b4/">Isabella Saldanha</a>, <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-brand%C3%A3o-de-moura-338636215/">João Pedro Brandão</a>, <a href="https://www.linkedin.com/in/laura-padilha-bueno-b358419a/">Laura Bueno</a>, <a href="https://www.linkedin.com/in/raideoliveira/">Raí de Oliveira</a> e <a href="https://www.linkedin.com/in/thomas-abadi-4a44a1264">Thomas Abadi</a>
 
 ## Descrição
 
-<br><br>
 Meu projeto ajuda estudantes e professores de Alagoas a se tornarem protagonistas no aprendizado de matemática e programação.
-<br><br>
 <p align="center">
-<img src="/imagens/LogoDoJogo.png" alt="NOME DO JOGO" border="0">
-
-
-<br><br>
 
 Bodin é um jogo educativo incrível que apresenta um conceito único de aprendizado. O jogo combina elementos de lógica matemática e computacional, criando um ambiente de aprendizagem divertido e interativo para os jogadores. A jogabilidade é baseada em resolver quebra-cabeças através da construção de algoritmos com botões de setas. A medida que o jogador avança, os desafios vão se tornando progressivamente mais difíceis, o que o torna uma ferramenta de aprendizado excepcional para todos os níveis de habilidade.
 
@@ -46,8 +38,6 @@ Um aspecto distintivo do Bodin é seu tema cultural local do estado de Alagoas. 
 |-->src<br>
 |readme.md<br>
 
-A pasta raiz contem dois arquivos que devem ser alterados:
-
 <b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
 
 Há também 4 pastas que seguem da seguinte forma:
@@ -65,7 +55,7 @@ Há também 4 pastas que seguem da seguinte forma:
 
 <b>Android:</b>
 
-Faça o Download do JOGO.apk no seu celular.
+Faça o Download do <a href="./execut%C3%A1veis/Android/Bodin.apk">JOGO.apk</a> no seu celular.
 Execute o APK e siga as instruções de seu telefone.
 
 <b>Windows:</b>
