@@ -8,20 +8,12 @@
 
 ## Nome do Grupo: Bode Frederico
 
-## Integrantes: <a href="https://www.linkedin.com/in/eduardo-henrique-santos-628607233/">Eduardo Henrique</a>, <a href="https://www.linkedin.com/in/gabrielcolettosilva/">Gabriel Coletto</a>, <a href="https://www.linkedin.com/in/isabella-fernandes-saldanha-138a631b4/">Isabella Saldanha</a>, <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-brand%C3%A3o-de-moura-338636215/">João Pedro Brandão</a>, <a href="https://www.linkedin.com/in/laura-padilha-bueno-b358419a/">Laura Bueno</a>, <a href="https://www.linkedin.com/in/raideoliveira/">Raí de Oliveira</a> e <a href="https://www.linkedin.com/in/thomas-abadi-4a44a1264">Thomas Abadi</a>
-
-<img src="/imagens/FotoDoGrupo.png" alt="NOME DO JOGO" border="0">
+## Integrantes: <a href="https://www.linkedin.com/in/eduardo-hos/">Eduardo Henrique</a>, <a href="https://www.linkedin.com/in/gabrielcolettosilva/">Gabriel Coletto</a>, <a href="https://www.linkedin.com/in/isabella-fernandes-saldanha-138a631b4/">Isabella Saldanha</a>, <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-brand%C3%A3o-de-moura-338636215/">João Pedro Brandão</a>, <a href="https://www.linkedin.com/in/laura-padilha-bueno-b358419a/">Laura Bueno</a>, <a href="https://www.linkedin.com/in/raideoliveira/">Raí de Oliveira</a> e <a href="https://www.linkedin.com/in/thomas-abadi-4a44a1264">Thomas Abadi</a>
 
 ## Descrição
 
-<br><br>
 Meu projeto ajuda estudantes e professores de Alagoas a se tornarem protagonistas no aprendizado de matemática e programação.
-<br><br>
 <p align="center">
-<img src="/imagens/LogoDoJogo.png" alt="NOME DO JOGO" border="0">
-
-
-<br><br>
 
 Bodin é um jogo educativo incrível que apresenta um conceito único de aprendizado. O jogo combina elementos de lógica matemática e computacional, criando um ambiente de aprendizagem divertido e interativo para os jogadores. A jogabilidade é baseada em resolver quebra-cabeças através da construção de algoritmos com botões de setas. A medida que o jogador avança, os desafios vão se tornando progressivamente mais difíceis, o que o torna uma ferramenta de aprendizado excepcional para todos os níveis de habilidade.
 
@@ -46,8 +38,6 @@ Um aspecto distintivo do Bodin é seu tema cultural local do estado de Alagoas. 
 |-->src<br>
 |readme.md<br>
 
-A pasta raiz contem dois arquivos que devem ser alterados:
-
 <b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
 
 Há também 4 pastas que seguem da seguinte forma:
@@ -65,7 +55,7 @@ Há também 4 pastas que seguem da seguinte forma:
 
 <b>Android:</b>
 
-Faça o Download do JOGO.apk no seu celular.
+Faça o Download do <a href="./execut%C3%A1veis/Android/Bodin.apk">JOGO.apk</a> no seu celular.
 Execute o APK e siga as instruções de seu telefone.
 
 <b>Windows:</b>
@@ -76,7 +66,7 @@ Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro progra
 <b>HTML:</b>
 
 Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser) ou acesse o link de deploy: https://2023m1t7-inteli.github.io/grupo1/game/
 
 ## 💻 Configuração para Desenvolvimento
 
@@ -141,7 +131,7 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 ## 📋 Licença/License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+<p> Bodin by Inteli, Laura Bueno, Gabriel Coletto, Eduardo Oliveira, Raí de Oliveira, João Pedro Moura and Thomas Abadi is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
 
 ## 🎓 Referências
 
