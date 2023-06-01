@@ -66,7 +66,7 @@ Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro progra
 <b>HTML:</b>
 
 Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser) ou acesse o link de deploy: https://2023m1t7-inteli.github.io/grupo1/game/
 
 ## 💻 Configuração para Desenvolvimento
 
